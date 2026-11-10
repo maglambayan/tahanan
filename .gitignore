@@ -1,0 +1,9 @@
+hardware/build/
+hardware/*-backups/
+hardware/fp-info-cache
+hardware/*.kicad_prl
+hardware/gen/__pycache__/
+hardware/gen/tahanan.net
+mechanical/__pycache__/
+software/haos-board/work/
+.DS_Store

@@ -1,0 +1,19 @@
+# Pin record for the Tahanan zigbee radio. Merge into a silabs-firmware-builder manifest for an MGM240P target.
+device: MGM240PA32VNN3
+name: tahanan_zigbee_ncp
+uart:
+  baudrate: 460800
+  flow_control: rtscts
+  tx: PC00
+  rx: PC01
+  rts: PC02
+  cts: PC03
+bootloader:
+  button: PB00
+  button_active: low
+swd:
+  swclk: PA01
+  swdio: PA02
+rf:
+  antenna: external, RF pin to U.FL J9
+  max_tx_power_dbm: 20

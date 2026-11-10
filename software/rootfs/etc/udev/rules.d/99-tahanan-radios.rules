@@ -1,0 +1,4 @@
+# Stable names for the on-board radios (RP1 UART instances are fixed by the overlays in config.txt).
+KERNEL=="ttyAMA2", SYMLINK+="tahanan-zigbee", ENV{ID_MODEL}="Tahanan_Zigbee_MGM240P"
+KERNEL=="ttyAMA3", SYMLINK+="tahanan-thread", ENV{ID_MODEL}="Tahanan_Thread_MGM240P"
+KERNEL=="ttyAMA0", SYMLINK+="tahanan-zwave",  ENV{ID_MODEL}="Tahanan_ZWave_Socket"

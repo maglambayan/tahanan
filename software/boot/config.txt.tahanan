@@ -1,0 +1,25 @@
+# Tahanan Hub additions to the Home Assistant OS config.txt (boot partition).
+[cm5]
+# --- storage: PCIe x1. Gen 2 is the supported speed on CM5; do not enable pciex1_gen=3 in production.
+dtparam=pciex1
+# --- wireless antenna: ant1 = CM5 PCB antenna (default SKU), ant2 = U.FL to the second RP-SMA
+dtparam=ant1
+# --- USB 2.0 port on the USB-C connector, device mode is only used by rpiboot
+dtoverlay=dwc2,dr_mode=host
+# --- serial ports (RP1 UARTs)
+dtoverlay=uart0-pi5            # GPIO14/15  Z-Wave socket J11        -> /dev/ttyAMA0
+dtoverlay=uart2-pi5,ctsrts     # GPIO4-7    Zigbee MGM240P (U19)     -> /dev/ttyAMA2
+dtoverlay=uart3-pi5,ctsrts     # GPIO8-11   Thread MGM240P (U20)     -> /dev/ttyAMA3
+dtoverlay=uart4-pi5            # GPIO12/13  service console on J7    -> /dev/ttyAMA4
+enable_uart=0
+# --- I2C1: codec 0x18, USB-PD controller 0x28
+dtparam=i2c_arm=on
+# --- HAT EEPROM pins are unused
+force_eeprom_read=0
+# --- fan curve for the optional 40 mm fan on J6
+dtparam=fan_temp0=55000,fan_temp0_hyst=5000,fan_temp0_speed=90
+dtparam=fan_temp1=65000,fan_temp1_hyst=5000,fan_temp1_speed=160
+dtparam=fan_temp2=72000,fan_temp2_hyst=4000,fan_temp2_speed=255
+# --- board overlay: audio, buttons, LED, PoE and mic-mute sense
+dtoverlay=tahanan
+[all]

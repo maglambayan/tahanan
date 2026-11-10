@@ -1,0 +1,3555 @@
+(kicad_sch (version 20250114) (generator "tahanan_gen") (generator_version "9.0") (uuid "3f587b54-df39-5918-b791-896dd1ee704d") (paper "A3")
+(title_block (title "Tahanan Hub - Gigabit Ethernet and 802.3bt PoE powered device") (rev "A") (company "Tahanan") (comment 1 "Generated from hardware/gen/design.py"))
+(lib_symbols
+(symbol "tahanan:RJ45_WE_7499511001A"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -10.16 19.05 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "RJ45_WE_7499511001A"
+				(at 0 19.05 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "tahanan:RJ45_Wuerth_7499511001A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.we-online.com/components/products/datasheet/7499511001A.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "RJ45 1000BASE-T with magnetics, four cable-side centre taps for PoE, 600 mA per tap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RJ45_WE_7499511001A_0_1"
+				(rectangle
+					(start -10.16 17.78)
+					(end 10.16 -15.240000000000002)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "RJ45_WE_7499511001A_1_1"
+				(pin passive line
+					(at -12.7 15.240000000000002 0)
+					(length 2.54)
+					(name "D1+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 12.700000000000001 0)
+					(length 2.54)
+					(name "D1-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 10.16 0)
+					(length 2.54)
+					(name "CD1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 7.620000000000001 0)
+					(length 2.54)
+					(name "D2+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 5.080000000000002 0)
+					(length 2.54)
+					(name "D2-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 2.540000000000001 0)
+					(length 2.54)
+					(name "CD2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 0.0 0)
+					(length 2.54)
+					(name "D3+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -2.539999999999999 0)
+					(length 2.54)
+					(name "D3-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -5.079999999999998 0)
+					(length 2.54)
+					(name "CD3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -7.619999999999997 0)
+					(length 2.54)
+					(name "D4+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -10.16 0)
+					(length 2.54)
+					(name "D4-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -12.7 0)
+					(length 2.54)
+					(name "CD4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 15.240000000000002 180)
+					(length 2.54)
+					(name "V1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 12.700000000000001 180)
+					(length 2.54)
+					(name "V2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 10.16 180)
+					(length 2.54)
+					(name "V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 7.620000000000001 180)
+					(length 2.54)
+					(name "V4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 2.540000000000001 180)
+					(length 2.54)
+					(name "SHIELD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "SH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762)
+						(xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762)
+						(xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Power_Protection:TPD4E05U06DQA"
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -0.635 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TPD4E05U06DQA"
+				(at 1.905 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_SON:USON-10_2.5x1.0mm_P0.5mm"
+				(at 1.905 -12.065 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf"
+				(at 1.905 -13.97 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Description" "4-Channel ESD Protection for Super-Speed USB 3.0 Interface, USON-10"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "ESD protection USB 3.0"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "USON*2.5x1.0mm*P0.5mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TPD4E05U06DQA_0_0"
+				(rectangle
+					(start -5.715 6.477)
+					(end 5.715 -6.604)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 -6.604)
+						(xy -3.175 6.477)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 6.477)
+						(xy 0 -6.604)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 6.477)
+						(xy 3.175 -6.604)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TPD4E05U06DQA_0_1"
+				(polyline
+					(pts
+						(xy -7.747 2.54)
+						(xy -3.175 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -7.62 7.62)
+					(end 7.62 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 -2.54)
+						(xy -5.715 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -5.715 -2.54)
+					(radius 0.2794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 5.08)
+						(xy -6.35 5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 3.81)
+						(xy -6.35 3.81)
+						(xy -5.715 5.08)
+						(xy -5.08 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -3.81)
+						(xy -6.35 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -5.08)
+						(xy -6.35 -5.08)
+						(xy -5.715 -3.81)
+						(xy -5.08 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.175 6.477)
+					(radius 0.2794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center -3.175 2.54)
+					(radius 0.2794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center -3.175 -6.604)
+					(radius 0.2794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 5.08)
+						(xy -3.81 5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 3.81)
+						(xy -3.81 3.81)
+						(xy -3.175 5.08)
+						(xy -2.54 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -3.81)
+						(xy -3.81 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -5.08)
+						(xy -3.81 -5.08)
+						(xy -3.175 -3.81)
+						(xy -2.54 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 0.889)
+						(xy -1.016 0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 6.477)
+					(radius 0.2794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -6.604)
+						(xy 0 -7.62)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -6.604)
+					(radius 0.2794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.889)
+						(xy -0.635 0.889)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.889)
+						(xy 1.016 1.143)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.381)
+						(xy -0.635 -0.381)
+						(xy 0 0.889)
+						(xy 0.635 -0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.175 6.477)
+					(radius 0.2794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 3.175 -2.54)
+					(radius 0.2794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 3.175 -6.604)
+					(radius 0.2794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 5.08)
+						(xy 2.54 5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 3.81)
+						(xy 2.54 3.81)
+						(xy 3.175 5.08)
+						(xy 3.81 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -3.81)
+						(xy 2.54 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -5.08)
+						(xy 2.54 -5.08)
+						(xy 3.175 -3.81)
+						(xy 3.81 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 5.715 2.54)
+					(radius 0.2794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 5.08)
+						(xy 5.08 5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 3.81)
+						(xy 5.08 3.81)
+						(xy 5.715 5.08)
+						(xy 6.35 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 -3.81)
+						(xy 5.08 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 -5.08)
+						(xy 5.08 -5.08)
+						(xy 5.715 -3.81)
+						(xy 6.35 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 2.54)
+						(xy 5.715 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -2.54)
+						(xy 3.175 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TPD4E05U06DQA_1_1"
+				(pin passive line
+					(at -12.7 2.54 0)
+					(length 5.08)
+					(name "D1+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -2.54 0)
+					(length 5.08)
+					(name "D1-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -12.7 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 2.54 180)
+					(length 5.08)
+					(name "D2+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -2.54 180)
+					(length 5.08)
+					(name "D2-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin free line
+					(at 12.7 -7.62 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin free line
+					(at 12.7 7.62 180)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -12.7 90)
+					(length 5.08)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin free line
+					(at -12.7 -7.62 0)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin free line
+					(at -12.7 7.62 0)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Diode:PMEG10020ELR"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PMEG10020ELR"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W"
+				(at 0 -4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "100V, 2A low leakage current MEGA Schottky barrier rectifier, SOD-123W"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "ir diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Nexperia*CFP3*SOD?123W*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PMEG10020ELR_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635)
+						(xy -1.905 1.27)
+						(xy -1.27 1.27)
+						(xy -1.27 -1.27)
+						(xy -0.635 -1.27)
+						(xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27)
+						(xy 1.27 -1.27)
+						(xy -1.27 0)
+						(xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0)
+						(xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PMEG10020ELR_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Diode:SMAJ58A"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SMAJ58A"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SMA"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
+				(at -1.27 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "400W unidirectional Transient Voltage Suppressor, 58.0Vr, SMA(DO-214AC)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "unidirectional diode TVS voltage suppressor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "D*SMA*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SMAJ58A_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27)
+						(xy -1.27 1.27)
+						(xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27)
+						(xy 1.27 -1.27)
+						(xy -1.27 0)
+						(xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SMAJ58A_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:FerriteBead"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "FB"
+				(at -3.81 0.635 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "FerriteBead"
+				(at 3.81 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Ferrite bead"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "L ferrite bead inductor filter"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Inductor_* L_* *Ferrite*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FerriteBead_0_1"
+				(polyline
+					(pts
+						(xy -2.7686 0.4064)
+						(xy -1.7018 2.2606)
+						(xy 2.7686 -0.3048)
+						(xy 1.6764 -2.159)
+						(xy -2.7686 0.4064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27)
+						(xy 0 1.2954)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27)
+						(xy 0 -1.2192)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "FerriteBead_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "tahanan:Ag5810"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -10.16 13.969999999999999 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Ag5810"
+				(at 0 13.969999999999999 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "tahanan:Silvertel_Ag5810"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://silvertel.com/images/datasheets/Ag5810-datasheet-IEEE802_3bt-Power-over-Ethernet-4-pair-PD.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "60 W IEEE 802.3bt Type 4 isolated PoE PD module, 12 V out"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Ag5810_0_1"
+				(rectangle
+					(start -10.16 12.7)
+					(end 10.16 -12.7)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Ag5810_1_1"
+				(pin power_in line
+					(at -12.7 10.16 0)
+					(length 2.54)
+					(name "VIN+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -12.7 7.619999999999999 0)
+					(length 2.54)
+					(name "VIN-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at -12.7 2.539999999999999 0)
+					(length 2.54)
+					(name "TYP2-DET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at -12.7 0.0 0)
+					(length 2.54)
+					(name "TYP4-DET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -5.080000000000002 0)
+					(length 2.54)
+					(name "SA1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -12.7 -7.620000000000001 0)
+					(length 2.54)
+					(name "SA2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 12.7 10.16 180)
+					(length 2.54)
+					(name "VOUT1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 7.619999999999999 180)
+					(length 2.54)
+					(name "VOUT1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 5.079999999999999 180)
+					(length 2.54)
+					(name "VOUT2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 0.0 180)
+					(length 2.54)
+					(name "ADJ"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -5.080000000000002 180)
+					(length 2.54)
+					(name "0V1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -7.620000000000001 180)
+					(length 2.54)
+					(name "0V2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 -10.16 180)
+					(length 2.54)
+					(name "0V2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Isolator:LTV-817S"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -3.81 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LTV-817S"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_DIP:SMDIP-4_W9.53mm"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.us.liteon.com/downloads/LTV-817-827-847.PDF"
+				(at -8.89 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "DC Optocoupler, Vce 35V, CTR 50%, SMDIP-4"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "NPN DC Optocoupler"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SMDIP*W9.53mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LTV-817S_1_1"
+				(rectangle
+					(start -5.08 3.81)
+					(end 5.08 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 2.54)
+						(xy -2.54 2.54)
+						(xy -2.54 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 -0.635)
+						(xy -1.905 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.635)
+						(xy -2.54 -2.54)
+						(xy -5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.635)
+						(xy -3.175 0.635)
+						(xy -1.905 0.635)
+						(xy -2.54 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 0.508)
+						(xy 0.762 0.508)
+						(xy 0.381 0.381)
+						(xy 0.381 0.635)
+						(xy 0.762 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -0.508)
+						(xy 0.762 -0.508)
+						(xy 0.381 -0.635)
+						(xy 0.381 -0.381)
+						(xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.905)
+						(xy 2.54 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0.635)
+						(xy 4.445 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 -1.651)
+						(xy 3.556 -1.143)
+						(xy 4.064 -2.159)
+						(xy 3.048 -1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 2.54)
+						(xy 5.08 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -2.54)
+						(xy 2.54 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -2.54)
+						(xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:C_Polarized"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Polarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_Polarized_0_1"
+				(rectangle
+					(start -2.286 0.508)
+					(end 2.286 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286)
+						(xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.794)
+						(xy -1.27 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.286 -0.508)
+					(end -2.286 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "C_Polarized_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:LED"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -3.048 -0.762)
+						(xy -4.572 -2.286)
+						(xy -3.81 -2.286)
+						(xy -4.572 -2.286)
+						(xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762)
+						(xy -3.302 -2.286)
+						(xy -2.54 -2.286)
+						(xy -3.302 -2.286)
+						(xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0)
+						(xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27)
+						(xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27)
+						(xy 1.27 1.27)
+						(xy -1.27 0)
+						(xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+)
+(text "Gigabit Ethernet and 802.3bt PoE powered device" (exclude_from_sim no) (at 15 14 0) (effects (font (size 3.5 3.5) (bold yes)) (justify left top)) (uuid "0a213a91-a8df-599a-9f3d-67398081f970"))
+(text "ISOLATION: every net on the cable side of U17 (V1-V4, VPOE_*, POE_VIN_*, POE_T4DET, POE_OPTO_A) is the PoE primary domain.\nKeep 2.5mm creepage to all other copper and no planes under it (net class PoE_Primary). Rated 1500V impulse (Ag5810 datasheet 4).\nTwo Schottky bridges (eight PMEG10020) accept power on either or both pairsets and either polarity. U17 presents Class 7; the\njack is rated 600mA per centre tap, which bounds PoE input at 60W PSE power. Opto U18 tells Linux when a Type 4 PSE is present." (exclude_from_sim no) (at 15 21 0) (effects (font (size 1.8 1.8)) (justify left top)) (uuid "56e2fc4e-bc04-54f9-b8cd-06c436bbb7f7"))
+(symbol (lib_id "tahanan:RJ45_WE_7499511001A") (at 45.72 69.85 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "7df0090e-a961-594b-a92a-3bb32a6fddde")
+(property "Reference" "J2" (at 45.72 48.01 0) (effects (font (size 1.27 1.27))))
+(property "Value" "RJ45 GbE PoE" (at 45.72 50.01 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "tahanan:RJ45_Wuerth_7499511001A" (at 45.72 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://www.we-online.com/components/products/datasheet/7499511001A.pdf" (at 45.72 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "RJ45 1000BASE-T with magnetics, four cable-side centre taps for PoE, 600 mA per tap" (at 45.72 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "7499511001A" (at 45.72 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Wurth Elektronik" (at 45.72 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "Link-PP LPJG0926HENL (different footprint)" (at 45.72 69.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "11" (uuid "74c10e7b-3d42-54fd-b1f8-0bba16860cf0"))
+(pin "10" (uuid "454c4a23-b439-5eb9-86dd-be29e9d832c4"))
+(pin "12" (uuid "ca54860d-04c9-542c-b741-8d0fb9a84d71"))
+(pin "4" (uuid "a5fda634-709d-5713-ac4d-74f6c1d157dc"))
+(pin "5" (uuid "3ac554c0-eb56-5bec-bee5-4a1ceb12d932"))
+(pin "6" (uuid "01293d51-8b3d-5364-a319-1dc30a4e4fbf"))
+(pin "3" (uuid "5a787e81-f159-5ee8-831e-5272d721f221"))
+(pin "2" (uuid "dcd39bff-5abf-54a4-b7da-a8e4f3cf4634"))
+(pin "1" (uuid "2a45a482-86f0-5964-a493-5d2648d3b966"))
+(pin "8" (uuid "14bdb723-17fc-57e5-a88b-142c14b7eef5"))
+(pin "9" (uuid "db622775-b036-5509-9a00-78fc02ddf908"))
+(pin "7" (uuid "2b3d89ec-838a-536c-9f9a-7d4208f71a6c"))
+(pin "13" (uuid "fb4ff2cf-acd9-52ee-9259-1a1bb0b60c43"))
+(pin "14" (uuid "131c8a37-52eb-5c32-8942-8a319f976407"))
+(pin "15" (uuid "9d295980-4428-5553-8c8e-890c5dc5b372"))
+(pin "16" (uuid "cbc3d4d2-854f-516b-9547-ef2d256913a1"))
+(pin "SH" (uuid "8862012f-f405-5299-b7f1-7747af4d47f0"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "J2") (unit 1)))))
+(global_label "ETH_P0_P" (shape passive) (at 33.02 54.61 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "15ef5050-d224-52f4-9e49-12d431610682") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P0_N" (shape passive) (at 33.02 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d21b28b6-bf4a-5995-a667-3cd31dcdddfc") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_CT0" (shape passive) (at 33.02 59.69 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "56c84914-d634-54ab-b2d9-7efad27cab8e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P1_P" (shape passive) (at 33.02 62.23 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "86bafb4e-c647-516e-8f9d-259257cc315c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P1_N" (shape passive) (at 33.02 64.77 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "dd146c27-2cfc-56e5-8c0f-a5ce9646131a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_CT1" (shape passive) (at 33.02 67.31 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "69e81c4c-35ed-59b8-b5b3-1376ce85f5d6") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P2_P" (shape passive) (at 33.02 69.85 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4d3ad14a-f39b-5888-9519-e5525e11b56d") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P2_N" (shape passive) (at 33.02 72.39 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5ec44a01-d317-5158-a3b6-feae2e5aca58") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_CT2" (shape passive) (at 33.02 74.93 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8e210aa6-5cd0-5926-8dbc-dc8efdec3229") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P3_P" (shape passive) (at 33.02 77.47 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f9edd508-d6ed-57e7-be10-bbb6b05ac0fa") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P3_N" (shape passive) (at 33.02 80.01 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cc818978-1f27-58ff-8d5d-8df6c5774668") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_CT3" (shape passive) (at 33.02 82.55 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ac74b1bb-4f37-5c6e-a374-7d2ce0263b89") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_V1" (shape passive) (at 58.42 54.61 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5a38150c-04b0-57aa-a09e-806fd492e8a0") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_V2" (shape passive) (at 58.42 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "fe9d289e-b025-5ee7-b1da-883d183506c6") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_V3" (shape passive) (at 58.42 59.69 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "16c67aa8-6937-52fb-ba0d-e618a98fc65b") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_V4" (shape passive) (at 58.42 62.23 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e5f8661f-f990-5c22-a384-ec37f50afbb1") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "CHASSIS" (shape passive) (at 58.42 67.31 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "7129da0d-08ff-56b1-95cc-5e75b1b6a077") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 100.33 57.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "90a47e09-c4b1-5c52-b082-64a6e23cfe01")
+(property "Reference" "C65" (at 100.33 52.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 16V" (at 100.33 53.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 100.33 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 100.33 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 16V X7R 0402" (at 100.33 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05B104KO5NNNC" (at 100.33 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 100.33 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 100.33 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "8964535c-93bd-5e4f-b429-0b08a49b4892"))
+(pin "2" (uuid "e862b29b-1d7e-5937-8d44-e14f0e793ace"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "C65") (unit 1)))))
+(global_label "ETH_CT0" (shape passive) (at 96.52 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "af67371d-b522-5492-b85d-020ced81c76a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 104.14 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0082e77a-e0a1-5a7c-9247-5b84c896b497") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 100.33 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "83782975-e83e-504f-9eb3-7484ea4735a9")
+(property "Reference" "C66" (at 100.33 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 16V" (at 100.33 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 100.33 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 100.33 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 16V X7R 0402" (at 100.33 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05B104KO5NNNC" (at 100.33 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 100.33 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 100.33 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "13e2a16a-1df0-57c5-a6a5-96eaa7cf6a61"))
+(pin "2" (uuid "65fa5921-3c71-57e8-8d5f-f5b374e6bc30"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "C66") (unit 1)))))
+(global_label "ETH_CT1" (shape passive) (at 96.52 73.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cca11dbf-0026-5b8f-a651-b7edefb02caa") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 104.14 73.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5a09ac01-6f2b-52da-b682-02fcf45af809") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 100.33 91.44 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0e5ea7f3-e366-554e-bee3-584f567316cd")
+(property "Reference" "C67" (at 100.33 86.36 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 16V" (at 100.33 88.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 100.33 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 100.33 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 16V X7R 0402" (at 100.33 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05B104KO5NNNC" (at 100.33 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 100.33 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 100.33 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "17f8c631-b1df-5c85-927c-784ce557c3ad"))
+(pin "2" (uuid "e1378459-2f09-59fe-82fb-85417ef51716"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "C67") (unit 1)))))
+(global_label "ETH_CT2" (shape passive) (at 96.52 91.44 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9446f1f4-78b1-59ac-9766-733808679ab1") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 104.14 91.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8ee8bae9-12c0-57d0-ba99-be22d1704069") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 100.33 107.95 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "58a0cea9-1c2a-55c9-9a14-2ae9f8d920c6")
+(property "Reference" "C68" (at 100.33 102.87 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 16V" (at 100.33 104.65 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 100.33 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 100.33 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 16V X7R 0402" (at 100.33 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05B104KO5NNNC" (at 100.33 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 100.33 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 100.33 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "3dff9d79-fda4-5e9b-b080-50c4d649c849"))
+(pin "2" (uuid "3dde8122-7804-54f6-8856-c2f401595e17"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "C68") (unit 1)))))
+(global_label "ETH_CT3" (shape passive) (at 96.52 107.95 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0b00d704-bf33-5d41-9c95-9aa0de83af65") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 104.14 107.95 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "316bd0a1-31ca-5bbb-9228-7cb29513610e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Power_Protection:TPD4E05U06DQA") (at 149.86 62.23 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "5fe71953-883e-5801-a636-51393253469c")
+(property "Reference" "U15" (at 149.86 48.01 0) (effects (font (size 1.27 1.27))))
+(property "Value" "TPD4E05U06DQA" (at 149.86 50.01 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_SON:USON-10_2.5x1.0mm_P0.5mm" (at 149.86 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf" (at 149.86 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "4-channel ESD array 0.5pF, Ethernet MDI pairs" (at 149.86 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "TPD4E05U06DQAR" (at 149.86 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Texas Instruments" (at 149.86 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 149.86 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "23acfbb5-a8e8-5655-924f-cbebf57b1762"))
+(pin "2" (uuid "80d748d9-d101-5b44-a164-b2c338f0a5fa"))
+(pin "3" (uuid "6762c6e6-d318-5a24-96dc-c8d00f199730"))
+(pin "4" (uuid "7441103f-0edd-5286-8025-a4f588805dc2"))
+(pin "5" (uuid "710847f8-2bfe-5855-aa7b-d9e7f5c268d9"))
+(pin "6" (uuid "f91ef24b-04dd-5868-9412-344d575dabfc"))
+(pin "7" (uuid "7b329d65-5f4c-5b54-af1c-5991e3a3b07c"))
+(pin "8" (uuid "2ed65fdd-a492-51f1-b7e3-696157832dfa"))
+(pin "9" (uuid "517c6723-748c-53e1-98fe-149ed6fdd69f"))
+(pin "10" (uuid "c6935dce-dd70-5587-9e35-9dc3a198dfe7"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "U15") (unit 1)))))
+(global_label "ETH_P0_P" (shape passive) (at 137.16 59.69 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1b4c8a41-9897-5d3a-93be-ba0734613cce") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P0_N" (shape passive) (at 137.16 64.77 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "26b76fde-db21-560b-a306-5624ddb807be") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 149.86 74.93 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e3e010ff-d185-53db-8553-21787d3c0e80") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P1_P" (shape passive) (at 162.56 59.69 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "fb98b8f8-09ff-5f15-8dcc-10e5e650e4dd") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P1_N" (shape passive) (at 162.56 64.77 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "10a2388b-7d55-51ed-9695-690e838e8cf9") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(no_connect (at 162.56 69.85) (uuid "e9fc6073-6644-5443-ac72-130bf7ce7f35"))
+(no_connect (at 162.56 54.61) (uuid "112c146d-67fc-58c5-8a2a-3b072bdb4df1"))
+(no_connect (at 137.16 69.85) (uuid "1d5c043e-6a0b-59e9-b7c8-108d3a8036ed"))
+(no_connect (at 137.16 54.61) (uuid "b55827f1-7c75-5c9c-b8cb-6f3baa2d88b4"))
+(symbol (lib_id "Power_Protection:TPD4E05U06DQA") (at 215.9 62.23 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3a648a76-3a7c-5491-a2bd-ff177d51fd59")
+(property "Reference" "U16" (at 215.9 48.01 0) (effects (font (size 1.27 1.27))))
+(property "Value" "TPD4E05U06DQA" (at 215.9 50.01 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_SON:USON-10_2.5x1.0mm_P0.5mm" (at 215.9 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf" (at 215.9 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "4-channel ESD array 0.5pF, Ethernet MDI pairs" (at 215.9 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "TPD4E05U06DQAR" (at 215.9 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Texas Instruments" (at 215.9 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 215.9 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "efdca9fe-4714-5c4a-be79-6bb7c1af7e0f"))
+(pin "2" (uuid "edf63b78-034b-520e-91d2-0818ddf993c5"))
+(pin "3" (uuid "f95f21d5-9d7e-573b-b562-56c55b9ad4c8"))
+(pin "4" (uuid "cbe835f6-f0de-532b-b6d0-220f0fd710be"))
+(pin "5" (uuid "c6e5e8a5-54f1-5ce1-a6a4-e84143653c90"))
+(pin "6" (uuid "98f44922-8c3b-585f-82d5-90758c995495"))
+(pin "7" (uuid "7fdf19c6-16ff-5288-a4db-0bee83d7810a"))
+(pin "8" (uuid "4bf9d029-1a4b-510b-a615-cb89aef5a2f8"))
+(pin "9" (uuid "1ae6fb4e-8c46-55b7-9fcb-dd4ff2dac672"))
+(pin "10" (uuid "231a23fc-a8c1-55e3-b2b9-31b43bcaa97a"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "U16") (unit 1)))))
+(global_label "ETH_P2_P" (shape passive) (at 203.2 59.69 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0b2f87f1-57f5-5368-86ab-f87b6656ce0e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P2_N" (shape passive) (at 203.2 64.77 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ce09a543-e63d-5529-b742-26ff6e5a31ab") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 215.9 74.93 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "480cdb94-2422-56bd-b971-212aa01380b6") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P3_P" (shape passive) (at 228.6 59.69 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "531c33e8-f7a2-5533-a40f-18c3c3bab988") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "ETH_P3_N" (shape passive) (at 228.6 64.77 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c682d8a6-b89a-574c-be02-d8090193a1b6") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(no_connect (at 228.6 69.85) (uuid "36b96a83-9355-51aa-9a41-c5220b083f11"))
+(no_connect (at 228.6 54.61) (uuid "a8536eaa-a4b0-5922-a0a6-9a2d14a368c8"))
+(no_connect (at 203.2 69.85) (uuid "36156a99-cb87-522b-9152-1b9fef0f6da8"))
+(no_connect (at 203.2 54.61) (uuid "181836b9-1c06-55c7-9f96-f9ed9f33ee33"))
+(symbol (lib_id "Diode:PMEG10020ELR") (at 252.73 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "41052f35-0957-5004-875b-3091afbf0470")
+(property "Reference" "D7" (at 252.73 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "PMEG10020ELR" (at 252.73 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W" (at 252.73 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf" (at 252.73 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Schottky 100V 2A SOD-123W, PoE input bridge" (at 252.73 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "PMEG10020ELRX" (at 252.73 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Nexperia" (at 252.73 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "SS210" (at 252.73 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "69cf3f59-d6aa-5ee7-8ff7-96be61aadace"))
+(pin "2" (uuid "ce653195-9cbe-544f-8081-4e4ff19300f8"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "D7") (unit 1)))))
+(global_label "VPOE_P" (shape passive) (at 252.73 77.47 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2d947466-e160-530a-bbe1-91077993dfdd") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_V1" (shape passive) (at 252.73 69.85 90) (effects (font (size 1.27 1.27)) (justify left)) (uuid "fe42f847-a7fd-5a5c-b2d6-6ea616562d96") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Diode:PMEG10020ELR") (at 252.73 123.19 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b4bab130-157e-5e81-ba72-be27c8c73018")
+(property "Reference" "D8" (at 252.73 118.11 0) (effects (font (size 1.27 1.27))))
+(property "Value" "PMEG10020ELR" (at 252.73 119.89 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W" (at 252.73 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf" (at 252.73 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Schottky 100V 2A SOD-123W, PoE input bridge" (at 252.73 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "PMEG10020ELRX" (at 252.73 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Nexperia" (at 252.73 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "SS210" (at 252.73 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "8a15a4a9-08f3-518f-9ed9-64ed8193cca7"))
+(pin "2" (uuid "b75dc6b7-ba15-571e-ace9-82713074a22c"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "D8") (unit 1)))))
+(global_label "POE_V1" (shape passive) (at 252.73 127.0 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2d0f2141-614d-5ba5-861d-723ce5703fa3") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VPOE_N" (shape passive) (at 252.73 119.38 90) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9e08cb24-379d-5f20-bf6e-6507d2c8986d") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Diode:PMEG10020ELR") (at 262.89 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ffdc1a30-5c3b-5a18-ad4b-c588951e2fc4")
+(property "Reference" "D9" (at 262.89 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "PMEG10020ELR" (at 262.89 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W" (at 262.89 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf" (at 262.89 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Schottky 100V 2A SOD-123W, PoE input bridge" (at 262.89 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "PMEG10020ELRX" (at 262.89 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Nexperia" (at 262.89 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "SS210" (at 262.89 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "8d7a86ed-051b-55c1-a772-12fd1d16358c"))
+(pin "2" (uuid "2ed6b03e-cd81-5643-b58f-f6644058a634"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "D9") (unit 1)))))
+(global_label "VPOE_P" (shape passive) (at 262.89 77.47 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fec974bf-b9ee-5826-9c26-497f0bd21f6a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_V2" (shape passive) (at 262.89 69.85 90) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f18ad123-be8d-5a6a-aa08-f2ec01c6870b") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Diode:PMEG10020ELR") (at 262.89 123.19 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d489662e-cba3-530a-b1c6-66f3c0f2b87b")
+(property "Reference" "D10" (at 262.89 118.11 0) (effects (font (size 1.27 1.27))))
+(property "Value" "PMEG10020ELR" (at 262.89 119.89 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W" (at 262.89 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf" (at 262.89 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Schottky 100V 2A SOD-123W, PoE input bridge" (at 262.89 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "PMEG10020ELRX" (at 262.89 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Nexperia" (at 262.89 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "SS210" (at 262.89 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "b051832f-be2d-5f29-8170-3775ee9edf9b"))
+(pin "2" (uuid "7c3111d6-088b-5560-a11b-f28e238eb255"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "D10") (unit 1)))))
+(global_label "POE_V2" (shape passive) (at 262.89 127.0 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a77db838-1b81-5677-9e0d-8b03c254d518") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VPOE_N" (shape passive) (at 262.89 119.38 90) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c60f981c-8b52-55ac-b839-d609fe882252") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Diode:PMEG10020ELR") (at 273.05 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cd85dcba-8d9b-5656-b1ab-bf951462b7b0")
+(property "Reference" "D11" (at 273.05 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "PMEG10020ELR" (at 273.05 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W" (at 273.05 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf" (at 273.05 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Schottky 100V 2A SOD-123W, PoE input bridge" (at 273.05 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "PMEG10020ELRX" (at 273.05 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Nexperia" (at 273.05 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "SS210" (at 273.05 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "c0932e9c-482d-5033-9ebe-16556cd1a0b5"))
+(pin "2" (uuid "0146bec0-5af8-5d4f-ad39-eeed3f1a4fe4"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "D11") (unit 1)))))
+(global_label "VPOE_P" (shape passive) (at 273.05 77.47 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "359cd5ee-9027-5124-bb12-8a2c8ae13faf") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_V3" (shape passive) (at 273.05 69.85 90) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5aec54b5-ff64-583d-bf8a-ddff491c2daf") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Diode:PMEG10020ELR") (at 273.05 123.19 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3b407f64-b919-5702-92be-976bab59f1f7")
+(property "Reference" "D12" (at 273.05 118.11 0) (effects (font (size 1.27 1.27))))
+(property "Value" "PMEG10020ELR" (at 273.05 119.89 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W" (at 273.05 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf" (at 273.05 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Schottky 100V 2A SOD-123W, PoE input bridge" (at 273.05 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "PMEG10020ELRX" (at 273.05 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Nexperia" (at 273.05 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "SS210" (at 273.05 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "dae021f9-4818-50de-998a-14785dcede57"))
+(pin "2" (uuid "2a40b568-48d3-5932-8b46-6be884a0f996"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "D12") (unit 1)))))
+(global_label "POE_V3" (shape passive) (at 273.05 127.0 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "81119a93-8bed-5bcf-9d69-d34d8e4d453f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VPOE_N" (shape passive) (at 273.05 119.38 90) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ac5dc7f5-0f51-567b-b50d-6fd7d3c55ac1") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Diode:PMEG10020ELR") (at 283.21 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e57cc4f7-7c91-58ca-953b-9ac3064f4783")
+(property "Reference" "D13" (at 283.21 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "PMEG10020ELR" (at 283.21 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W" (at 283.21 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf" (at 283.21 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Schottky 100V 2A SOD-123W, PoE input bridge" (at 283.21 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "PMEG10020ELRX" (at 283.21 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Nexperia" (at 283.21 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "SS210" (at 283.21 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "11fcc412-a665-52b1-969c-a18b9c62424a"))
+(pin "2" (uuid "383da07b-dccd-52d4-9915-acd73f484c24"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "D13") (unit 1)))))
+(global_label "VPOE_P" (shape passive) (at 283.21 77.47 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "255f3dda-562a-54e8-a66d-9845718c1acc") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_V4" (shape passive) (at 283.21 69.85 90) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4ff6f375-074f-5aaf-a2cb-70f9839379c2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Diode:PMEG10020ELR") (at 283.21 123.19 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b2d1303d-3cf3-5b1a-a98d-89afab1a17d5")
+(property "Reference" "D14" (at 283.21 118.11 0) (effects (font (size 1.27 1.27))))
+(property "Value" "PMEG10020ELR" (at 283.21 119.89 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W" (at 283.21 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf" (at 283.21 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Schottky 100V 2A SOD-123W, PoE input bridge" (at 283.21 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "PMEG10020ELRX" (at 283.21 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Nexperia" (at 283.21 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "SS210" (at 283.21 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "7bf13169-cd27-59b6-bc58-df3e343fda99"))
+(pin "2" (uuid "35537a6b-4574-5737-8983-a120c7e90a4b"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "D14") (unit 1)))))
+(global_label "POE_V4" (shape passive) (at 283.21 127.0 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "464b1432-3a68-5bc0-a9ed-34d90365a070") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VPOE_N" (shape passive) (at 283.21 119.38 90) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4305f017-801a-5f4b-84a1-62410fdc8621") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Diode:SMAJ58A") (at 293.37 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "53074b9c-eb4a-50f4-a8b4-ea7567443bb5")
+(property "Reference" "D15" (at 293.37 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "SMAJ58A" (at 293.37 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Diode_SMD:D_SMA" (at 293.37 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet" (at 293.37 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "TVS 58V unidirectional 400W SMA (pin 1 cathode to VPOE_P)" (at 293.37 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "SMAJ58A" (at 293.37 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Littelfuse" (at 293.37 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 293.37 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "eb56c30f-6aa6-5ac6-bcf7-b418f952e011"))
+(pin "2" (uuid "afd8dfab-8552-5b8e-95b3-c5877c8a563a"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "D15") (unit 1)))))
+(global_label "VPOE_P" (shape passive) (at 293.37 77.47 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ef448ea4-e371-5f09-a23b-e4b92187e938") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VPOE_N" (shape passive) (at 293.37 69.85 90) (effects (font (size 1.27 1.27)) (justify left)) (uuid "38c7d891-f1ad-5587-b436-b46c2a4ddcf3") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 309.88 106.68 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6c3185cd-2b43-5100-bb81-a77f17258e79")
+(property "Reference" "C69" (at 309.88 101.6 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 100V" (at 309.88 103.38 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 309.88 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 309.88 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 100V X7R 0805" (at 309.88 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21B104KCFNNNE" (at 309.88 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 309.88 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 309.88 106.68 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "bf1dfc42-f3a2-5f5a-bf20-d6307efa6182"))
+(pin "2" (uuid "7dec7135-ed49-5a48-b5ed-b58161613e7c"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "C69") (unit 1)))))
+(global_label "VPOE_P" (shape passive) (at 306.07 106.68 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "777ad6ce-b99d-5d98-887d-f827da573bb7") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VPOE_N" (shape passive) (at 313.69 106.68 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "adbc5333-3a87-5ac9-aacb-07780a324666") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:FerriteBead") (at 309.88 123.19 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "dfcd03ee-6d9e-5559-b62d-76bec87c6cda")
+(property "Reference" "FB1" (at 309.88 118.11 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1k@100MHz 2A" (at 309.88 119.89 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Inductor_SMD:L_1210_3225Metric" (at 309.88 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 309.88 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Ferrite bead" (at 309.88 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "FBMH3225HM102NT" (at 309.88 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Taiyo Yuden" (at 309.88 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 309.88 123.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "ace52f33-c9d0-5699-91b1-ef74a8e17baf"))
+(pin "2" (uuid "4fe0fbad-058f-566e-9984-cb38b37bd141"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "FB1") (unit 1)))))
+(global_label "VPOE_P" (shape passive) (at 306.07 123.19 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "db05ba4e-f097-50ef-84b8-fac06c21f7e2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_VIN_P" (shape passive) (at 313.69 123.19 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5361f73d-3816-5e75-a955-7b3ad35dd2a6") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:FerriteBead") (at 309.88 140.97 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e935d0bb-4596-5d4e-919b-77297884290e")
+(property "Reference" "FB2" (at 309.88 135.89 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1k@100MHz 2A" (at 309.88 137.67 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Inductor_SMD:L_1210_3225Metric" (at 309.88 140.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 309.88 140.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Ferrite bead" (at 309.88 140.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "FBMH3225HM102NT" (at 309.88 140.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Taiyo Yuden" (at 309.88 140.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 309.88 140.97 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "4fcb2f45-c3b6-5b8b-939b-917d9e790163"))
+(pin "2" (uuid "0b08ffa1-8f77-5ca1-b905-9fb1e576bc66"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "FB2") (unit 1)))))
+(global_label "VPOE_N" (shape passive) (at 306.07 140.97 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "54002c42-7f42-57cc-b10b-25197576fdaa") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_VIN_N" (shape passive) (at 313.69 140.97 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a5dba214-e4ea-5ad2-b11c-a706befe1af2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "tahanan:Ag5810") (at 368.3 64.77 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "21fb8f08-893e-5cf9-bc02-04fdddb66148")
+(property "Reference" "U17" (at 368.3 48.01 0) (effects (font (size 1.27 1.27))))
+(property "Value" "Ag5810" (at 368.3 50.01 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "tahanan:Silvertel_Ag5810" (at 368.3 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://silvertel.com/images/datasheets/Ag5810-datasheet-IEEE802_3bt-Power-over-Ethernet-4-pair-PD.pdf" (at 368.3 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "60 W IEEE 802.3bt Type 4 isolated PoE PD module, 12 V out" (at 368.3 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "Ag5810" (at 368.3 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Silvertel" (at 368.3 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "Ag5800 (85W, larger footprint)" (at 368.3 64.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "9518517d-5ca7-5c66-95e7-edf5223e47bf"))
+(pin "2" (uuid "931635e6-8f86-5095-b6aa-751d48c1dcfb"))
+(pin "3" (uuid "4b33b9be-7540-541b-bc02-e291129c581c"))
+(pin "4" (uuid "be2815bd-eb2e-530c-8b30-ad6aa82f23cd"))
+(pin "5" (uuid "3156da12-fdd0-5d6b-bff9-717e3e6345c2"))
+(pin "6" (uuid "0601d397-92e4-5e2e-8d58-a6c7f6185470"))
+(pin "7" (uuid "bc637fe9-90b7-5d03-9ca3-c756ea359c75"))
+(pin "8" (uuid "3077ec5e-5892-559c-9c0a-eb915c1bf4cc"))
+(pin "10" (uuid "70cd02f3-b8ce-5943-8d90-8df23631a54b"))
+(pin "13" (uuid "541456fe-e31a-5971-8e75-d4c735a7c2c2"))
+(pin "9" (uuid "e0200004-bcf8-5927-a4bb-5a4022a7e8b5"))
+(pin "11" (uuid "0fbf2d6e-3fd1-58c9-acbe-b4311d5f9581"))
+(pin "12" (uuid "0da3dbd8-fea9-57fe-96b6-3cc21c910b14"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "U17") (unit 1)))))
+(global_label "POE_VIN_P" (shape passive) (at 355.6 54.61 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b1a7b28c-35c1-5335-9c1b-11d585bb01d1") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_VIN_N" (shape passive) (at 355.6 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f670f92d-acee-5213-bc32-6e784c647958") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(no_connect (at 355.6 62.23) (uuid "725e229b-6a43-577f-b8ff-dcd6ab25ed9f"))
+(global_label "POE_T4DET" (shape passive) (at 355.6 64.77 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0aafeb6d-6ed8-547c-8825-e25c38bc8cf9") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(no_connect (at 355.6 69.85) (uuid "48831126-0585-56fb-9fa7-bdaf9c54d776"))
+(no_connect (at 355.6 72.39) (uuid "0e839830-a758-5acb-8873-f9f124e9fc36"))
+(global_label "V12_POE" (shape passive) (at 381.0 54.61 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "80e27d62-756d-5b65-9333-bba4e4aba37b") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "V12_POE" (shape passive) (at 381.0 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "b3f0c9ad-bb9e-590e-b9f3-90b064650715") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "V12_POE" (shape passive) (at 381.0 59.69 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f7595662-5b19-52be-b024-e225c37ffaa8") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(no_connect (at 381.0 64.77) (uuid "6ccfcee7-6f2c-5f2d-bd30-5b3f79d60252"))
+(global_label "GND" (shape passive) (at 381.0 69.85 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "14ad01ba-b68a-5a0a-8a04-09c5cd72efa6") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 381.0 72.39 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4ac470c9-2d16-53ab-9212-7ddb48032d01") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 381.0 74.93 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3906a6b5-2a9f-5502-8867-bb737d39264a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 38.1 166.37 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1d78d945-e44a-5d3d-8e45-9d02fa33ac54")
+(property "Reference" "R25" (at 38.1 161.29 0) (effects (font (size 1.27 1.27))))
+(property "Value" "27k" (at 38.1 163.07 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 27k 1% 1206 0.25W, opto LED current limit from 57V" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC1206FR-0727kL" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "9d01788c-a807-54ca-99da-9843929209dc"))
+(pin "2" (uuid "c8e0c94e-a5a4-58f3-abfc-0217742f6f20"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "R25") (unit 1)))))
+(global_label "POE_VIN_P" (shape passive) (at 34.29 166.37 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b6c38504-41bc-5465-81ee-66347cc7fd0a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_OPTO_A" (shape passive) (at 41.91 166.37 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "36b30df2-23f4-56ca-9952-60aa487eaf8f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Isolator:LTV-817S") (at 93.98 166.37 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0566a412-32a9-5a42-ade6-fbcc734b0899")
+(property "Reference" "U18" (at 93.98 157.23 0) (effects (font (size 1.27 1.27))))
+(property "Value" "LTV-817S" (at 93.98 159.23 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_DIP:SMDIP-4_W9.53mm" (at 93.98 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "http://www.us.liteon.com/downloads/LTV-817-827-847.PDF" (at 93.98 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Optocoupler 5kV, PoE Type 4 detect across the isolation barrier" (at 93.98 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "LTV-817S" (at 93.98 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Lite-On" (at 93.98 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "PC817X (SMD), TLP785" (at 93.98 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "18e9ee1c-bf40-50a1-95a0-cedf6f1953c2"))
+(pin "2" (uuid "78777b44-fec7-516d-a8e7-6b7722de9bc2"))
+(pin "3" (uuid "ea215de7-9b8a-5181-a9e0-8e8143c15584"))
+(pin "4" (uuid "058532b1-1c74-56d4-b58e-56277bfd01a6"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "U18") (unit 1)))))
+(global_label "POE_OPTO_A" (shape passive) (at 86.36 163.83 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "40853ebe-1143-5f2a-9933-404dc4530616") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_T4DET" (shape passive) (at 86.36 168.91 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5da57452-8685-5544-aca7-48eff7ed2103") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 101.6 168.91 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "90f6c209-80c4-5c53-b73d-96e5ec3e2587") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_BT_N" (shape passive) (at 101.6 163.83 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f4a49221-49c0-51a4-abfb-3b98db2a04e7") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 140.97 166.37 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4717423a-880e-5e65-b5c7-3773ebea4178")
+(property "Reference" "R26" (at 140.97 161.29 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10k" (at 140.97 163.07 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 140.97 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 140.97 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 10k 1% 0402" (at 140.97 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-0710kL" (at 140.97 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 140.97 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 140.97 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "daeae678-ca29-561a-a723-92f5fb8cc7c4"))
+(pin "2" (uuid "8241b009-f01a-5ea5-bfcd-984758749d3a"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "R26") (unit 1)))))
+(global_label "+3V3" (shape passive) (at 137.16 166.37 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b7e5ad53-d444-57e7-8b43-4d42e4c59bec") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "POE_BT_N" (shape passive) (at 144.78 166.37 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "311eb06e-ecec-577c-9bd2-05cca3de0e43") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C_Polarized") (at 144.78 184.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0ea10dfc-2353-59fd-b9d7-d60b90d6fb8a")
+(property "Reference" "C70" (at 144.78 179.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1000uF 16V" (at 144.78 180.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5" (at 144.78 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 144.78 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Aluminium electrolytic 1000uF 16V, required by Ag5810" (at 144.78 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "EEE-FT1C102AP" (at 144.78 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Panasonic" (at 144.78 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 144.78 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "f806ead6-751c-5a1f-9e2e-5f9605026739"))
+(pin "2" (uuid "ea241563-9425-59ad-b695-bffce471c635"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "C70") (unit 1)))))
+(global_label "V12_POE" (shape passive) (at 140.97 184.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "72f4043e-e9f7-526d-941b-61293fcdce5b") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 148.59 184.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "52895dc9-40cd-561f-8138-4783cca2d089") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 144.78 200.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "019058fa-81d4-5fc9-a1f4-9649dbc0eb89")
+(property "Reference" "C71" (at 144.78 195.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uF 25V" (at 144.78 197.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 144.78 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 144.78 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 10uF 25V X7R 1206" (at 144.78 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL31B106KAHNNNE" (at 144.78 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 144.78 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 144.78 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "8211c594-31bc-5823-b3fd-a100c835a858"))
+(pin "2" (uuid "9418a94c-9779-58b5-92a9-9027fc03349b"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "C71") (unit 1)))))
+(global_label "V12_POE" (shape passive) (at 140.97 200.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "78065fe3-a4b6-59ee-9fdd-14ce1696c325") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 148.59 200.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "af7ba572-84c7-524f-ad06-7b7f64c69655") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C_Polarized") (at 144.78 218.44 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3dde3a5f-feaf-5d29-9d49-d483fa71e91a")
+(property "Reference" "C72" (at 144.78 213.36 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1000uF 16V" (at 144.78 215.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5" (at 144.78 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 144.78 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Aluminium electrolytic 1000uF 16V, required by Ag5810" (at 144.78 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "EEE-FT1C102AP" (at 144.78 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Panasonic" (at 144.78 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 144.78 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "3f898f15-0992-5fba-bbd4-ff0ac75e3c0a"))
+(pin "2" (uuid "3f33b7b2-baeb-5c28-88c8-1f177f3ebe8e"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "C72") (unit 1)))))
+(global_label "V12_POE" (shape passive) (at 140.97 218.44 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d20497fe-6e16-5229-883e-757f82f3c7ea") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 148.59 218.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "412324ba-0e59-517f-a305-aeb15ba27ab1") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 144.78 234.95 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ebb0397c-357c-5f49-8183-063ea899819f")
+(property "Reference" "C73" (at 144.78 229.87 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uF 25V" (at 144.78 231.65 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_1206_3216Metric" (at 144.78 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 144.78 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 10uF 25V X7R 1206" (at 144.78 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL31B106KAHNNNE" (at 144.78 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 144.78 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 144.78 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "f7993540-3fc6-53a1-a6ed-7742b34bccf8"))
+(pin "2" (uuid "fcdc4039-7430-5310-8a81-32385c79f955"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "C73") (unit 1)))))
+(global_label "V12_POE" (shape passive) (at 140.97 234.95 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3f0bcffe-1757-5687-b1f3-5a8df46a337f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 148.59 234.95 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e9dc5345-e2e1-57fa-949f-b3b05ee1e387") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 144.78 251.46 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "48b317d2-d8aa-57c2-a87d-76b2260a7977")
+(property "Reference" "R27" (at 144.78 246.38 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1M" (at 144.78 248.16 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_1206_3216Metric" (at 144.78 251.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 144.78 251.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 1M 1% 1206" (at 144.78 251.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC1206FR-071ML" (at 144.78 251.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 144.78 251.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 144.78 251.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "16ae1eef-86e8-5c2a-b6e6-412a519dd066"))
+(pin "2" (uuid "560f0fa3-38aa-55d7-8ba6-9c36d479ee23"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "R27") (unit 1)))))
+(global_label "CHASSIS" (shape passive) (at 140.97 251.46 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "01ca81a6-a3ff-5890-95ad-354ff67c983f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 148.59 251.46 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "80c7eb8a-aba0-5f13-8339-68f091c7538e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 186.69 166.37 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "efeb8403-bc05-5190-a463-013fb153dbd1")
+(property "Reference" "C74" (at 186.69 161.29 0) (effects (font (size 1.27 1.27))))
+(property "Value" "4.7nF 2kV" (at 186.69 163.07 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_1812_4532Metric" (at 186.69 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 186.69 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 4.7nF 2kV X7R 1812" (at 186.69 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "C1812C472KGRACTU" (at 186.69 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "KEMET" (at 186.69 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 186.69 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "7931b981-e2dc-5039-86ba-500171fdfd16"))
+(pin "2" (uuid "403ffc15-aacc-519b-b37b-892b8107e4a8"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "C74") (unit 1)))))
+(global_label "CHASSIS" (shape passive) (at 182.88 166.37 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "56f5d32a-c4e2-5f99-90c3-abb071fee528") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 190.5 166.37 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "b376ae99-5d32-534f-a20d-39493dd6a31b") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 184.15 184.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "efe6172d-ffe6-5314-86ba-5de7fbf21641")
+(property "Reference" "R28" (at 184.15 179.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "330" (at 184.15 180.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 184.15 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 184.15 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 330 1% 0402" (at 184.15 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-07330RL" (at 184.15 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 184.15 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 184.15 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "c675b8f9-4d08-5eef-b11e-f1700a721810"))
+(pin "2" (uuid "c164eab7-258d-598b-8e49-61195bd4736b"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "R28") (unit 1)))))
+(global_label "+3V3" (shape passive) (at 180.34 184.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7ead0ef3-3036-575a-80ce-164333842e46") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "LEDE1_A" (shape passive) (at 187.96 184.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8b27edf5-33d7-5869-bdb8-70130fe801ec") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:LED") (at 170.18 218.44 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4ce35dfb-ce1d-5eac-bbb8-ff5c44eab888")
+(property "Reference" "D16" (at 170.18 213.36 0) (effects (font (size 1.27 1.27))))
+(property "Value" "LED green" (at 170.18 215.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "LED_SMD:LED_0603_1608Metric" (at 170.18 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 170.18 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "LED green 0603" (at 170.18 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "150060GS75000" (at 170.18 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Wurth" (at 170.18 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 170.18 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "304a6982-abb5-5b55-9201-1b50810ca5fe"))
+(pin "2" (uuid "cdf6ace0-b57b-541f-8823-e73710014543"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "D16") (unit 1)))))
+(global_label "ETH_LED3_N" (shape passive) (at 170.18 222.25 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "33a548f7-a6e0-56e3-900e-23d57d5b4cbd") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "LEDE1_A" (shape passive) (at 170.18 214.63 90) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f4c57a7b-27a0-57ab-82d9-674f06cf6d10") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 184.15 256.54 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1b7893bc-6073-5ca6-968a-1d8db577770e")
+(property "Reference" "R29" (at 184.15 251.46 0) (effects (font (size 1.27 1.27))))
+(property "Value" "330" (at 184.15 253.24 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 184.15 256.54 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 184.15 256.54 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 330 1% 0402" (at 184.15 256.54 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-07330RL" (at 184.15 256.54 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 184.15 256.54 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 184.15 256.54 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "5c1242d1-f9be-5b20-b427-da6ce217d9bd"))
+(pin "2" (uuid "bd261afc-25fa-5823-a6ef-1e0e6d955abd"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "R29") (unit 1)))))
+(global_label "+3V3" (shape passive) (at 180.34 256.54 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "05e6ab47-4573-56dd-a721-5912001c5494") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "LEDE2_A" (shape passive) (at 187.96 256.54 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3e684336-718c-56bb-87c8-5af29979b5ee") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:LED") (at 210.82 184.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "43b35a36-929b-55b5-b12a-632a50e07a3e")
+(property "Reference" "D17" (at 210.82 179.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "LED yellow" (at 210.82 180.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "LED_SMD:LED_0603_1608Metric" (at 210.82 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 210.82 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "LED yellow 0603" (at 210.82 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "150060YS75000" (at 210.82 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Wurth" (at 210.82 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 210.82 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "81e8fbe9-e66f-58f8-8dda-645018555f49"))
+(pin "2" (uuid "fc51be7c-1f7d-5b74-bbb4-35cde81e640d"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/3f587b54-df39-5918-b791-896dd1ee704d" (reference "D17") (unit 1)))))
+(global_label "ETH_LED2_N" (shape passive) (at 210.82 187.96 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "bde8a452-7a5f-5aad-be86-3ca57551b696") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "LEDE2_A" (shape passive) (at 210.82 180.34 90) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f0d04bfe-3bb2-51b3-9ad1-27659671e6e4") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+)

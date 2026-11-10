@@ -1,0 +1,4448 @@
+{
+ "sheets": {
+  "power_in": "Power input: USB-C PD sink, input OR-ing",
+  "power_rails": "Regulators and sequencing",
+  "cm5": "Compute Module 5 and system control",
+  "storage_usb": "NVMe (M.2 Key M) and USB 3.0 host ports",
+  "ethernet_poe": "Gigabit Ethernet and 802.3bt PoE powered device",
+  "radios": "Zigbee, Thread and Z-Wave",
+  "audio": "Audio codec, microphone and speaker output"
+ },
+ "parts": [
+  {
+   "ref": "J1",
+   "value": "USB-C PD",
+   "fp": "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+   "mpn": "USB4105-GF-A",
+   "mfr": "GCT",
+   "desc": "USB Type-C receptacle, USB 2.0, 16 pin, top mount",
+   "alt": "HRO TYPE-C-31-M-12 (different footprint)",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "https://www.usb.org/sites/default/files/documents/usb_type-c.zip",
+   "symbol": "Connector:USB_C_Receptacle_USB2.0_16P",
+   "net": {
+    "A4": "VBUS",
+    "A9": "VBUS",
+    "B4": "VBUS",
+    "B9": "VBUS",
+    "A1": "GND",
+    "A12": "GND",
+    "B1": "GND",
+    "B12": "GND",
+    "A5": "USBC_CC1",
+    "B5": "USBC_CC2",
+    "A6": "USB2_DP",
+    "B6": "USB2_DP",
+    "A7": "USB2_DM",
+    "B7": "USB2_DM",
+    "A8": "NC",
+    "B8": "NC",
+    "SH": "CHASSIS"
+   }
+  },
+  {
+   "ref": "U1",
+   "value": "STUSB4500QTR",
+   "fp": "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm",
+   "mpn": "STUSB4500QTR",
+   "mfr": "STMicroelectronics",
+   "desc": "Stand-alone USB PD controller (with sink Auto-run mode), QFN-24",
+   "alt": "STUSB4500LQTR (5V-only variant is NOT a substitute)",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "https://www.st.com/resource/en/datasheet/stusb4500.pdf",
+   "symbol": "Interface_USB:STUSB4500QTR",
+   "net": {
+    "2": "USBC_CC1",
+    "1": "USBC_CC1",
+    "4": "USBC_CC2",
+    "5": "USBC_CC2",
+    "3": "NC",
+    "6": "GND",
+    "7": "I2C1_SCL",
+    "8": "I2C1_SDA",
+    "9": "PD_DISCH",
+    "10": "GND",
+    "25": "GND",
+    "11": "NC",
+    "12": "GND",
+    "13": "GND",
+    "14": "NC",
+    "15": "NC",
+    "16": "PD_VBUS_EN_N",
+    "17": "NC",
+    "18": "PD_VS_DISCH",
+    "19": "NC",
+    "20": "NC",
+    "21": "PD_1V2",
+    "22": "GND",
+    "23": "PD_2V7",
+    "24": "VBUS"
+   }
+  },
+  {
+   "ref": "C1",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "PD_1V2",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C2",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "PD_2V7",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C3",
+   "value": "4.7uF 50V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A475KBQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 4.7uF 50V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VBUS",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R1",
+   "value": "470",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07470RL",
+   "mfr": "Yageo",
+   "desc": "Resistor 470 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "VBUS",
+    "2": "PD_VS_DISCH"
+   }
+  },
+  {
+   "ref": "R2",
+   "value": "1k",
+   "fp": "Resistor_SMD:R_0603_1608Metric",
+   "mpn": "RC0603FR-071kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 1k 1% 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "VBUS_SW",
+    "2": "PD_DISCH"
+   }
+  },
+  {
+   "ref": "D1",
+   "value": "SMAJ22A",
+   "fp": "Diode_SMD:D_SMA",
+   "mpn": "SMAJ22A",
+   "mfr": "Littelfuse",
+   "desc": "TVS 22V unidirectional 400W SMA",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet",
+   "symbol": "Diode:SMAJ22A",
+   "net": {
+    "1": "VBUS",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "Q1",
+   "value": "DMP3013SFV",
+   "fp": "Package_SON:Diodes_PowerDI3333-8",
+   "mpn": "DMP3013SFV-7",
+   "mfr": "Diodes Inc",
+   "desc": "P-MOSFET -30V 13mOhm PowerDI3333-8",
+   "alt": "Si7617DN",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "https://www.diodes.com/assets/Datasheets/DMP3013SFV.pdf",
+   "symbol": "Transistor_FET:DMP3013SFV",
+   "net": {
+    "1": "VBUS",
+    "2": "VBUS",
+    "3": "VBUS",
+    "4": "PD_GATE",
+    "5": "VBUS_SW"
+   }
+  },
+  {
+   "ref": "R3",
+   "value": "100k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07100kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 100k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "VBUS",
+    "2": "PD_GATE"
+   }
+  },
+  {
+   "ref": "R4",
+   "value": "22k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-0722kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 22k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "PD_GATE",
+    "2": "PD_VBUS_EN_N"
+   }
+  },
+  {
+   "ref": "C4",
+   "value": "100nF 50V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10B104KB8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 50V X7R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VBUS",
+    "2": "PD_GATE"
+   }
+  },
+  {
+   "ref": "D2",
+   "value": "BZT52C10S 10V",
+   "fp": "Diode_SMD:D_SOD-323",
+   "mpn": "BZT52C10S-7-F",
+   "mfr": "Diodes Inc",
+   "desc": "Zener 10V 200mW SOD-323, Q1 gate clamp",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:D_Zener",
+   "net": {
+    "1": "VBUS",
+    "2": "PD_GATE"
+   }
+  },
+  {
+   "ref": "U2",
+   "value": "USBLC6-2SC6",
+   "fp": "Package_TO_SOT_SMD:SOT-23-6",
+   "mpn": "USBLC6-2SC6",
+   "mfr": "STMicroelectronics",
+   "desc": "Very low capacitance ESD protection diode, 2 data-line, SOT-23-6",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "https://www.st.com/resource/en/datasheet/usblc6-2.pdf",
+   "symbol": "Power_Protection:USBLC6-2SC6",
+   "net": {
+    "1": "USB2_DP",
+    "6": "USB2_DP",
+    "3": "USB2_DM",
+    "4": "USB2_DM",
+    "5": "VBUS",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C5",
+   "value": "10uF 50V",
+   "fp": "Capacitor_SMD:C_1210_3225Metric",
+   "mpn": "CL32B106KBJNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 50V X7R 1210",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VBUS_SW",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "U3",
+   "value": "LM74700-Q1",
+   "fp": "Package_TO_SOT_SMD:SOT-23-6",
+   "mpn": "LM74700QDBVRQ1",
+   "mfr": "Texas Instruments",
+   "desc": "Low Iq reverse battery protection ideal diode controller, SOT-23-6",
+   "alt": "LM74701-Q1",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "http://www.ti.com/lit/gpn/LM74700-Q1",
+   "symbol": "Power_Management:LM74700",
+   "net": {
+    "1": "OR1_VCAP",
+    "2": "GND",
+    "3": "VBUS_SW",
+    "4": "VIN",
+    "5": "OR1_GATE",
+    "6": "VBUS_SW"
+   }
+  },
+  {
+   "ref": "Q2",
+   "value": "CSD17581Q3A",
+   "fp": "Package_SON:VSON-8_3.3x3.3mm_P0.65mm_NexFET",
+   "mpn": "CSD17581Q3A",
+   "mfr": "Texas Instruments",
+   "desc": "N-MOSFET 30V 3.8mOhm SON3.3x3.3",
+   "alt": "CSD17577Q3A",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "https://www.ti.com/lit/ds/symlink/csd17581q3a.pdf",
+   "symbol": "Transistor_FET:CSD17581Q3A",
+   "net": {
+    "1": "VBUS_SW",
+    "2": "VBUS_SW",
+    "3": "VBUS_SW",
+    "4": "OR1_GATE",
+    "5": "VIN"
+   }
+  },
+  {
+   "ref": "C6",
+   "value": "100nF 50V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10B104KB8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 50V X7R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "OR1_VCAP",
+    "2": "VBUS_SW"
+   }
+  },
+  {
+   "ref": "U4",
+   "value": "LM74700-Q1",
+   "fp": "Package_TO_SOT_SMD:SOT-23-6",
+   "mpn": "LM74700QDBVRQ1",
+   "mfr": "Texas Instruments",
+   "desc": "Low Iq reverse battery protection ideal diode controller, SOT-23-6",
+   "alt": "LM74701-Q1",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "http://www.ti.com/lit/gpn/LM74700-Q1",
+   "symbol": "Power_Management:LM74700",
+   "net": {
+    "1": "OR2_VCAP",
+    "2": "GND",
+    "3": "V12_POE",
+    "4": "VIN",
+    "5": "OR2_GATE",
+    "6": "V12_POE"
+   }
+  },
+  {
+   "ref": "Q3",
+   "value": "CSD17581Q3A",
+   "fp": "Package_SON:VSON-8_3.3x3.3mm_P0.65mm_NexFET",
+   "mpn": "CSD17581Q3A",
+   "mfr": "Texas Instruments",
+   "desc": "N-MOSFET 30V 3.8mOhm SON3.3x3.3",
+   "alt": "CSD17577Q3A",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "https://www.ti.com/lit/ds/symlink/csd17581q3a.pdf",
+   "symbol": "Transistor_FET:CSD17581Q3A",
+   "net": {
+    "1": "V12_POE",
+    "2": "V12_POE",
+    "3": "V12_POE",
+    "4": "OR2_GATE",
+    "5": "VIN"
+   }
+  },
+  {
+   "ref": "C7",
+   "value": "100nF 50V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10B104KB8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 50V X7R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "OR2_VCAP",
+    "2": "V12_POE"
+   }
+  },
+  {
+   "ref": "C8",
+   "value": "10uF 50V",
+   "fp": "Capacitor_SMD:C_1210_3225Metric",
+   "mpn": "CL32B106KBJNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 50V X7R 1210",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C9",
+   "value": "10uF 50V",
+   "fp": "Capacitor_SMD:C_1210_3225Metric",
+   "mpn": "CL32B106KBJNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 50V X7R 1210",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C10",
+   "value": "100uF 35V",
+   "fp": "Capacitor_SMD:CP_Elec_6.3x7.7",
+   "mpn": "EEE-FT1V101AP",
+   "mfr": "Panasonic",
+   "desc": "Aluminium electrolytic 100uF 35V low-ESR",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Device:C_Polarized",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "TP1",
+   "value": "VIN",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad VIN",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "VIN"
+   }
+  },
+  {
+   "ref": "TP2",
+   "value": "VBUS",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad VBUS",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "VBUS"
+   }
+  },
+  {
+   "ref": "TP3",
+   "value": "GND",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad GND",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "TP4",
+   "value": "GND",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad GND",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_in",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "U5",
+   "value": "LMR33640ADDA",
+   "fp": "Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm_ThermalVias",
+   "mpn": "LMR33640ADDAR",
+   "mfr": "Texas Instruments",
+   "desc": "Simple Switcher Synchronous Buck Regulator, Vin=3.8-36V, Iout=4A, F=400kHz, Adjustable output voltage, HSOP-8",
+   "alt": "LMR33640DDDAR (2.1MHz, needs smaller L)",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "http://www.ti.com/lit/ds/symlink/lmr33640.pdf",
+   "symbol": "Regulator_Switching:LMR33640ADDA",
+   "net": {
+    "1": "GND",
+    "9": "GND",
+    "2": "VIN",
+    "3": "EN_5V",
+    "4": "PG_5V",
+    "5": "FB_5V",
+    "6": "VCC_5V",
+    "7": "BOOT_5V",
+    "8": "SW_5V"
+   }
+  },
+  {
+   "ref": "C11",
+   "value": "10uF 50V",
+   "fp": "Capacitor_SMD:C_1210_3225Metric",
+   "mpn": "CL32B106KBJNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 50V X7R 1210",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C12",
+   "value": "10uF 50V",
+   "fp": "Capacitor_SMD:C_1210_3225Metric",
+   "mpn": "CL32B106KBJNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 50V X7R 1210",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C13",
+   "value": "100nF 50V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10B104KB8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 50V X7R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C14",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "BOOT_5V",
+    "2": "SW_5V"
+   }
+  },
+  {
+   "ref": "C15",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VCC_5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "L1",
+   "value": "10uH",
+   "fp": "Inductor_SMD:L_Bourns_SRP1038C_10.0x10.0mm",
+   "mpn": "SRP1038C-100M",
+   "mfr": "Bourns",
+   "desc": "Shielded power inductor 10uH",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:L",
+   "net": {
+    "1": "SW_5V",
+    "2": "+5V"
+   }
+  },
+  {
+   "ref": "R5",
+   "value": "100k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07100kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 100k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+5V",
+    "2": "FB_5V"
+   }
+  },
+  {
+   "ref": "R6",
+   "value": "24.9k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-0724k9L",
+   "mfr": "Yageo",
+   "desc": "Resistor 24.9k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "FB_5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C16",
+   "value": "22pF 50V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05C220JB5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 22pF 50V C0G 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "FB_5V"
+   }
+  },
+  {
+   "ref": "C17",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C18",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C19",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C20",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R7",
+   "value": "100k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07100kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 100k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+5V",
+    "2": "PG_5V"
+   }
+  },
+  {
+   "ref": "R8",
+   "value": "100k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07100kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 100k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "VIN",
+    "2": "EN_5V"
+   }
+  },
+  {
+   "ref": "R9",
+   "value": "18k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-0718kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 18k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "EN_5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "U6",
+   "value": "LMR33640ADDA",
+   "fp": "Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm_ThermalVias",
+   "mpn": "LMR33640ADDAR",
+   "mfr": "Texas Instruments",
+   "desc": "Simple Switcher Synchronous Buck Regulator, Vin=3.8-36V, Iout=4A, F=400kHz, Adjustable output voltage, HSOP-8",
+   "alt": "LMR33640DDDAR (2.1MHz, needs smaller L)",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "http://www.ti.com/lit/ds/symlink/lmr33640.pdf",
+   "symbol": "Regulator_Switching:LMR33640ADDA",
+   "net": {
+    "1": "GND",
+    "9": "GND",
+    "2": "VIN",
+    "3": "PG_5V",
+    "4": "PG_5VUSB",
+    "5": "FB_5VUSB",
+    "6": "VCC_5VUSB",
+    "7": "BOOT_5VUSB",
+    "8": "SW_5VUSB"
+   }
+  },
+  {
+   "ref": "C21",
+   "value": "10uF 50V",
+   "fp": "Capacitor_SMD:C_1210_3225Metric",
+   "mpn": "CL32B106KBJNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 50V X7R 1210",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C22",
+   "value": "10uF 50V",
+   "fp": "Capacitor_SMD:C_1210_3225Metric",
+   "mpn": "CL32B106KBJNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 50V X7R 1210",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C23",
+   "value": "100nF 50V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10B104KB8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 50V X7R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C24",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "BOOT_5VUSB",
+    "2": "SW_5VUSB"
+   }
+  },
+  {
+   "ref": "C25",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VCC_5VUSB",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "L2",
+   "value": "10uH",
+   "fp": "Inductor_SMD:L_Bourns_SRP1038C_10.0x10.0mm",
+   "mpn": "SRP1038C-100M",
+   "mfr": "Bourns",
+   "desc": "Shielded power inductor 10uH",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:L",
+   "net": {
+    "1": "SW_5VUSB",
+    "2": "+5V_USB"
+   }
+  },
+  {
+   "ref": "R10",
+   "value": "100k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07100kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 100k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+5V_USB",
+    "2": "FB_5VUSB"
+   }
+  },
+  {
+   "ref": "R11",
+   "value": "24.9k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-0724k9L",
+   "mfr": "Yageo",
+   "desc": "Resistor 24.9k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "FB_5VUSB",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C26",
+   "value": "22pF 50V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05C220JB5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 22pF 50V C0G 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V_USB",
+    "2": "FB_5VUSB"
+   }
+  },
+  {
+   "ref": "C27",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V_USB",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C28",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V_USB",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C29",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V_USB",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C30",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V_USB",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R12",
+   "value": "100k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07100kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 100k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+5V_USB",
+    "2": "PG_5VUSB"
+   }
+  },
+  {
+   "ref": "U7",
+   "value": "LMR33630ADDA",
+   "fp": "Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm_ThermalVias",
+   "mpn": "LMR33630ADDAR",
+   "mfr": "Texas Instruments",
+   "desc": "Simple Switcher Synchronous Buck Regulator, Vin=3.8-36V, Iout=3A, F=400kHz, Adjustable output voltage, HSOP-8",
+   "alt": "LMR33640ADDAR",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "http://www.ti.com/lit/ds/symlink/lmr33630.pdf",
+   "symbol": "Regulator_Switching:LMR33630ADDA",
+   "net": {
+    "1": "GND",
+    "9": "GND",
+    "2": "VIN",
+    "3": "PCIE_PWR_EN",
+    "4": "PG_3V3N",
+    "5": "FB_3V3N",
+    "6": "VCC_3V3N",
+    "7": "BOOT_3V3N",
+    "8": "SW_3V3N"
+   }
+  },
+  {
+   "ref": "C31",
+   "value": "10uF 50V",
+   "fp": "Capacitor_SMD:C_1210_3225Metric",
+   "mpn": "CL32B106KBJNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 50V X7R 1210",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C32",
+   "value": "10uF 50V",
+   "fp": "Capacitor_SMD:C_1210_3225Metric",
+   "mpn": "CL32B106KBJNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 50V X7R 1210",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C33",
+   "value": "100nF 50V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10B104KB8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 50V X7R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VIN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C34",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "BOOT_3V3N",
+    "2": "SW_3V3N"
+   }
+  },
+  {
+   "ref": "C35",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VCC_3V3N",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "L3",
+   "value": "6.8uH",
+   "fp": "Inductor_SMD:L_Bourns_SRP1038C_10.0x10.0mm",
+   "mpn": "SRP1038C-6R8M",
+   "mfr": "Bourns",
+   "desc": "Shielded power inductor 6.8uH",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:L",
+   "net": {
+    "1": "SW_3V3N",
+    "2": "+3V3_NVME"
+   }
+  },
+  {
+   "ref": "R13",
+   "value": "100k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07100kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 100k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "FB_3V3N"
+   }
+  },
+  {
+   "ref": "R14",
+   "value": "43.2k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-0743k2L",
+   "mfr": "Yageo",
+   "desc": "Resistor 43.2k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "FB_3V3N",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C36",
+   "value": "22pF 50V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05C220JB5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 22pF 50V C0G 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "FB_3V3N"
+   }
+  },
+  {
+   "ref": "C37",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C38",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C39",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C40",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R15",
+   "value": "100k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07100kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 100k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "PG_3V3N"
+   }
+  },
+  {
+   "ref": "R16",
+   "value": "100k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07100kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 100k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "PCIE_PWR_EN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "U8",
+   "value": "AP63203WU",
+   "fp": "Package_TO_SOT_SMD:TSOT-23-6",
+   "mpn": "AP63203WU-7",
+   "mfr": "Diodes Inc",
+   "desc": "2A, 1.1MHz Buck DC/DC Converter, fixed 3.3V output voltage, TSOT-23-6",
+   "alt": "AP63205WU-7 is 5V, not a substitute",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf",
+   "symbol": "Regulator_Switching:AP63203WU",
+   "net": {
+    "1": "+3V3",
+    "2": "CM5_3V3",
+    "3": "+5V",
+    "4": "GND",
+    "5": "SW_3V3",
+    "6": "BST_3V3"
+   }
+  },
+  {
+   "ref": "C41",
+   "value": "10uF 10V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10A106KP8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 10V X5R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C42",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "BST_3V3",
+    "2": "SW_3V3"
+   }
+  },
+  {
+   "ref": "L4",
+   "value": "4.7uH",
+   "fp": "Inductor_SMD:L_Bourns-SRN4018",
+   "mpn": "SRN4018-4R7M",
+   "mfr": "Bourns",
+   "desc": "Shielded power inductor 4.7uH 2A",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:L",
+   "net": {
+    "1": "SW_3V3",
+    "2": "+3V3"
+   }
+  },
+  {
+   "ref": "C43",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C44",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "U9",
+   "value": "AP2112K-1.8",
+   "fp": "Package_TO_SOT_SMD:SOT-23-5",
+   "mpn": "AP2112K-1.8TRG1",
+   "mfr": "Diodes Inc",
+   "desc": "600mA low dropout linear regulator, with enable pin, 2.5V-6V input voltage range, 1.8V fixed positive output, SOT-23-5",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "https://www.diodes.com/assets/Datasheets/AP2112.pdf",
+   "symbol": "Regulator_Linear:AP2112K-1.8",
+   "net": {
+    "1": "+3V3",
+    "2": "GND",
+    "3": "+3V3",
+    "5": "+1V8",
+    "4": "NC"
+   }
+  },
+  {
+   "ref": "C45",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C46",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+1V8",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "TP5",
+   "value": "+5V",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad +5V",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "+5V"
+   }
+  },
+  {
+   "ref": "TP6",
+   "value": "+5V_USB",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad +5V_USB",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "+5V_USB"
+   }
+  },
+  {
+   "ref": "TP7",
+   "value": "+3V3",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad +3V3",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "+3V3"
+   }
+  },
+  {
+   "ref": "TP8",
+   "value": "+3V3_NVME",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad +3V3_NVME",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "+3V3_NVME"
+   }
+  },
+  {
+   "ref": "TP9",
+   "value": "+1V8",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad +1V8",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "+1V8"
+   }
+  },
+  {
+   "ref": "TP10",
+   "value": "V12_POE",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad V12_POE",
+   "alt": "",
+   "dnp": false,
+   "sheet": "power_rails",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "V12_POE"
+   }
+  },
+  {
+   "ref": "J3",
+   "value": "CM5 pins 1-100",
+   "fp": "Connector_Hirose_DF40:Hirose_DF40HC(3.0)-100DS-0.4V_2x50_P0.4mm",
+   "mpn": "DF40HC(3.0)-100DS-0.4V(51)",
+   "mfr": "Hirose",
+   "desc": "100-pin 0.4mm board-to-board receptacle, 3.0mm stack, mates with CM5",
+   "alt": "Amphenol 10164227-1004A1RLF (4.0mm stack; confirm land pattern and change standoffs to 4.0mm)",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
+   "symbol": "tahanan:CM5_A",
+   "net": {
+    "1": "GND",
+    "7": "GND",
+    "13": "GND",
+    "23": "GND",
+    "33": "GND",
+    "43": "GND",
+    "53": "GND",
+    "59": "GND",
+    "65": "GND",
+    "71": "GND",
+    "2": "GND",
+    "8": "GND",
+    "14": "GND",
+    "22": "GND",
+    "32": "GND",
+    "42": "GND",
+    "52": "GND",
+    "60": "GND",
+    "66": "GND",
+    "74": "GND",
+    "98": "GND",
+    "77": "+5V",
+    "79": "+5V",
+    "81": "+5V",
+    "83": "+5V",
+    "85": "+5V",
+    "87": "+5V",
+    "84": "CM5_3V3",
+    "86": "CM5_3V3",
+    "78": "CM5_3V3",
+    "88": "NC",
+    "90": "NC",
+    "76": "VBAT",
+    "12": "ETH_P0_P",
+    "10": "ETH_P0_N",
+    "4": "ETH_P1_P",
+    "6": "ETH_P1_N",
+    "11": "ETH_P2_P",
+    "9": "ETH_P2_N",
+    "3": "ETH_P3_P",
+    "5": "ETH_P3_N",
+    "15": "ETH_LED3_N",
+    "17": "ETH_LED2_N",
+    "18": "NC",
+    "16": "FAN_TACH",
+    "19": "FAN_PWM",
+    "20": "EEPROM_NWP",
+    "21": "LED_ACT_N",
+    "95": "LED_PWR_N",
+    "35": "NC",
+    "36": "NC",
+    "80": "NC",
+    "82": "NC",
+    "89": "NC",
+    "91": "NC",
+    "92": "PWR_BTN_N",
+    "93": "RPIBOOT_N",
+    "94": "NC",
+    "96": "NC",
+    "97": "POE_BT_N",
+    "100": "NC",
+    "99": "NC",
+    "73": "NC",
+    "75": "NC",
+    "58": "I2C1_SDA",
+    "56": "I2C1_SCL",
+    "54": "ZB_H2M_TXD",
+    "34": "ZB_M2H_TXD",
+    "30": "ZB_M2H_RTS",
+    "37": "ZB_H2M_RTS",
+    "39": "TH_H2M_TXD",
+    "40": "TH_M2H_TXD",
+    "44": "TH_M2H_RTS",
+    "38": "TH_H2M_RTS",
+    "31": "DBG_TXD",
+    "28": "DBG_RXD",
+    "55": "ZW_H2M_TXD",
+    "51": "ZW_M2H_TXD",
+    "29": "AUD_RST_N",
+    "50": "USER_BTN_N",
+    "49": "I2S_BCLK",
+    "26": "I2S_WS",
+    "27": "I2S_SDI",
+    "25": "I2S_SDO",
+    "46": "ZB_RST_N",
+    "47": "ZB_BOOT_N",
+    "45": "TH_RST_N",
+    "41": "TH_BOOT_N",
+    "24": "USER_LED",
+    "48": "MIC_ON",
+    "57": "NC",
+    "62": "NC",
+    "63": "NC",
+    "67": "NC",
+    "69": "NC",
+    "61": "NC",
+    "68": "NC",
+    "64": "NC",
+    "72": "NC",
+    "70": "NC"
+   }
+  },
+  {
+   "ref": "J13",
+   "value": "CM5 pins 101-200",
+   "fp": "Connector_Hirose_DF40:Hirose_DF40HC(3.0)-100DS-0.4V_2x50_P0.4mm",
+   "mpn": "DF40HC(3.0)-100DS-0.4V(51)",
+   "mfr": "Hirose",
+   "desc": "100-pin 0.4mm board-to-board receptacle, 3.0mm stack, mates with CM5",
+   "alt": "Amphenol 10164227-1004A1RLF (4.0mm stack; confirm land pattern and change standoffs to 4.0mm)",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
+   "symbol": "tahanan:CM5_B",
+   "net": {
+    "7": "GND",
+    "13": "GND",
+    "19": "GND",
+    "25": "GND",
+    "31": "GND",
+    "37": "GND",
+    "55": "GND",
+    "61": "GND",
+    "67": "GND",
+    "73": "GND",
+    "79": "GND",
+    "85": "GND",
+    "91": "GND",
+    "97": "GND",
+    "8": "GND",
+    "14": "GND",
+    "20": "GND",
+    "26": "GND",
+    "32": "GND",
+    "38": "GND",
+    "44": "GND",
+    "50": "GND",
+    "56": "GND",
+    "62": "GND",
+    "68": "GND",
+    "74": "GND",
+    "80": "GND",
+    "86": "GND",
+    "92": "GND",
+    "98": "GND",
+    "1": "NC",
+    "2": "PCIE_CLKREQ_N",
+    "3": "USB2_DM",
+    "5": "USB2_DP",
+    "4": "PCIE_WAKE_N",
+    "6": "PCIE_PWR_EN",
+    "9": "PCIE_RST_N",
+    "10": "PCIE_CLK_P",
+    "12": "PCIE_CLK_N",
+    "11": "USB_VBUS_EN",
+    "16": "PCIE_RX_P",
+    "18": "PCIE_RX_N",
+    "22": "PCIE_TX_P",
+    "24": "PCIE_TX_N",
+    "28": "USB3_0_RX_N",
+    "30": "USB3_0_RX_P",
+    "40": "USB3_0_TX_N",
+    "42": "USB3_0_TX_P",
+    "34": "USB3_0_DP",
+    "36": "USB3_0_DM",
+    "57": "USB3_1_RX_N",
+    "59": "USB3_1_RX_P",
+    "69": "USB3_1_TX_N",
+    "71": "USB3_1_TX_P",
+    "63": "USB3_1_DP",
+    "65": "USB3_1_DM",
+    "15": "NC",
+    "17": "NC",
+    "21": "NC",
+    "23": "NC",
+    "27": "NC",
+    "29": "NC",
+    "33": "NC",
+    "35": "NC",
+    "39": "NC",
+    "41": "NC",
+    "43": "NC",
+    "45": "NC",
+    "46": "NC",
+    "47": "NC",
+    "48": "NC",
+    "49": "NC",
+    "51": "NC",
+    "52": "NC",
+    "53": "NC",
+    "54": "NC",
+    "58": "NC",
+    "60": "NC",
+    "64": "NC",
+    "66": "NC",
+    "70": "NC",
+    "72": "NC",
+    "75": "NC",
+    "76": "NC",
+    "77": "NC",
+    "78": "NC",
+    "81": "NC",
+    "82": "NC",
+    "83": "NC",
+    "84": "NC",
+    "87": "NC",
+    "88": "NC",
+    "89": "NC",
+    "90": "NC",
+    "93": "NC",
+    "94": "NC",
+    "95": "NC",
+    "96": "NC",
+    "99": "NC",
+    "100": "NC"
+   }
+  },
+  {
+   "ref": "C47",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C48",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C49",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C50",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C51",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C52",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "CM5_3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C53",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "CM5_3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R17",
+   "value": "4.7k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-074k7L",
+   "mfr": "Yageo",
+   "desc": "Resistor 4.7k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+3V3",
+    "2": "I2C1_SDA"
+   }
+  },
+  {
+   "ref": "R18",
+   "value": "4.7k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-074k7L",
+   "mfr": "Yageo",
+   "desc": "Resistor 4.7k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+3V3",
+    "2": "I2C1_SCL"
+   }
+  },
+  {
+   "ref": "SW1",
+   "value": "POWER",
+   "fp": "Button_Switch_SMD:SW_Tactile_SPST_NO_Straight_CK_PTS636Sx25SMTRLFS",
+   "mpn": "PTS636SM25FSMTRLFS",
+   "mfr": "C&K",
+   "desc": "Tactile switch, top actuated: POWER",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Switch:SW_Push",
+   "net": {
+    "1": "PWR_BTN_N",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "SW2",
+   "value": "RPIBOOT",
+   "fp": "Button_Switch_SMD:SW_Tactile_SPST_NO_Straight_CK_PTS636Sx25SMTRLFS",
+   "mpn": "PTS636SM25FSMTRLFS",
+   "mfr": "C&K",
+   "desc": "Tactile switch, top actuated: RPIBOOT",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Switch:SW_Push",
+   "net": {
+    "1": "RPIBOOT_N",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "SW3",
+   "value": "USER",
+   "fp": "Button_Switch_SMD:SW_Tactile_SPST_NO_Straight_CK_PTS636Sx25SMTRLFS",
+   "mpn": "PTS636SM25FSMTRLFS",
+   "mfr": "C&K",
+   "desc": "Tactile switch, top actuated: USER",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Switch:SW_Push",
+   "net": {
+    "1": "USER_BTN_N",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R19",
+   "value": "1k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-071kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 1k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+3V3",
+    "2": "LEDP_A"
+   }
+  },
+  {
+   "ref": "D3",
+   "value": "LED red",
+   "fp": "LED_SMD:LED_0603_1608Metric",
+   "mpn": "150060RS75000",
+   "mfr": "Wurth",
+   "desc": "LED red 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:LED",
+   "net": {
+    "2": "LEDP_A",
+    "1": "LED_PWR_N"
+   }
+  },
+  {
+   "ref": "R20",
+   "value": "1k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-071kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 1k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+3V3",
+    "2": "LEDA_A"
+   }
+  },
+  {
+   "ref": "D4",
+   "value": "LED green",
+   "fp": "LED_SMD:LED_0603_1608Metric",
+   "mpn": "150060GS75000",
+   "mfr": "Wurth",
+   "desc": "LED green 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:LED",
+   "net": {
+    "2": "LEDA_A",
+    "1": "LED_ACT_N"
+   }
+  },
+  {
+   "ref": "R21",
+   "value": "1k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-071kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 1k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "USER_LED",
+    "2": "LEDU_A"
+   }
+  },
+  {
+   "ref": "D5",
+   "value": "LED blue",
+   "fp": "LED_SMD:LED_0603_1608Metric",
+   "mpn": "150060BS75000",
+   "mfr": "Wurth",
+   "desc": "LED blue 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:LED",
+   "net": {
+    "2": "LEDU_A",
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "BT1",
+   "value": "CR1220",
+   "fp": "Battery:BatteryHolder_Keystone_3000_1x12mm",
+   "mpn": "3000",
+   "mfr": "Keystone",
+   "desc": "Coin cell holder 12mm, RTC backup",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Device:Battery_Cell",
+   "net": {
+    "1": "VBAT",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "J6",
+   "value": "FAN",
+   "fp": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+   "mpn": "SM04B-SRSS-TB",
+   "mfr": "JST",
+   "desc": "4-pin 1.0mm fan header, Raspberry Pi 5 fan pinout",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Connector_Generic_MountingPin:Conn_01x04_MountingPin",
+   "net": {
+    "1": "+5V",
+    "2": "FAN_PWM",
+    "3": "GND",
+    "4": "FAN_TACH",
+    "MP": "GND"
+   }
+  },
+  {
+   "ref": "J7",
+   "value": "CONSOLE 3V3",
+   "fp": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+   "mpn": "61300311121",
+   "mfr": "Wurth",
+   "desc": "3-pin header, serial console (UART4, 3.3V)",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Connector_Generic:Conn_01x03",
+   "net": {
+    "1": "GND",
+    "2": "DBG_TXD",
+    "3": "DBG_RXD"
+   }
+  },
+  {
+   "ref": "TP11",
+   "value": "EEPROM_nWP",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad EEPROM_nWP",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "EEPROM_NWP"
+   }
+  },
+  {
+   "ref": "TP12",
+   "value": "CM5_3V3",
+   "fp": "TestPoint:TestPoint_Pad_D1.5mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Test pad CM5_3V3",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Connector:TestPoint",
+   "net": {
+    "1": "CM5_3V3"
+   }
+  },
+  {
+   "ref": "H1",
+   "value": "M2.5 standoff 3mm",
+   "fp": "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M2.5_H3mm_9774030151",
+   "mpn": "9774030151R",
+   "mfr": "Wurth",
+   "desc": "SMT spacer M2.5 internal thread, 3.0mm, CM5 mounting",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Mechanical:MountingHole_Pad",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "H2",
+   "value": "M2.5 standoff 3mm",
+   "fp": "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M2.5_H3mm_9774030151",
+   "mpn": "9774030151R",
+   "mfr": "Wurth",
+   "desc": "SMT spacer M2.5 internal thread, 3.0mm, CM5 mounting",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Mechanical:MountingHole_Pad",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "H3",
+   "value": "M2.5 standoff 3mm",
+   "fp": "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M2.5_H3mm_9774030151",
+   "mpn": "9774030151R",
+   "mfr": "Wurth",
+   "desc": "SMT spacer M2.5 internal thread, 3.0mm, CM5 mounting",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Mechanical:MountingHole_Pad",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "H4",
+   "value": "M2.5 standoff 3mm",
+   "fp": "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M2.5_H3mm_9774030151",
+   "mpn": "9774030151R",
+   "mfr": "Wurth",
+   "desc": "SMT spacer M2.5 internal thread, 3.0mm, CM5 mounting",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Mechanical:MountingHole_Pad",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "H5",
+   "value": "M3 mounting hole",
+   "fp": "MountingHole:MountingHole_3.2mm_M3_Pad_Via",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Board mounting hole M3, plated, grounded",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Mechanical:MountingHole_Pad",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "H6",
+   "value": "M3 mounting hole",
+   "fp": "MountingHole:MountingHole_3.2mm_M3_Pad_Via",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Board mounting hole M3, plated, grounded",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Mechanical:MountingHole_Pad",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "H7",
+   "value": "M3 mounting hole",
+   "fp": "MountingHole:MountingHole_3.2mm_M3_Pad_Via",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Board mounting hole M3, plated, grounded",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Mechanical:MountingHole_Pad",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "H8",
+   "value": "M3 mounting hole",
+   "fp": "MountingHole:MountingHole_3.2mm_M3_Pad_Via",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Board mounting hole M3, plated, grounded",
+   "alt": "",
+   "dnp": false,
+   "sheet": "cm5",
+   "datasheet": "",
+   "symbol": "Mechanical:MountingHole_Pad",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "J4",
+   "value": "M.2 Key M",
+   "fp": "Connector_PCBEdge:TE_M.2_M_2x38-1MP_P0.5mm",
+   "mpn": "2199119-4",
+   "mfr": "TE Connectivity",
+   "desc": "M.2 Key M socket 0.5mm pitch, NVMe SSD",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "https://web.archive.org/web/20200613074028/http://read.pudn.com/downloads794/doc/project/3133918/PCIe_M.2_Electromechanical_Spec_Rev1.0_Final_11012013_RS_Clean.pdf#page=155",
+   "symbol": "Connector:Bus_M.2_Socket_M",
+   "net": {
+    "1": "GND",
+    "3": "GND",
+    "9": "GND",
+    "15": "GND",
+    "21": "GND",
+    "27": "GND",
+    "33": "GND",
+    "39": "GND",
+    "45": "GND",
+    "51": "GND",
+    "57": "GND",
+    "71": "GND",
+    "73": "GND",
+    "75": "GND",
+    "2": "+3V3_NVME",
+    "4": "+3V3_NVME",
+    "12": "+3V3_NVME",
+    "14": "+3V3_NVME",
+    "16": "+3V3_NVME",
+    "18": "+3V3_NVME",
+    "70": "+3V3_NVME",
+    "72": "+3V3_NVME",
+    "74": "+3V3_NVME",
+    "10": "M2_LED_N",
+    "38": "NC",
+    "41": "PCIE_RX_N",
+    "43": "PCIE_RX_P",
+    "47": "PCIE_TX_N",
+    "49": "PCIE_TX_P",
+    "50": "PCIE_RST_N",
+    "52": "PCIE_CLKREQ_N",
+    "53": "PCIE_CLK_N",
+    "54": "PCIE_WAKE_N",
+    "55": "PCIE_CLK_P",
+    "68": "NC",
+    "69": "NC",
+    "29": "NC",
+    "31": "NC",
+    "35": "NC",
+    "37": "NC",
+    "17": "NC",
+    "19": "NC",
+    "23": "NC",
+    "25": "NC",
+    "5": "NC",
+    "7": "NC",
+    "11": "NC",
+    "13": "NC",
+    "6": "NC",
+    "8": "NC",
+    "20": "NC",
+    "22": "NC",
+    "24": "NC",
+    "26": "NC",
+    "28": "NC",
+    "30": "NC",
+    "32": "NC",
+    "34": "NC",
+    "36": "NC",
+    "40": "NC",
+    "42": "NC",
+    "44": "NC",
+    "46": "NC",
+    "48": "NC",
+    "56": "NC",
+    "58": "NC",
+    "67": "NC"
+   }
+  },
+  {
+   "ref": "C54",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C55",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C56",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C57",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C58",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R22",
+   "value": "1k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-071kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 1k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+3V3_NVME",
+    "2": "LEDM_A"
+   }
+  },
+  {
+   "ref": "D6",
+   "value": "LED yellow",
+   "fp": "LED_SMD:LED_0603_1608Metric",
+   "mpn": "150060YS75000",
+   "mfr": "Wurth",
+   "desc": "LED yellow 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:LED",
+   "net": {
+    "2": "LEDM_A",
+    "1": "M2_LED_N"
+   }
+  },
+  {
+   "ref": "H9",
+   "value": "M.2 standoff 2280",
+   "fp": "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M2_H2.5mm_9774025243",
+   "mpn": "9774025243R",
+   "mfr": "Wurth",
+   "desc": "SMT spacer M2, M.2 2280 retention",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Mechanical:MountingHole_Pad",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "H10",
+   "value": "M.2 standoff 2242",
+   "fp": "Mounting_Wuerth:Mounting_Wuerth_WA-SMSI-M2_H2.5mm_9774025243",
+   "mpn": "9774025243R",
+   "mfr": "Wurth",
+   "desc": "SMT spacer M2, M.2 2242 retention",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Mechanical:MountingHole_Pad",
+   "net": {
+    "1": "GND"
+   }
+  },
+  {
+   "ref": "J5",
+   "value": "USB 3.0 x2",
+   "fp": "Connector_USB:USB3_A_Molex_48406-0001_Horizontal_Stacked",
+   "mpn": "48406-0001",
+   "mfr": "Molex",
+   "desc": "Dual stacked USB 3.0 Type-A receptacle",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Connector:USB3_A_Stacked",
+   "net": {
+    "SH": "CHASSIS",
+    "1": "USB_VBUS1",
+    "2": "USB3_0_DM",
+    "3": "USB3_0_DP",
+    "4": "GND",
+    "5": "USB3_0_RX_N",
+    "6": "USB3_0_RX_P",
+    "7": "GND",
+    "8": "USB3_0_TX_N",
+    "9": "USB3_0_TX_P",
+    "10": "USB_VBUS2",
+    "11": "USB3_1_DM",
+    "12": "USB3_1_DP",
+    "13": "GND",
+    "14": "USB3_1_RX_N",
+    "15": "USB3_1_RX_P",
+    "16": "GND",
+    "17": "USB3_1_TX_N",
+    "18": "USB3_1_TX_P"
+   }
+  },
+  {
+   "ref": "U10",
+   "value": "TPS2561DRC",
+   "fp": "Package_SON:VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm_ThermalVias",
+   "mpn": "TPS2561DRCR",
+   "mfr": "Texas Instruments",
+   "desc": "Dual channel precision adjustable current-limited power switches",
+   "alt": "TPS2561ADRCR",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "http://www.ti.com/lit/ds/symlink/tps2561.pdf",
+   "symbol": "tahanan:TPS2561",
+   "net": {
+    "1": "GND",
+    "2": "+5V_USB",
+    "3": "+5V_USB",
+    "4": "USB_VBUS_EN",
+    "5": "USB_VBUS_EN",
+    "6": "NC",
+    "7": "USB_ILIM",
+    "8": "USB_VBUS2",
+    "9": "USB_VBUS1",
+    "10": "NC",
+    "11": "GND"
+   }
+  },
+  {
+   "ref": "R23",
+   "value": "47k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-0747kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 47k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "USB_ILIM",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R24",
+   "value": "100k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07100kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 100k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "USB_VBUS_EN",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C59",
+   "value": "10uF 10V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10A106KP8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 10V X5R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V_USB",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C60",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V_USB",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C61",
+   "value": "150uF 6.3V",
+   "fp": "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B",
+   "mpn": "T520B157M006ATE070",
+   "mfr": "KEMET",
+   "desc": "Polymer tantalum 150uF 6.3V 70mOhm",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:C_Polarized",
+   "net": {
+    "1": "USB_VBUS1",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C62",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "USB_VBUS1",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "U11",
+   "value": "TPD4E05U06DQA",
+   "fp": "Package_SON:USON-10_2.5x1.0mm_P0.5mm",
+   "mpn": "TPD4E05U06DQAR",
+   "mfr": "Texas Instruments",
+   "desc": "4-channel ESD array 0.5pF, USB 3.0 SuperSpeed pairs",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf",
+   "symbol": "Power_Protection:TPD4E05U06DQA",
+   "net": {
+    "1": "USB3_0_RX_P",
+    "2": "USB3_0_RX_N",
+    "4": "USB3_0_TX_P",
+    "5": "USB3_0_TX_N",
+    "3": "GND",
+    "8": "GND",
+    "6": "NC",
+    "7": "NC",
+    "9": "NC",
+    "10": "NC"
+   }
+  },
+  {
+   "ref": "U12",
+   "value": "TPD2EUSB30",
+   "fp": "Package_TO_SOT_SMD:Texas_DRT-3",
+   "mpn": "TPD2EUSB30DRTR",
+   "mfr": "Texas Instruments",
+   "desc": "2-channel ESD array, USB 2.0 D+/D-",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "http://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf",
+   "symbol": "Power_Protection:TPD2EUSB30",
+   "net": {
+    "1": "USB3_0_DP",
+    "2": "USB3_0_DM",
+    "3": "GND"
+   }
+  },
+  {
+   "ref": "C63",
+   "value": "150uF 6.3V",
+   "fp": "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B",
+   "mpn": "T520B157M006ATE070",
+   "mfr": "KEMET",
+   "desc": "Polymer tantalum 150uF 6.3V 70mOhm",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:C_Polarized",
+   "net": {
+    "1": "USB_VBUS2",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C64",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "USB_VBUS2",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "U13",
+   "value": "TPD4E05U06DQA",
+   "fp": "Package_SON:USON-10_2.5x1.0mm_P0.5mm",
+   "mpn": "TPD4E05U06DQAR",
+   "mfr": "Texas Instruments",
+   "desc": "4-channel ESD array 0.5pF, USB 3.0 SuperSpeed pairs",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf",
+   "symbol": "Power_Protection:TPD4E05U06DQA",
+   "net": {
+    "1": "USB3_1_RX_P",
+    "2": "USB3_1_RX_N",
+    "4": "USB3_1_TX_P",
+    "5": "USB3_1_TX_N",
+    "3": "GND",
+    "8": "GND",
+    "6": "NC",
+    "7": "NC",
+    "9": "NC",
+    "10": "NC"
+   }
+  },
+  {
+   "ref": "U14",
+   "value": "TPD2EUSB30",
+   "fp": "Package_TO_SOT_SMD:Texas_DRT-3",
+   "mpn": "TPD2EUSB30DRTR",
+   "mfr": "Texas Instruments",
+   "desc": "2-channel ESD array, USB 2.0 D+/D-",
+   "alt": "",
+   "dnp": false,
+   "sheet": "storage_usb",
+   "datasheet": "http://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf",
+   "symbol": "Power_Protection:TPD2EUSB30",
+   "net": {
+    "1": "USB3_1_DP",
+    "2": "USB3_1_DM",
+    "3": "GND"
+   }
+  },
+  {
+   "ref": "J2",
+   "value": "RJ45 GbE PoE",
+   "fp": "tahanan:RJ45_Wuerth_7499511001A",
+   "mpn": "7499511001A",
+   "mfr": "Wurth Elektronik",
+   "desc": "RJ45 1000BASE-T with magnetics, four cable-side centre taps for PoE, 600 mA per tap",
+   "alt": "Link-PP LPJG0926HENL (different footprint)",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://www.we-online.com/components/products/datasheet/7499511001A.pdf",
+   "symbol": "tahanan:RJ45_WE_7499511001A",
+   "net": {
+    "11": "ETH_P0_P",
+    "10": "ETH_P0_N",
+    "12": "ETH_CT0",
+    "4": "ETH_P1_P",
+    "5": "ETH_P1_N",
+    "6": "ETH_CT1",
+    "3": "ETH_P2_P",
+    "2": "ETH_P2_N",
+    "1": "ETH_CT2",
+    "8": "ETH_P3_P",
+    "9": "ETH_P3_N",
+    "7": "ETH_CT3",
+    "13": "POE_V1",
+    "14": "POE_V2",
+    "15": "POE_V3",
+    "16": "POE_V4",
+    "SH": "CHASSIS"
+   }
+  },
+  {
+   "ref": "C65",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "ETH_CT0",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C66",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "ETH_CT1",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C67",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "ETH_CT2",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C68",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "ETH_CT3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "U15",
+   "value": "TPD4E05U06DQA",
+   "fp": "Package_SON:USON-10_2.5x1.0mm_P0.5mm",
+   "mpn": "TPD4E05U06DQAR",
+   "mfr": "Texas Instruments",
+   "desc": "4-channel ESD array 0.5pF, Ethernet MDI pairs",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf",
+   "symbol": "Power_Protection:TPD4E05U06DQA",
+   "net": {
+    "1": "ETH_P0_P",
+    "2": "ETH_P0_N",
+    "4": "ETH_P1_P",
+    "5": "ETH_P1_N",
+    "3": "GND",
+    "8": "GND",
+    "6": "NC",
+    "7": "NC",
+    "9": "NC",
+    "10": "NC"
+   }
+  },
+  {
+   "ref": "U16",
+   "value": "TPD4E05U06DQA",
+   "fp": "Package_SON:USON-10_2.5x1.0mm_P0.5mm",
+   "mpn": "TPD4E05U06DQAR",
+   "mfr": "Texas Instruments",
+   "desc": "4-channel ESD array 0.5pF, Ethernet MDI pairs",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://www.ti.com/lit/ds/symlink/tpd4e05u06.pdf",
+   "symbol": "Power_Protection:TPD4E05U06DQA",
+   "net": {
+    "1": "ETH_P2_P",
+    "2": "ETH_P2_N",
+    "4": "ETH_P3_P",
+    "5": "ETH_P3_N",
+    "3": "GND",
+    "8": "GND",
+    "6": "NC",
+    "7": "NC",
+    "9": "NC",
+    "10": "NC"
+   }
+  },
+  {
+   "ref": "D7",
+   "value": "PMEG10020ELR",
+   "fp": "Diode_SMD:Nexperia_CFP3_SOD-123W",
+   "mpn": "PMEG10020ELRX",
+   "mfr": "Nexperia",
+   "desc": "Schottky 100V 2A SOD-123W, PoE input bridge",
+   "alt": "SS210",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf",
+   "symbol": "Diode:PMEG10020ELR",
+   "net": {
+    "2": "POE_V1",
+    "1": "VPOE_P"
+   }
+  },
+  {
+   "ref": "D8",
+   "value": "PMEG10020ELR",
+   "fp": "Diode_SMD:Nexperia_CFP3_SOD-123W",
+   "mpn": "PMEG10020ELRX",
+   "mfr": "Nexperia",
+   "desc": "Schottky 100V 2A SOD-123W, PoE input bridge",
+   "alt": "SS210",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf",
+   "symbol": "Diode:PMEG10020ELR",
+   "net": {
+    "2": "VPOE_N",
+    "1": "POE_V1"
+   }
+  },
+  {
+   "ref": "D9",
+   "value": "PMEG10020ELR",
+   "fp": "Diode_SMD:Nexperia_CFP3_SOD-123W",
+   "mpn": "PMEG10020ELRX",
+   "mfr": "Nexperia",
+   "desc": "Schottky 100V 2A SOD-123W, PoE input bridge",
+   "alt": "SS210",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf",
+   "symbol": "Diode:PMEG10020ELR",
+   "net": {
+    "2": "POE_V2",
+    "1": "VPOE_P"
+   }
+  },
+  {
+   "ref": "D10",
+   "value": "PMEG10020ELR",
+   "fp": "Diode_SMD:Nexperia_CFP3_SOD-123W",
+   "mpn": "PMEG10020ELRX",
+   "mfr": "Nexperia",
+   "desc": "Schottky 100V 2A SOD-123W, PoE input bridge",
+   "alt": "SS210",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf",
+   "symbol": "Diode:PMEG10020ELR",
+   "net": {
+    "2": "VPOE_N",
+    "1": "POE_V2"
+   }
+  },
+  {
+   "ref": "D11",
+   "value": "PMEG10020ELR",
+   "fp": "Diode_SMD:Nexperia_CFP3_SOD-123W",
+   "mpn": "PMEG10020ELRX",
+   "mfr": "Nexperia",
+   "desc": "Schottky 100V 2A SOD-123W, PoE input bridge",
+   "alt": "SS210",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf",
+   "symbol": "Diode:PMEG10020ELR",
+   "net": {
+    "2": "POE_V3",
+    "1": "VPOE_P"
+   }
+  },
+  {
+   "ref": "D12",
+   "value": "PMEG10020ELR",
+   "fp": "Diode_SMD:Nexperia_CFP3_SOD-123W",
+   "mpn": "PMEG10020ELRX",
+   "mfr": "Nexperia",
+   "desc": "Schottky 100V 2A SOD-123W, PoE input bridge",
+   "alt": "SS210",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf",
+   "symbol": "Diode:PMEG10020ELR",
+   "net": {
+    "2": "VPOE_N",
+    "1": "POE_V3"
+   }
+  },
+  {
+   "ref": "D13",
+   "value": "PMEG10020ELR",
+   "fp": "Diode_SMD:Nexperia_CFP3_SOD-123W",
+   "mpn": "PMEG10020ELRX",
+   "mfr": "Nexperia",
+   "desc": "Schottky 100V 2A SOD-123W, PoE input bridge",
+   "alt": "SS210",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf",
+   "symbol": "Diode:PMEG10020ELR",
+   "net": {
+    "2": "POE_V4",
+    "1": "VPOE_P"
+   }
+  },
+  {
+   "ref": "D14",
+   "value": "PMEG10020ELR",
+   "fp": "Diode_SMD:Nexperia_CFP3_SOD-123W",
+   "mpn": "PMEG10020ELRX",
+   "mfr": "Nexperia",
+   "desc": "Schottky 100V 2A SOD-123W, PoE input bridge",
+   "alt": "SS210",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://assets.nexperia.com/documents/data-sheet/PMEG10020ELR.pdf",
+   "symbol": "Diode:PMEG10020ELR",
+   "net": {
+    "2": "VPOE_N",
+    "1": "POE_V4"
+   }
+  },
+  {
+   "ref": "D15",
+   "value": "SMAJ58A",
+   "fp": "Diode_SMD:D_SMA",
+   "mpn": "SMAJ58A",
+   "mfr": "Littelfuse",
+   "desc": "TVS 58V unidirectional 400W SMA (pin 1 cathode to VPOE_P)",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet",
+   "symbol": "Diode:SMAJ58A",
+   "net": {
+    "1": "VPOE_P",
+    "2": "VPOE_N"
+   }
+  },
+  {
+   "ref": "C69",
+   "value": "100nF 100V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21B104KCFNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 100V X7R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "VPOE_P",
+    "2": "VPOE_N"
+   }
+  },
+  {
+   "ref": "FB1",
+   "value": "1k@100MHz 2A",
+   "fp": "Inductor_SMD:L_1210_3225Metric",
+   "mpn": "FBMH3225HM102NT",
+   "mfr": "Taiyo Yuden",
+   "desc": "Ferrite bead",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:FerriteBead",
+   "net": {
+    "1": "VPOE_P",
+    "2": "POE_VIN_P"
+   }
+  },
+  {
+   "ref": "FB2",
+   "value": "1k@100MHz 2A",
+   "fp": "Inductor_SMD:L_1210_3225Metric",
+   "mpn": "FBMH3225HM102NT",
+   "mfr": "Taiyo Yuden",
+   "desc": "Ferrite bead",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:FerriteBead",
+   "net": {
+    "1": "VPOE_N",
+    "2": "POE_VIN_N"
+   }
+  },
+  {
+   "ref": "U17",
+   "value": "Ag5810",
+   "fp": "tahanan:Silvertel_Ag5810",
+   "mpn": "Ag5810",
+   "mfr": "Silvertel",
+   "desc": "60 W IEEE 802.3bt Type 4 isolated PoE PD module, 12 V out",
+   "alt": "Ag5800 (85W, larger footprint)",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "https://silvertel.com/images/datasheets/Ag5810-datasheet-IEEE802_3bt-Power-over-Ethernet-4-pair-PD.pdf",
+   "symbol": "tahanan:Ag5810",
+   "net": {
+    "1": "POE_VIN_P",
+    "2": "POE_VIN_N",
+    "3": "NC",
+    "4": "POE_T4DET",
+    "5": "NC",
+    "6": "NC",
+    "7": "V12_POE",
+    "8": "V12_POE",
+    "10": "V12_POE",
+    "9": "GND",
+    "11": "GND",
+    "12": "GND",
+    "13": "NC"
+   }
+  },
+  {
+   "ref": "R25",
+   "value": "27k",
+   "fp": "Resistor_SMD:R_1206_3216Metric",
+   "mpn": "RC1206FR-0727kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 27k 1% 1206 0.25W, opto LED current limit from 57V",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "POE_VIN_P",
+    "2": "POE_OPTO_A"
+   }
+  },
+  {
+   "ref": "U18",
+   "value": "LTV-817S",
+   "fp": "Package_DIP:SMDIP-4_W9.53mm",
+   "mpn": "LTV-817S",
+   "mfr": "Lite-On",
+   "desc": "Optocoupler 5kV, PoE Type 4 detect across the isolation barrier",
+   "alt": "PC817X (SMD), TLP785",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "http://www.us.liteon.com/downloads/LTV-817-827-847.PDF",
+   "symbol": "Isolator:LTV-817S",
+   "net": {
+    "1": "POE_OPTO_A",
+    "2": "POE_T4DET",
+    "3": "GND",
+    "4": "POE_BT_N"
+   }
+  },
+  {
+   "ref": "R26",
+   "value": "10k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-0710kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 10k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+3V3",
+    "2": "POE_BT_N"
+   }
+  },
+  {
+   "ref": "C70",
+   "value": "1000uF 16V",
+   "fp": "Capacitor_SMD:CP_Elec_10x10.5",
+   "mpn": "EEE-FT1C102AP",
+   "mfr": "Panasonic",
+   "desc": "Aluminium electrolytic 1000uF 16V, required by Ag5810",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:C_Polarized",
+   "net": {
+    "1": "V12_POE",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C71",
+   "value": "10uF 25V",
+   "fp": "Capacitor_SMD:C_1206_3216Metric",
+   "mpn": "CL31B106KAHNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 25V X7R 1206",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "V12_POE",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C72",
+   "value": "1000uF 16V",
+   "fp": "Capacitor_SMD:CP_Elec_10x10.5",
+   "mpn": "EEE-FT1C102AP",
+   "mfr": "Panasonic",
+   "desc": "Aluminium electrolytic 1000uF 16V, required by Ag5810",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:C_Polarized",
+   "net": {
+    "1": "V12_POE",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C73",
+   "value": "10uF 25V",
+   "fp": "Capacitor_SMD:C_1206_3216Metric",
+   "mpn": "CL31B106KAHNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 25V X7R 1206",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "V12_POE",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R27",
+   "value": "1M",
+   "fp": "Resistor_SMD:R_1206_3216Metric",
+   "mpn": "RC1206FR-071ML",
+   "mfr": "Yageo",
+   "desc": "Resistor 1M 1% 1206",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "CHASSIS",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C74",
+   "value": "4.7nF 2kV",
+   "fp": "Capacitor_SMD:C_1812_4532Metric",
+   "mpn": "C1812C472KGRACTU",
+   "mfr": "KEMET",
+   "desc": "MLCC 4.7nF 2kV X7R 1812",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "CHASSIS",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R28",
+   "value": "330",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07330RL",
+   "mfr": "Yageo",
+   "desc": "Resistor 330 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+3V3",
+    "2": "LEDE1_A"
+   }
+  },
+  {
+   "ref": "D16",
+   "value": "LED green",
+   "fp": "LED_SMD:LED_0603_1608Metric",
+   "mpn": "150060GS75000",
+   "mfr": "Wurth",
+   "desc": "LED green 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:LED",
+   "net": {
+    "2": "LEDE1_A",
+    "1": "ETH_LED3_N"
+   }
+  },
+  {
+   "ref": "R29",
+   "value": "330",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07330RL",
+   "mfr": "Yageo",
+   "desc": "Resistor 330 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "+3V3",
+    "2": "LEDE2_A"
+   }
+  },
+  {
+   "ref": "D17",
+   "value": "LED yellow",
+   "fp": "LED_SMD:LED_0603_1608Metric",
+   "mpn": "150060YS75000",
+   "mfr": "Wurth",
+   "desc": "LED yellow 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "ethernet_poe",
+   "datasheet": "",
+   "symbol": "Device:LED",
+   "net": {
+    "2": "LEDE2_A",
+    "1": "ETH_LED2_N"
+   }
+  },
+  {
+   "ref": "U19",
+   "value": "MGM240P Zigbee (RF pin)",
+   "fp": "tahanan:SiliconLabs_MGM240P",
+   "mpn": "MGM240PA32VNN3",
+   "mfr": "Silicon Labs",
+   "desc": "Silicon Labs MGM240P EFR32MG24 multiprotocol 2.4 GHz module (Zigbee, Thread, BLE)",
+   "alt": "MGM240PB32VNA3 / MGM240PB32VNN3 pending certification check",
+   "dnp": false,
+   "sheet": "radios",
+   "datasheet": "https://www.silabs.com/documents/public/data-sheets/mgm240p-datasheet.pdf",
+   "symbol": "tahanan:MGM240P",
+   "net": {
+    "1": "GND",
+    "14": "GND",
+    "23": "GND",
+    "32": "GND",
+    "34": "GND",
+    "35": "GND",
+    "36": "GND",
+    "15": "+3V3",
+    "22": "ZB_M2H_TXD",
+    "24": "ZB_H2M_TXD",
+    "25": "ZB_M2H_RTS",
+    "26": "ZB_H2M_RTS",
+    "6": "ZB_BOOT_N",
+    "31": "ZB_RST_N",
+    "8": "ZB_SWCLK",
+    "9": "ZB_SWDIO",
+    "33": "ZB_RF_A",
+    "2": "NC",
+    "3": "NC",
+    "4": "NC",
+    "5": "NC",
+    "7": "NC",
+    "10": "NC",
+    "11": "NC",
+    "12": "NC",
+    "13": "NC",
+    "16": "NC",
+    "17": "NC",
+    "18": "NC",
+    "19": "NC",
+    "20": "NC",
+    "21": "NC",
+    "27": "NC",
+    "28": "NC",
+    "29": "NC",
+    "30": "NC"
+   }
+  },
+  {
+   "ref": "C75",
+   "value": "10uF 10V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10A106KP8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 10V X5R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C76",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "J8",
+   "value": "ZB SWD",
+   "fp": "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical",
+   "mpn": "",
+   "mfr": "",
+   "desc": "SWD pads, not fitted",
+   "alt": "",
+   "dnp": true,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Connector_Generic:Conn_01x05",
+   "net": {
+    "1": "+3V3",
+    "2": "ZB_SWDIO",
+    "3": "ZB_SWCLK",
+    "4": "ZB_RST_N",
+    "5": "GND"
+   }
+  },
+  {
+   "ref": "R30",
+   "value": "0",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-070RL",
+   "mfr": "Yageo",
+   "desc": "0 ohm 0402, series element of antenna matching pi network",
+   "alt": "",
+   "dnp": false,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "ZB_RF_A",
+    "2": "ZB_RF_B"
+   }
+  },
+  {
+   "ref": "C77",
+   "value": "DNP 50V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "",
+   "mfr": "",
+   "desc": "MLCC DNP 50V C0G 0402",
+   "alt": "",
+   "dnp": true,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "ZB_RF_A",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C78",
+   "value": "DNP 50V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "",
+   "mfr": "",
+   "desc": "MLCC DNP 50V C0G 0402",
+   "alt": "",
+   "dnp": true,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "ZB_RF_B",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "J9",
+   "value": "U.FL Zigbee",
+   "fp": "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical",
+   "mpn": "U.FL-R-SMT-1(80)",
+   "mfr": "Hirose",
+   "desc": "U.FL coaxial receptacle 50 ohm",
+   "alt": "",
+   "dnp": false,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Connector:Conn_Coaxial",
+   "net": {
+    "1": "ZB_RF_B",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "U20",
+   "value": "MGM240P Thread (antenna)",
+   "fp": "tahanan:SiliconLabs_MGM240P",
+   "mpn": "MGM240PA32VNA3",
+   "mfr": "Silicon Labs",
+   "desc": "Silicon Labs MGM240P EFR32MG24 multiprotocol 2.4 GHz module (Zigbee, Thread, BLE)",
+   "alt": "MGM240PB32VNA3 / MGM240PB32VNN3 pending certification check",
+   "dnp": false,
+   "sheet": "radios",
+   "datasheet": "https://www.silabs.com/documents/public/data-sheets/mgm240p-datasheet.pdf",
+   "symbol": "tahanan:MGM240P",
+   "net": {
+    "1": "GND",
+    "14": "GND",
+    "23": "GND",
+    "32": "GND",
+    "34": "GND",
+    "35": "GND",
+    "36": "GND",
+    "15": "+3V3",
+    "22": "TH_M2H_TXD",
+    "24": "TH_H2M_TXD",
+    "25": "TH_M2H_RTS",
+    "26": "TH_H2M_RTS",
+    "6": "TH_BOOT_N",
+    "31": "TH_RST_N",
+    "8": "TH_SWCLK",
+    "9": "TH_SWDIO",
+    "33": "NC",
+    "2": "NC",
+    "3": "NC",
+    "4": "NC",
+    "5": "NC",
+    "7": "NC",
+    "10": "NC",
+    "11": "NC",
+    "12": "NC",
+    "13": "NC",
+    "16": "NC",
+    "17": "NC",
+    "18": "NC",
+    "19": "NC",
+    "20": "NC",
+    "21": "NC",
+    "27": "NC",
+    "28": "NC",
+    "29": "NC",
+    "30": "NC"
+   }
+  },
+  {
+   "ref": "C79",
+   "value": "10uF 10V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10A106KP8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 10V X5R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C80",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "J10",
+   "value": "TH SWD",
+   "fp": "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical",
+   "mpn": "",
+   "mfr": "",
+   "desc": "SWD pads, not fitted",
+   "alt": "",
+   "dnp": true,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Connector_Generic:Conn_01x05",
+   "net": {
+    "1": "+3V3",
+    "2": "TH_SWDIO",
+    "3": "TH_SWCLK",
+    "4": "TH_RST_N",
+    "5": "GND"
+   }
+  },
+  {
+   "ref": "J11",
+   "value": "Z-Wave module socket",
+   "fp": "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical",
+   "mpn": "SSW-105-01-G-D",
+   "mfr": "Samtec",
+   "desc": "2x5 2.54mm socket, Raspberry Pi header pins 1-10 for Z-Wave 800 module",
+   "alt": "",
+   "dnp": false,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Connector_Generic:Conn_02x05_Odd_Even",
+   "net": {
+    "1": "+3V3",
+    "2": "+5V",
+    "3": "NC",
+    "4": "+5V",
+    "5": "NC",
+    "6": "GND",
+    "7": "NC",
+    "8": "ZW_H2M_TXD",
+    "9": "GND",
+    "10": "ZW_M2H_TXD"
+   }
+  },
+  {
+   "ref": "C81",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C82",
+   "value": "10uF 10V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10A106KP8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 10V X5R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "radios",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "U21",
+   "value": "TLV320AIC3100",
+   "fp": "Package_DFN_QFN:VQFN-32-1EP_5x5mm_P0.5mm_EP3.5x3.5mm",
+   "mpn": "TLV320AIC3100IRHBR",
+   "mfr": "Texas Instruments",
+   "desc": "Low Power Audio Codec with Audio Processing and Mono Class\u2011D Amplifier, VQFN-32",
+   "alt": "TLV320AIC3110IRHBR (stereo class-D, same driver)",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "http://www.ti.com/lit/ds/symlink/tlv320aic3100.pdf",
+   "symbol": "Audio:TLV320AIC3100",
+   "net": {
+    "1": "GND",
+    "2": "+3V3",
+    "3": "+1V8",
+    "4": "I2S_SDI",
+    "5": "I2S_SDO",
+    "6": "I2S_WS",
+    "7": "I2S_BCLK",
+    "8": "AUD_MCLK",
+    "9": "I2C1_SDA",
+    "10": "I2C1_SCL",
+    "11": "GND",
+    "12": "NC",
+    "13": "MIC_IN_P",
+    "14": "NC",
+    "15": "MIC_IN_N",
+    "16": "GND",
+    "17": "+3V3A",
+    "18": "GND",
+    "19": "SPK_M",
+    "23": "SPK_M",
+    "20": "GND",
+    "25": "GND",
+    "21": "+5V_SPK",
+    "24": "+5V_SPK",
+    "22": "SPK_P",
+    "26": "SPK_P",
+    "27": "NC",
+    "28": "+3V3A",
+    "29": "GND",
+    "30": "NC",
+    "31": "AUD_RST_N",
+    "32": "NC",
+    "33": "GND"
+   }
+  },
+  {
+   "ref": "FB3",
+   "value": "220R@100MHz 1.4A",
+   "fp": "Inductor_SMD:L_0603_1608Metric",
+   "mpn": "BLM18PG221SN1D",
+   "mfr": "Murata",
+   "desc": "Ferrite bead",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:FerriteBead",
+   "net": {
+    "1": "+3V3",
+    "2": "+3V3A"
+   }
+  },
+  {
+   "ref": "FB4",
+   "value": "220R@100MHz 2A",
+   "fp": "Inductor_SMD:L_0805_2012Metric",
+   "mpn": "BLM21PG221SN1D",
+   "mfr": "Murata",
+   "desc": "Ferrite bead",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:FerriteBead",
+   "net": {
+    "1": "+5V",
+    "2": "+5V_SPK"
+   }
+  },
+  {
+   "ref": "C83",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C84",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+1V8",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C85",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3A",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C86",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3A",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C87",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C88",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+1V8",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C89",
+   "value": "10uF 10V",
+   "fp": "Capacitor_SMD:C_0603_1608Metric",
+   "mpn": "CL10A106KP8NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 10uF 10V X5R 0603",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3A",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C90",
+   "value": "22uF 10V",
+   "fp": "Capacitor_SMD:C_0805_2012Metric",
+   "mpn": "CL21A226MPQNNNE",
+   "mfr": "Samsung",
+   "desc": "MLCC 22uF 10V X5R 0805",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V_SPK",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C91",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V_SPK",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C92",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+5V_SPK",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R31",
+   "value": "10k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-0710kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 10k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "AUD_RST_N",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "Y1",
+   "value": "12.288MHz",
+   "fp": "Oscillator:Oscillator_SMD_ECS_2520MV-xxx-xx-4Pin_2.5x2.0mm",
+   "mpn": "ECS-2520MV-122.8-BN-TR",
+   "mfr": "ECS",
+   "desc": "CMOS oscillator 12.288MHz 2.5x2.0mm",
+   "alt": "SiTime SIT2001BI-S2-33E-12.288000",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "https://www.ecsxtal.com/store/pdf/ECS-2520MV.pdf",
+   "symbol": "Oscillator:ECS-2520MV-xxx-xx",
+   "net": {
+    "1": "+3V3",
+    "2": "GND",
+    "3": "AUD_OSC",
+    "4": "+3V3"
+   }
+  },
+  {
+   "ref": "R32",
+   "value": "33",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-0733RL",
+   "mfr": "Yageo",
+   "desc": "Resistor 33 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "AUD_OSC",
+    "2": "AUD_MCLK"
+   }
+  },
+  {
+   "ref": "C93",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "+3V3",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "MK1",
+   "value": "IM73A135V01",
+   "fp": "Sensor_Audio:Infineon_PG-LLGA-5-2",
+   "mpn": "IM73A135V01XTSA1",
+   "mfr": "Infineon",
+   "desc": "Analog MEMS microphone, 73dB SNR, differential, bottom port, IP57",
+   "alt": "Knowles SPH8878LR5H-1 (different footprint)",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "https://www.infineon.com/dgdl/Infineon-IM73A135-DataSheet-v01_00-EN.pdf?fileId=8ac78c8c7f2a768a017fadec36b84500",
+   "symbol": "Sensor_Audio:IM73A135V01",
+   "net": {
+    "1": "MIC_OUT_P",
+    "3": "MIC_OUT_N",
+    "2": "MIC_VDD",
+    "4": "GND",
+    "5": "GND"
+   }
+  },
+  {
+   "ref": "C94",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "MIC_OUT_P",
+    "2": "MIC_IN_P"
+   }
+  },
+  {
+   "ref": "C95",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "MIC_OUT_N",
+    "2": "MIC_IN_N"
+   }
+  },
+  {
+   "ref": "SW4",
+   "value": "MIC MUTE",
+   "fp": "Button_Switch_SMD:SW_SPDT_CK_JS102011SAQN",
+   "mpn": "JS102011SAQN",
+   "mfr": "C&K",
+   "desc": "Slide switch SPDT, hardware microphone mute",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Switch:SW_SPDT",
+   "net": {
+    "1": "+3V3A",
+    "2": "MIC_VDD",
+    "3": "GND"
+   }
+  },
+  {
+   "ref": "C96",
+   "value": "100nF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B104KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 100nF 16V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "MIC_VDD",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C97",
+   "value": "1uF 16V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05A105KO5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1uF 16V X5R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "MIC_VDD",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "R33",
+   "value": "10k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-0710kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 10k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "MIC_VDD",
+    "2": "MIC_ON"
+   }
+  },
+  {
+   "ref": "R34",
+   "value": "100k",
+   "fp": "Resistor_SMD:R_0402_1005Metric",
+   "mpn": "RC0402FR-07100kL",
+   "mfr": "Yageo",
+   "desc": "Resistor 100k 1% 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:R",
+   "net": {
+    "1": "MIC_ON",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "FB5",
+   "value": "220R@100MHz 1.4A",
+   "fp": "Inductor_SMD:L_0603_1608Metric",
+   "mpn": "BLM18PG221SN1D",
+   "mfr": "Murata",
+   "desc": "Ferrite bead",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:FerriteBead",
+   "net": {
+    "1": "SPK_P",
+    "2": "SPK_OUT_P"
+   }
+  },
+  {
+   "ref": "FB6",
+   "value": "220R@100MHz 1.4A",
+   "fp": "Inductor_SMD:L_0603_1608Metric",
+   "mpn": "BLM18PG221SN1D",
+   "mfr": "Murata",
+   "desc": "Ferrite bead",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:FerriteBead",
+   "net": {
+    "1": "SPK_M",
+    "2": "SPK_OUT_M"
+   }
+  },
+  {
+   "ref": "C98",
+   "value": "1nF 50V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B102KB5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1nF 50V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "SPK_OUT_P",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "C99",
+   "value": "1nF 50V",
+   "fp": "Capacitor_SMD:C_0402_1005Metric",
+   "mpn": "CL05B102KB5NNNC",
+   "mfr": "Samsung",
+   "desc": "MLCC 1nF 50V X7R 0402",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Device:C",
+   "net": {
+    "1": "SPK_OUT_M",
+    "2": "GND"
+   }
+  },
+  {
+   "ref": "J12",
+   "value": "SPEAKER 4R 3W",
+   "fp": "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal",
+   "mpn": "S2B-PH-K-S",
+   "mfr": "JST",
+   "desc": "2-pin 2.0mm header, speaker",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Connector_Generic:Conn_01x02",
+   "net": {
+    "1": "SPK_OUT_P",
+    "2": "SPK_OUT_M"
+   }
+  },
+  {
+   "ref": "FID1",
+   "value": "Fiducial",
+   "fp": "Fiducial:Fiducial_1mm_Mask2mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Fiducial mark",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Mechanical:Fiducial",
+   "net": {}
+  },
+  {
+   "ref": "FID2",
+   "value": "Fiducial",
+   "fp": "Fiducial:Fiducial_1mm_Mask2mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Fiducial mark",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Mechanical:Fiducial",
+   "net": {}
+  },
+  {
+   "ref": "FID3",
+   "value": "Fiducial",
+   "fp": "Fiducial:Fiducial_1mm_Mask2mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Fiducial mark",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Mechanical:Fiducial",
+   "net": {}
+  },
+  {
+   "ref": "FID4",
+   "value": "Fiducial",
+   "fp": "Fiducial:Fiducial_1mm_Mask2mm",
+   "mpn": "",
+   "mfr": "",
+   "desc": "Fiducial mark",
+   "alt": "",
+   "dnp": false,
+   "sheet": "audio",
+   "datasheet": "",
+   "symbol": "Mechanical:Fiducial",
+   "net": {}
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+(version 1)
+
+(rule "PoE isolation barrier"
+  (condition "A.NetClass == 'PoE_Primary' && B.NetClass != 'PoE_Primary' && B.NetName != ''")
+  (constraint clearance (min 2.5mm)))
+
+(rule "PoE primary to planes"
+  (condition "A.NetClass == 'PoE_Primary' && B.Type == 'Zone'")
+  (constraint clearance (min 2.5mm)))
+
+# Stock library footprints whose own pad sits closer to its own hole than the board-level 0.25 mm.
+(rule "SMT spacers: pad surrounds its own hole"
+  (condition "A.Type == 'Pad' && A.Fabrication_Property == 'Heatsink pad' || A.memberOfFootprint('H*')")
+  (constraint hole_clearance (min 0mm)))
+
+(rule "USB-C and microphone locating holes"
+  (condition "A.memberOfFootprint('J1') || A.memberOfFootprint('MK1')")
+  (constraint hole_clearance (min 0.15mm)))
+
+(rule "Diff90 intra-pair skew"
+  (condition "A.NetClass == 'Diff90'")
+  (constraint skew (max 0.1mm)))
+
+(rule "Diff100 intra-pair skew"
+  (condition "A.NetClass == 'Diff100'")
+  (constraint skew (max 0.15mm)))
+
+(rule "RF feed length"
+  (condition "A.NetClass == 'RF50'")
+  (constraint length (max 12mm)))

@@ -1,0 +1,21 @@
+Item,Qty,Manufacturer,MPN / specification,Description,Est. unit USD,Note
+Compute module,1,Raspberry Pi,CM5104000,"Compute Module 5, 4GB RAM, Lite (no eMMC), wireless",60.0,CM5108000 (8GB) is a drop-in option
+NVMe SSD,1,any,"M.2 2280 or 2242 NVMe, single-sided preferred","Primary storage, PCIe Gen 2 x1",30.0,not shipped in the base SKU if sold bare
+CM5 heat sink,1,Raspberry Pi,SC1869 (CM5 passive cooler),Aluminium passive cooler for CM5,5.0,confirm height under 10 mm
+Thermal pad,1,Bergquist / Laird,"1.5 mm, 3 W/mK, 20 x 70 mm",SSD to base thermal land,0.8,
+Speaker,1,PUI Audio / CUI,"40 mm, 4 ohm, 3 W, depth <= 10 mm, JST PH lead",Voice response speaker,2.5,select and confirm acoustically
+Zigbee antenna,1,any,"2.4 GHz RP-SMA dipole, 2-3 dBi, antenna listed in the MGM240P grant",External Zigbee antenna,1.2,certification depends on antenna type and gain
+RF pigtail,1,any,"U.FL to RP-SMA bulkhead, 1.13 mm coax, 150 mm",Zigbee antenna lead,1.0,
+Coin cell,1,Panasonic,CR1220,RTC backup,0.3,
+Screw,4,any,M3 x 25 pan head,Enclosure and PCB clamp,0.03,
+Heat-set insert,4,any,"M3 x 5.7, brass",Lid pillars,0.05,
+Screw,4,any,M2.5 x 5,CM5 to spacers,0.02,
+Screw,1,any,M2 x 3 wafer head,SSD retention,0.02,
+Rubber foot,4,3M,SJ5302 (10 mm),Base feet,0.05,
+Enclosure base,1,custom,mechanical/out/tahanan-base.step,"PC/ABS V-0, moulded or printed",2.5,
+Enclosure lid,1,custom,mechanical/out/tahanan-lid.step,"PC/ABS V-0, moulded or printed",3.0,
+Button plunger,3,custom,mechanical/out/tahanan-button-plunger.step,,0.1,
+Mute slider,1,custom,mechanical/out/tahanan-mute-slider.step,,0.1,
+Bare PCB,1,custom,"tahanan rev A, 160 x 105 mm, 4 layer, 1.6 mm, ENIG",see docs/pcb-layout-guide.md,4.5,after routing
+Z-Wave module (option),1,Aeotec / Zooz,Z-Pi 800 / ZAC93 800 GPIO,Region-specific Z-Wave 800 controller on J11,30.0,optional SKU
+Fan (option),1,any,"40 x 40 x 10 mm, 5 V PWM, JST-SH 4-pin (Pi 5 pinout)",Needed for sustained full load,3.0,optional SKU

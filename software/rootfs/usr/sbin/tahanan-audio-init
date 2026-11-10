@@ -1,0 +1,15 @@
+#!/bin/sh
+# One-shot ALSA mixer defaults for the TLV320AIC3100 (card "TahananHub"). Control names are those of the
+# mainline tlv320aic31xx driver; confirm with `amixer -c TahananHub controls` on first bring-up.
+C="amixer -q -c TahananHub"
+$C sset 'DAC Left Input' 'Mono'  2>/dev/null   # mono mix of L+R to the single class-D output
+$C sset 'DAC' 0dB
+$C sset 'Speaker Driver' on
+$C sset 'Speaker Driver' 12dB
+$C sset 'Speaker Analog' 100
+$C sset 'Output Left From Left DAC' on
+$C sset 'MIC1LP P-Terminal' 'FFR 10 Ohm'
+$C sset 'MIC1LM M-Terminal' 'FFR 10 Ohm'
+$C sset 'Mic PGA' 20dB
+$C sset 'ADC' on
+$C sset 'ADC Capture' 0dB

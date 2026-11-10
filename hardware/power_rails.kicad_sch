@@ -1,0 +1,2599 @@
+(kicad_sch (version 20250114) (generator "tahanan_gen") (generator_version "9.0") (uuid "64d4f371-288d-5b42-8c0a-88f09dcabe58") (paper "A2")
+(title_block (title "Tahanan Hub - Regulators and sequencing") (rev "A") (company "Tahanan") (comment 1 "Generated from hardware/gen/design.py"))
+(lib_symbols
+(symbol "Regulator_Switching:LMR33640ADDA"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LMR33640ADDA"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm_ThermalVias"
+				(at 0 -20.32 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmr33640.pdf"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Simple Switcher Synchronous Buck Regulator, Vin=3.8-36V, Iout=4A, F=400kHz, Adjustable output voltage, HSOP-8"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "simple-switcher synchronous buck step-down voltage-regulator"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Texas*HSOP*1EP*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LMR33640ADDA_0_1"
+				(rectangle
+					(start -7.62 7.62)
+					(end 7.62 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "LMR33640ADDA_1_1"
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "PG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "BOOT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "SW"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762)
+						(xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762)
+						(xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:L"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "L"
+				(at -1.27 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "L"
+				(at 1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Inductor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "L_0_1"
+				(arc
+					(start 0 2.54)
+					(mid 0.6323 1.905)
+					(end 0 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 1.27)
+					(mid 0.6323 0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "L_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Regulator_Switching:LMR33630ADDA"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LMR33630ADDA"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm_ThermalVias"
+				(at 0 -20.32 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmr33630.pdf"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Simple Switcher Synchronous Buck Regulator, Vin=3.8-36V, Iout=3A, F=400kHz, Adjustable output voltage, HSOP-8"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "simple-switcher synchronous buck step-down voltage-regulator"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Texas*HSOP*1EP*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LMR33630ADDA_0_1"
+				(rectangle
+					(start -7.62 7.62)
+					(end 7.62 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "LMR33630ADDA_1_1"
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "PG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "BOOT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "SW"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Regulator_Switching:AP63203WU"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -7.62 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AP63203WU"
+				(at 2.54 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "2A, 1.1MHz Buck DC/DC Converter, fixed 3.3V output voltage, TSOT-23-6"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "2A Buck DC/DC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TSOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "AP63203WU_0_1"
+				(rectangle
+					(start -7.62 5.08)
+					(end 7.62 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "AP63203WU_1_1"
+				(pin input line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "SW"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "BST"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Regulator_Linear:AP2112K-1.8"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -5.08 5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "AP2112K-1.8"
+				(at 0 5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+				(at 0 8.255 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "600mA low dropout linear regulator, with enable pin, 2.5V-6V input voltage range, 1.8V fixed positive output, SOT-23-5"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "linear regulator ldo fixed positive"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23?5*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "AP2112K-1.8_0_1"
+				(rectangle
+					(start -5.08 4.445)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "AP2112K-1.8_1_1"
+				(pin power_in line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 5.08 0 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0)
+						(xy 0 1.27)
+						(xy -1.016 1.905)
+						(xy 0 2.54)
+						(xy 1.016 1.905)
+						(xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+)
+(text "Regulators and sequencing" (exclude_from_sim no) (at 15 14 0) (effects (font (size 3.5 3.5) (bold yes)) (justify left top)) (uuid "65d78e2c-182c-59be-bd5f-42fd7635cced"))
+(text "Sequence: VIN>8V -> +5V (U5) -> PG_5V enables +5V_USB (U6). CM5 starts from +5V; CM5_3V3 then enables +3V3 (U8).\n+3V3_NVME (U7) is enabled by PCIE_PWR_EN from the CM5. Nothing drives a CM5 pin before +5V is valid (CM5 datasheet 3.1).\nLMR336x0: VFB=1.0V. 5V: 100k/24.9k. 3.3V: 100k/43.2k. fsw=400kHz." (exclude_from_sim no) (at 15 21 0) (effects (font (size 1.8 1.8)) (justify left top)) (uuid "2c6a188e-e84b-5e34-be62-ecb012ee16ae"))
+(symbol (lib_id "Regulator_Switching:LMR33640ADDA") (at 40.64 59.69 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "63d25638-0c5d-5230-ad6a-8f9e4a72803a")
+(property "Reference" "U5" (at 40.64 48.01 0) (effects (font (size 1.27 1.27))))
+(property "Value" "LMR33640ADDA" (at 40.64 50.01 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm_ThermalVias" (at 40.64 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmr33640.pdf" (at 40.64 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Simple Switcher Synchronous Buck Regulator, Vin=3.8-36V, Iout=4A, F=400kHz, Adjustable output voltage, HSOP-8" (at 40.64 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "LMR33640ADDAR" (at 40.64 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Texas Instruments" (at 40.64 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "LMR33640DDDAR (2.1MHz, needs smaller L)" (at 40.64 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "ac62ed8d-c046-5334-a98b-54ebe41dd785"))
+(pin "2" (uuid "e97a225f-ae21-530f-9330-f3fe47ad665d"))
+(pin "3" (uuid "df58d838-954d-51e4-a392-efb5ceee8779"))
+(pin "4" (uuid "cdedd7dd-b77c-5cea-b95b-81eca5d808ab"))
+(pin "5" (uuid "afceb8e2-d81a-5ca0-948b-86c458430cb4"))
+(pin "6" (uuid "55c704da-3fdb-5875-8b06-eee8167228f7"))
+(pin "7" (uuid "33eeefe0-fd6d-5d20-bc81-29d32b87dfc6"))
+(pin "8" (uuid "1565d0b6-80f0-5e0e-a74b-e2dc5e1959b1"))
+(pin "9" (uuid "e1c8e883-55cc-5d66-8060-0103baf3a092"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "U5") (unit 1)))))
+(global_label "GND" (shape passive) (at 40.64 69.85 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5e5608e1-a87f-5c08-9f4a-d88f624c7e82") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VIN" (shape passive) (at 30.48 54.61 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "455405fb-09a3-520e-8b07-c23c9f5b81a6") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "EN_5V" (shape passive) (at 30.48 59.69 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f59d3430-3122-5ca4-a66a-4c32bcb5c706") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "PG_5V" (shape passive) (at 50.8 64.77 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "bc37797c-441e-5385-8b8e-55fca5de0bf0") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "FB_5V" (shape passive) (at 50.8 62.23 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9013df3f-6634-5fe3-aade-0ac331e51501") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VCC_5V" (shape passive) (at 30.48 64.77 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fe79b12f-1d7b-5460-b243-84e2d93fc634") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "BOOT_5V" (shape passive) (at 50.8 54.61 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1a03e2d2-0a3a-5505-87ce-4a8d4f506407") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "SW_5V" (shape passive) (at 50.8 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1066bc7f-47a6-5256-97af-ca8e32fedcb6") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 87.63 57.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "74c26bfb-9923-5574-8741-07a095901a5b")
+(property "Reference" "C11" (at 87.63 52.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uF 50V" (at 87.63 53.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 87.63 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 87.63 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 10uF 50V X7R 1210" (at 87.63 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL32B106KBJNNNE" (at 87.63 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 87.63 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 87.63 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "6eeceed3-f512-54e1-a07f-6059b90d9187"))
+(pin "2" (uuid "5da4f1e6-b0e4-5883-9809-1b29461ca088"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C11") (unit 1)))))
+(global_label "VIN" (shape passive) (at 83.82 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8f128b8c-905c-5d60-9330-1fcc49b14123") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 91.44 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "725f1d38-fd08-51cc-80a6-b856477ec056") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 87.63 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "71ddb60c-029e-56c5-acca-d9a71506b842")
+(property "Reference" "C12" (at 87.63 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uF 50V" (at 87.63 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 87.63 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 87.63 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 10uF 50V X7R 1210" (at 87.63 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL32B106KBJNNNE" (at 87.63 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 87.63 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 87.63 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "d413ef0c-cdd0-5f06-b133-c549b77438cf"))
+(pin "2" (uuid "e4790ea6-e996-57cc-9152-12cb75830957"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C12") (unit 1)))))
+(global_label "VIN" (shape passive) (at 83.82 73.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a48fee02-c49e-5328-8a43-323be30d493b") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 91.44 73.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "b6db968a-57aa-5f22-abe2-7b9de5f03384") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 87.63 91.44 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "308fb825-28e1-5bff-b441-96855b9aec57")
+(property "Reference" "C13" (at 87.63 86.36 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 50V" (at 87.63 88.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 87.63 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 87.63 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 50V X7R 0603" (at 87.63 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL10B104KB8NNNC" (at 87.63 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 87.63 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 87.63 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "393e98d2-15fb-5094-b525-013def82c8f8"))
+(pin "2" (uuid "1de71513-d6d0-5f93-be36-98c3deee1db0"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C13") (unit 1)))))
+(global_label "VIN" (shape passive) (at 83.82 91.44 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "37308f7d-29e6-5a4b-b1ec-fef4ead0d8f6") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 91.44 91.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "84600002-f389-5906-a4ff-ddc840efe3bc") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 92.71 107.95 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4f73a93a-735e-5d0a-9ad5-06522f676c4d")
+(property "Reference" "C14" (at 92.71 102.87 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 16V" (at 92.71 104.65 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 92.71 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 92.71 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 16V X7R 0402" (at 92.71 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05B104KO5NNNC" (at 92.71 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 92.71 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 92.71 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "ee7f083f-b70a-5238-b8ab-1fce3fb00d52"))
+(pin "2" (uuid "3969886d-828b-591a-b5fe-595e032cd931"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C14") (unit 1)))))
+(global_label "BOOT_5V" (shape passive) (at 88.9 107.95 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e73abac5-45ae-5e59-9fdf-b2e3f41742fb") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "SW_5V" (shape passive) (at 96.52 107.95 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0ee584bb-2eb9-51e2-b4d5-b83faeba3df0") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 91.44 124.46 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1c2db6a5-2ee4-5835-9b1d-a6175035a71a")
+(property "Reference" "C15" (at 91.44 119.38 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1uF 16V" (at 91.44 121.16 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 91.44 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 91.44 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 1uF 16V X5R 0402" (at 91.44 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05A105KO5NNNC" (at 91.44 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 91.44 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 91.44 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "fe1e6619-ef17-508f-a2c6-4bc08508e368"))
+(pin "2" (uuid "9c92a2f3-8c57-5016-bf69-ee49124e4e8b"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C15") (unit 1)))))
+(global_label "VCC_5V" (shape passive) (at 87.63 124.46 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7866f59c-3d72-516b-8e3c-07b9142fe1e7") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 95.25 124.46 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "bb51234d-5699-58d8-af61-53f2887888c4") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:L") (at 90.17 142.24 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f74854a4-230b-5367-ac85-7c787e8b220f")
+(property "Reference" "L1" (at 90.17 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uH" (at 90.17 138.94 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Inductor_SMD:L_Bourns_SRP1038C_10.0x10.0mm" (at 90.17 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 90.17 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Shielded power inductor 10uH" (at 90.17 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "SRP1038C-100M" (at 90.17 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Bourns" (at 90.17 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 90.17 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "8eef3551-93fc-5dc0-8abd-d2d2a5b6e472"))
+(pin "2" (uuid "08c0e60c-f119-513e-b2a7-a41c9871857e"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "L1") (unit 1)))))
+(global_label "SW_5V" (shape passive) (at 86.36 142.24 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "05ba29c8-9bd7-5eee-bb5e-c285c18653b5") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "+5V" (shape passive) (at 93.98 142.24 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0503bf2b-3242-5516-bca9-0a08800f1862") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 129.54 57.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d469d6f8-1216-51dc-ae10-d7b5a28a7e84")
+(property "Reference" "R5" (at 129.54 52.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100k" (at 129.54 53.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 129.54 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 129.54 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 100k 1% 0402" (at 129.54 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-07100kL" (at 129.54 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 129.54 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 129.54 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "b8cb3db2-198c-5ecb-95b7-882095903d68"))
+(pin "2" (uuid "141a5cb6-44de-5a0e-b4cd-d02dcf71da18"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R5") (unit 1)))))
+(global_label "+5V" (shape passive) (at 125.73 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "836b8001-a397-518e-b03b-0abd7f97fa41") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "FB_5V" (shape passive) (at 133.35 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e3773691-b008-5bca-96e8-bf7967c85f00") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 132.08 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "94f09c4d-37d4-5d35-8868-00ff4b7f4aa6")
+(property "Reference" "R6" (at 132.08 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "24.9k" (at 132.08 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 132.08 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 132.08 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 24.9k 1% 0402" (at 132.08 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-0724k9L" (at 132.08 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 132.08 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 132.08 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "7e2e729d-f600-5d3d-adb2-69ec8bc16c64"))
+(pin "2" (uuid "e7e544ab-a429-5bcb-834f-a00ff85b2fbc"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R6") (unit 1)))))
+(global_label "FB_5V" (shape passive) (at 128.27 73.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5c6c66fd-06d9-5f49-a389-a20d165830fe") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 135.89 73.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3eb7aa49-16d1-5131-91f6-daa28371a8cb") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 129.54 91.44 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "917cdf1d-c4de-51df-b9b7-46d67920853a")
+(property "Reference" "C16" (at 129.54 86.36 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22pF 50V" (at 129.54 88.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 129.54 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 129.54 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22pF 50V C0G 0402" (at 129.54 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05C220JB5NNNC" (at 129.54 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 129.54 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 129.54 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "e47a1c8d-c8cc-58ce-b27b-97475c337a54"))
+(pin "2" (uuid "d34ba8f1-fd60-54ad-9f94-0f16015aacfc"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C16") (unit 1)))))
+(global_label "+5V" (shape passive) (at 125.73 91.44 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6481b26f-c69a-535e-b2f2-3de5404997d4") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "FB_5V" (shape passive) (at 133.35 91.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2a3249c9-19eb-5aec-bfd8-308a54f0ece6") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 129.54 107.95 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "0ad15bdb-cd68-5954-94bb-b0d7dc09cae9")
+(property "Reference" "C17" (at 129.54 102.87 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 129.54 104.65 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 129.54 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 129.54 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 129.54 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 129.54 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 129.54 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 129.54 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "ad647b62-4c30-57df-a49e-5fc4ef1a7122"))
+(pin "2" (uuid "01a94c7b-8048-5a61-b373-09e7370deea7"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C17") (unit 1)))))
+(global_label "+5V" (shape passive) (at 125.73 107.95 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6b880dcf-01f0-5483-8055-faffba567e72") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 133.35 107.95 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "22afe6d4-38e2-531c-bc18-3c3c8300f240") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 129.54 124.46 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "b133d34c-5203-5a6b-9607-4224912e5549")
+(property "Reference" "C18" (at 129.54 119.38 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 129.54 121.16 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 129.54 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 129.54 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 129.54 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 129.54 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 129.54 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 129.54 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "5e3c5510-0e20-5f61-a55d-9e2cbce5ddbb"))
+(pin "2" (uuid "31eb7a3c-c448-5dbd-8eda-6f0db7171a36"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C18") (unit 1)))))
+(global_label "+5V" (shape passive) (at 125.73 124.46 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ccfeec9a-218e-5582-9070-ee3194a20f1a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 133.35 124.46 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "20a866e8-ba6b-58c6-bc00-abf3f4526f8c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 129.54 142.24 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "c82c7316-4906-5732-bee8-fbb3557156f7")
+(property "Reference" "C19" (at 129.54 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 129.54 138.94 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 129.54 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 129.54 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 129.54 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 129.54 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 129.54 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 129.54 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "3fe23c4c-7b33-5d26-bf02-0ee847979741"))
+(pin "2" (uuid "b1204d20-8a69-58a9-bbf2-f935c1cb7410"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C19") (unit 1)))))
+(global_label "+5V" (shape passive) (at 125.73 142.24 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "15c69308-7a06-5d28-bd0d-40f45f6265b2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 133.35 142.24 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c372bb68-08aa-532f-9892-c2d0a54a914f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 167.64 57.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "bf94d9f2-5e82-52de-bf1b-215528e1e8ac")
+(property "Reference" "C20" (at 167.64 52.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 167.64 53.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 167.64 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 167.64 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 167.64 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 167.64 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 167.64 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 167.64 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "58a46741-0e0c-57dc-8c2c-31a8d8a1ee1d"))
+(pin "2" (uuid "8461d627-8ae7-576a-8db3-2a46438ef625"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C20") (unit 1)))))
+(global_label "+5V" (shape passive) (at 163.83 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "23d61cc9-0b7f-58de-924b-bfe54558bae4") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 171.45 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "69920a7c-9330-5131-bd28-3350e21dadcd") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 167.64 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "55f756ad-d8e2-5b28-8d8e-0a281fd74e83")
+(property "Reference" "R7" (at 167.64 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100k" (at 167.64 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 167.64 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 167.64 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 100k 1% 0402" (at 167.64 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-07100kL" (at 167.64 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 167.64 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 167.64 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "14b0ad7c-2475-54a4-b75a-33ddbc87610b"))
+(pin "2" (uuid "0da13a2a-0079-5443-94c4-802a4319423f"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R7") (unit 1)))))
+(global_label "+5V" (shape passive) (at 163.83 73.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d3e1851d-9b33-5dff-822e-9f062d5a76a3") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "PG_5V" (shape passive) (at 171.45 73.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "964e4a26-466a-5b51-923c-ebea6e0c71e2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 167.64 91.44 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "69cb7918-c800-50ba-9931-236c40e61420")
+(property "Reference" "R8" (at 167.64 86.36 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100k" (at 167.64 88.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 167.64 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 167.64 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 100k 1% 0402" (at 167.64 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-07100kL" (at 167.64 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 167.64 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 167.64 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "3c2ab5f1-3cda-5072-8c34-ec2b5044e1f5"))
+(pin "2" (uuid "ad55a960-3960-5f74-9b28-3fc2ebc83871"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R8") (unit 1)))))
+(global_label "VIN" (shape passive) (at 163.83 91.44 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8dcf3878-c6d0-5780-b5d2-97fe5ab81aec") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "EN_5V" (shape passive) (at 171.45 91.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "646375e9-ed71-5483-ad10-24d4b07b9db5") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 170.18 107.95 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4eaf5966-f5f5-551d-8fdd-271e18117394")
+(property "Reference" "R9" (at 170.18 102.87 0) (effects (font (size 1.27 1.27))))
+(property "Value" "18k" (at 170.18 104.65 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 170.18 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 170.18 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 18k 1% 0402" (at 170.18 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-0718kL" (at 170.18 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 170.18 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 170.18 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "610212e8-873f-582a-adaf-9a31a7d86ac7"))
+(pin "2" (uuid "bd7e60b6-e9e5-5d15-83e4-c10c7dda0cdf"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R9") (unit 1)))))
+(global_label "EN_5V" (shape passive) (at 166.37 107.95 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "52b3de28-858c-5ef5-9a7e-6a0d24462656") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 173.99 107.95 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d9a7e698-b6ee-5929-85be-fa1ae6943697") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Regulator_Switching:LMR33640ADDA") (at 218.44 59.69 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f0a838c8-2c94-59b6-834c-c110e0c5041c")
+(property "Reference" "U6" (at 218.44 48.01 0) (effects (font (size 1.27 1.27))))
+(property "Value" "LMR33640ADDA" (at 218.44 50.01 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm_ThermalVias" (at 218.44 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmr33640.pdf" (at 218.44 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Simple Switcher Synchronous Buck Regulator, Vin=3.8-36V, Iout=4A, F=400kHz, Adjustable output voltage, HSOP-8" (at 218.44 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "LMR33640ADDAR" (at 218.44 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Texas Instruments" (at 218.44 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "LMR33640DDDAR (2.1MHz, needs smaller L)" (at 218.44 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "3512d9ba-f89a-556b-9ba0-55d7a59a9b07"))
+(pin "2" (uuid "adbe43fd-b271-5d28-a7d2-e79608de30ad"))
+(pin "3" (uuid "77eda46d-0e82-5cbe-8085-19508e0d9d2d"))
+(pin "4" (uuid "4079dfcd-7b9e-5756-96e5-11ac27f9cb48"))
+(pin "5" (uuid "97974dff-0ddb-5ce8-b16a-a6539a99bacb"))
+(pin "6" (uuid "c0b5809b-1d62-5aea-8eb0-3d96c16a94b8"))
+(pin "7" (uuid "bd575457-107d-55f1-8ae9-abf336fe09be"))
+(pin "8" (uuid "aaa39f03-18bb-53d2-b74c-505974f13c51"))
+(pin "9" (uuid "01ff2121-fe88-5ead-8868-52abb9217f89"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "U6") (unit 1)))))
+(global_label "GND" (shape passive) (at 218.44 69.85 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "236e5c62-2996-5d7e-aacc-cff9b7ae3744") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VIN" (shape passive) (at 208.28 54.61 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0eb4417b-3bf4-5538-856c-40af9f64af02") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "PG_5V" (shape passive) (at 208.28 59.69 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a82b589c-6eee-5e7d-9c7f-e4fde8a5b8f3") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "PG_5VUSB" (shape passive) (at 228.6 64.77 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f56d6487-3f4b-5e45-8279-d5f3499de56c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "FB_5VUSB" (shape passive) (at 228.6 62.23 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e9a0efdd-9646-581e-9fc0-ab7001fe3967") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VCC_5VUSB" (shape passive) (at 208.28 64.77 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "66a0fe84-9266-5341-9050-3eed318e68f5") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "BOOT_5VUSB" (shape passive) (at 228.6 54.61 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "86aee45b-2204-590d-b975-b9841ad0e885") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "SW_5VUSB" (shape passive) (at 228.6 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2cb94222-5d8b-5939-9749-de45aa170604") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 269.24 57.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "56634e35-5cf4-5324-a982-43c52aca2069")
+(property "Reference" "C21" (at 269.24 52.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uF 50V" (at 269.24 53.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 269.24 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 269.24 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 10uF 50V X7R 1210" (at 269.24 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL32B106KBJNNNE" (at 269.24 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 269.24 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 269.24 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "347c3c26-56b5-5d4d-858b-be8289c3459a"))
+(pin "2" (uuid "c5581a03-db5f-5f26-b5b2-d59fed24ffc6"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C21") (unit 1)))))
+(global_label "VIN" (shape passive) (at 265.43 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3a4aec25-2373-5b0a-bee1-e4336323fb64") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 273.05 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "253ccdde-fdbe-5064-885f-af401d593142") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 269.24 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4b34fc56-5f4e-575b-b0ef-c47d4e79fc60")
+(property "Reference" "C22" (at 269.24 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uF 50V" (at 269.24 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 269.24 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 269.24 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 10uF 50V X7R 1210" (at 269.24 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL32B106KBJNNNE" (at 269.24 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 269.24 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 269.24 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "09585e61-e086-5470-b645-41badb2446ae"))
+(pin "2" (uuid "112910a2-6931-5cb3-953a-8c21848b063c"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C22") (unit 1)))))
+(global_label "VIN" (shape passive) (at 265.43 73.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "dc626599-e3f3-5026-a95c-776db8b00c2e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 273.05 73.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "aaf4dd6a-91eb-5ee6-a983-6fbfe2adf855") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 269.24 91.44 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "33c838ba-f104-5903-bafb-d6fb9c568631")
+(property "Reference" "C23" (at 269.24 86.36 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 50V" (at 269.24 88.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 269.24 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 269.24 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 50V X7R 0603" (at 269.24 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL10B104KB8NNNC" (at 269.24 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 269.24 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 269.24 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "7be767d1-1ed1-5641-bc6f-671b3755c626"))
+(pin "2" (uuid "c8bed0ea-9ff7-56ae-8df1-3d2953e23c49"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C23") (unit 1)))))
+(global_label "VIN" (shape passive) (at 265.43 91.44 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2d9bc1af-00be-5d7a-be4b-5e2610386da7") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 273.05 91.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2724fb64-14fa-5c41-99e9-5b4cdf0b16ab") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 278.13 107.95 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "36ef4565-c97d-5396-9767-1b1e1a8e9154")
+(property "Reference" "C24" (at 278.13 102.87 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 16V" (at 278.13 104.65 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 278.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 278.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 16V X7R 0402" (at 278.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05B104KO5NNNC" (at 278.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 278.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 278.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "de5dac2b-e20f-5b53-bdde-3a1147fd0052"))
+(pin "2" (uuid "329e1367-14ad-511e-ad97-4121735c2364"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C24") (unit 1)))))
+(global_label "BOOT_5VUSB" (shape passive) (at 274.32 107.95 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7c578aa9-7265-52f4-8dc5-472379e6b0b2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "SW_5VUSB" (shape passive) (at 281.94 107.95 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "76a23cd4-4464-51e9-8725-a08259a25108") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 276.86 124.46 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cf83b9ab-5672-5418-b69b-729116e51eb3")
+(property "Reference" "C25" (at 276.86 119.38 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1uF 16V" (at 276.86 121.16 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 276.86 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 276.86 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 1uF 16V X5R 0402" (at 276.86 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05A105KO5NNNC" (at 276.86 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 276.86 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 276.86 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "1ecb8b26-e121-5e02-91b9-f5a60979ed80"))
+(pin "2" (uuid "59acf418-a727-5f9b-9e5b-9a67a9205f15"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C25") (unit 1)))))
+(global_label "VCC_5VUSB" (shape passive) (at 273.05 124.46 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d0e19916-f29b-538a-ada7-44262a11d42f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 280.67 124.46 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5b41bc3d-0360-57b7-a7a3-275928498de7") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:L") (at 275.59 142.24 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "80f94bdf-d290-54a5-a3d3-43223ea448ee")
+(property "Reference" "L2" (at 275.59 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uH" (at 275.59 138.94 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Inductor_SMD:L_Bourns_SRP1038C_10.0x10.0mm" (at 275.59 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 275.59 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Shielded power inductor 10uH" (at 275.59 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "SRP1038C-100M" (at 275.59 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Bourns" (at 275.59 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 275.59 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "7a1a0929-326c-5db2-b395-b24d93085cb9"))
+(pin "2" (uuid "c753dd87-68bb-5ac5-8134-6888a85e5cff"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "L2") (unit 1)))))
+(global_label "SW_5VUSB" (shape passive) (at 271.78 142.24 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "78dfb772-a798-514e-a368-e4b190e9628f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "+5V_USB" (shape passive) (at 279.4 142.24 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f126bfc9-f11d-51d1-9527-0878794c59fd") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 323.85 57.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "16030ef3-6adc-5335-825a-8b8a338efb8b")
+(property "Reference" "R10" (at 323.85 52.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100k" (at 323.85 53.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 323.85 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 323.85 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 100k 1% 0402" (at 323.85 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-07100kL" (at 323.85 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 323.85 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 323.85 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "850238f5-7144-507b-a7fc-f1b345569c53"))
+(pin "2" (uuid "acb11183-d694-576f-8f1c-ad2f3ff9b5ae"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R10") (unit 1)))))
+(global_label "+5V_USB" (shape passive) (at 320.04 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3e5ee8c4-c423-5da5-b021-0025232ff26c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "FB_5VUSB" (shape passive) (at 327.66 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "5ad9c0f9-1689-57b4-a2c5-31bc63c2e6f9") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 325.12 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "c737a8a9-974b-5e06-b45d-73df7d6d4e24")
+(property "Reference" "R11" (at 325.12 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "24.9k" (at 325.12 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 325.12 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 325.12 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 24.9k 1% 0402" (at 325.12 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-0724k9L" (at 325.12 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 325.12 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 325.12 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "a19d36a0-a388-572d-85f4-808d8cda95f1"))
+(pin "2" (uuid "309b4490-d2e0-52bd-a0c8-4aa4f633b7ae"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R11") (unit 1)))))
+(global_label "FB_5VUSB" (shape passive) (at 321.31 73.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "71611cbe-98f1-534d-82d1-5ee092c6ab7c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 328.93 73.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "bbe62c8f-5a89-53ba-a3de-29bbebf1ec82") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 323.85 91.44 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ed125ad9-f954-52b2-975e-2208469f27d0")
+(property "Reference" "C26" (at 323.85 86.36 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22pF 50V" (at 323.85 88.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 323.85 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 323.85 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22pF 50V C0G 0402" (at 323.85 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05C220JB5NNNC" (at 323.85 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 323.85 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 323.85 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "616c36ba-85c5-5eb9-8809-13f6f21246f1"))
+(pin "2" (uuid "1bdbc887-b837-5f87-a986-bd5f943a717b"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C26") (unit 1)))))
+(global_label "+5V_USB" (shape passive) (at 320.04 91.44 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9d4618f7-4b5e-5cc7-8310-b7fab7f06c08") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "FB_5VUSB" (shape passive) (at 327.66 91.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "982d859c-7395-5406-b8ae-5f137e5a1ce5") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 323.85 107.95 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "2f2325df-123c-5836-a1b3-81262a1aa9e6")
+(property "Reference" "C27" (at 323.85 102.87 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 323.85 104.65 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 323.85 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 323.85 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 323.85 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 323.85 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 323.85 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 323.85 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "67fab44c-3359-5820-ba8a-01a3f8921167"))
+(pin "2" (uuid "0443f9d7-a4a6-5cb1-8e18-06af8d850308"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C27") (unit 1)))))
+(global_label "+5V_USB" (shape passive) (at 320.04 107.95 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e75b10b0-b295-5b45-9a8d-37a00cd059db") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 327.66 107.95 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "34fcb602-eb1d-5c83-8555-6b4e94ae550e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 323.85 124.46 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "335adc2b-ca04-5af3-8de4-68c87b73e518")
+(property "Reference" "C28" (at 323.85 119.38 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 323.85 121.16 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 323.85 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 323.85 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 323.85 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 323.85 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 323.85 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 323.85 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "13bd8613-4d3a-55bd-b01a-205ab168c834"))
+(pin "2" (uuid "bcc458f3-81fe-5c3f-9fad-0757579951cf"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C28") (unit 1)))))
+(global_label "+5V_USB" (shape passive) (at 320.04 124.46 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "df5e1a6d-a111-5b13-917d-4bce72f02742") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 327.66 124.46 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e4a9d676-0fa5-570b-8de8-540bb5cf1c7d") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 323.85 142.24 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f4326194-16fd-5b63-b0e0-7df044b4760f")
+(property "Reference" "C29" (at 323.85 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 323.85 138.94 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 323.85 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 323.85 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 323.85 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 323.85 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 323.85 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 323.85 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "f3e0b404-1076-5c93-b44d-c39405efda88"))
+(pin "2" (uuid "375595c3-c4fd-5b8a-8e95-22872e3a955a"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C29") (unit 1)))))
+(global_label "+5V_USB" (shape passive) (at 320.04 142.24 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "709b5e9e-688d-5999-a28d-395ea9032797") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 327.66 142.24 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e6639b53-767d-5277-bca8-cb8ac08ba1f0") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 370.84 57.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d7a9c251-b1e5-550d-9dc8-1bf7d9400277")
+(property "Reference" "C30" (at 370.84 52.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 370.84 53.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 370.84 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 370.84 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 370.84 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 370.84 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 370.84 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 370.84 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "afa25888-53ed-5f01-9243-0cd439d30305"))
+(pin "2" (uuid "310ba065-32e8-5bf2-8501-1e441ffe6eb9"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C30") (unit 1)))))
+(global_label "+5V_USB" (shape passive) (at 367.03 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0ab258d4-fd67-5e0a-aa08-6fde423e2722") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 374.65 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "52813dcc-a637-5989-af68-799b8f001b3c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 370.84 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "976595f6-97a9-511e-9358-a7d9f60fbc47")
+(property "Reference" "R12" (at 370.84 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100k" (at 370.84 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 370.84 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 370.84 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 100k 1% 0402" (at 370.84 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-07100kL" (at 370.84 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 370.84 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 370.84 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "56a47761-b189-5e5e-92d2-3731a7974e24"))
+(pin "2" (uuid "d1b27f0b-1b94-5b52-9da7-a075cfd0e41a"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R12") (unit 1)))))
+(global_label "+5V_USB" (shape passive) (at 367.03 73.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e1afe208-87af-51ef-9175-dbd2e97b4ebd") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "PG_5VUSB" (shape passive) (at 374.65 73.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4f235864-87fd-50fc-8d94-f471d385cf6d") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Regulator_Switching:LMR33630ADDA") (at 427.99 59.69 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e177687f-49d7-57b4-9ba9-427aefb345ea")
+(property "Reference" "U7" (at 427.99 48.01 0) (effects (font (size 1.27 1.27))))
+(property "Value" "LMR33630ADDA" (at 427.99 50.01 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm_ThermalVias" (at 427.99 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmr33630.pdf" (at 427.99 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Simple Switcher Synchronous Buck Regulator, Vin=3.8-36V, Iout=3A, F=400kHz, Adjustable output voltage, HSOP-8" (at 427.99 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "LMR33630ADDAR" (at 427.99 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Texas Instruments" (at 427.99 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "LMR33640ADDAR" (at 427.99 59.69 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "1841677c-e8fd-5248-9a31-d642c2ceed04"))
+(pin "2" (uuid "d06b10fa-0506-57ad-a753-aaf5189f0fe3"))
+(pin "3" (uuid "b18e5201-7251-5892-857e-754e5d01e4e5"))
+(pin "4" (uuid "59f9ae92-fd5b-5fba-8a13-3783b79dfbeb"))
+(pin "5" (uuid "47932c20-b53b-5901-bb37-597dc60278c7"))
+(pin "6" (uuid "3b74e9db-4ddc-5e8e-929d-e64017e1f158"))
+(pin "7" (uuid "724594cc-b0bd-5b6a-9016-c25466c57659"))
+(pin "8" (uuid "57bca841-a94b-5f13-91c5-dd0552f95158"))
+(pin "9" (uuid "8804b8af-ab3f-5281-b5a0-a5672f9c6c87"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "U7") (unit 1)))))
+(global_label "GND" (shape passive) (at 427.99 69.85 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cea1294a-aee3-5e49-984b-79e168e9986f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VIN" (shape passive) (at 417.83 54.61 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c40d9508-2804-5879-a02f-fb5c7ccee304") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "PCIE_PWR_EN" (shape passive) (at 417.83 59.69 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ac5679f6-4849-59c3-b3f5-6e9cd0843ff5") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "PG_3V3N" (shape passive) (at 438.15 64.77 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f43a2133-b86b-5599-9d1c-c4701c902fb7") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "FB_3V3N" (shape passive) (at 438.15 62.23 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "23e84a51-e7d7-5d74-b5ac-9e3ad03bafba") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "VCC_3V3N" (shape passive) (at 417.83 64.77 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c2641f99-5ff9-5140-bc36-23b0f5d677ef") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "BOOT_3V3N" (shape passive) (at 438.15 54.61 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9369efb4-21f0-5a7b-9920-2460f577b1c0") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "SW_3V3N" (shape passive) (at 438.15 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4d9f4f81-85d7-5836-a55c-ddba2e5b841f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 477.52 57.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "96d085b9-6e10-5bc5-a0b2-3e6f41c6afe4")
+(property "Reference" "C31" (at 477.52 52.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uF 50V" (at 477.52 53.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 477.52 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 477.52 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 10uF 50V X7R 1210" (at 477.52 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL32B106KBJNNNE" (at 477.52 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 477.52 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 477.52 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "26131184-3255-5208-8aca-7ec6dab4de09"))
+(pin "2" (uuid "c4245324-5ff4-569d-b9ec-ca8def3a106e"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C31") (unit 1)))))
+(global_label "VIN" (shape passive) (at 473.71 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a5075f57-0326-5f54-a39a-8bd31346c46b") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 481.33 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "045d8d47-fc7a-572e-9bab-ff3fc02329a2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 477.52 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1c17f49b-a48d-5456-8106-4255354c7937")
+(property "Reference" "C32" (at 477.52 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uF 50V" (at 477.52 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_1210_3225Metric" (at 477.52 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 477.52 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 10uF 50V X7R 1210" (at 477.52 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL32B106KBJNNNE" (at 477.52 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 477.52 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 477.52 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "3e642c48-89c4-5d48-ad22-75fe4497fc6a"))
+(pin "2" (uuid "18729879-a7c2-5658-85ec-e112bf93b4d8"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C32") (unit 1)))))
+(global_label "VIN" (shape passive) (at 473.71 73.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "77cc7d49-da0c-5628-92bc-9995d4b50c70") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 481.33 73.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "80ce0e9d-8e30-5c61-b54b-f41f3cfc1ea8") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 477.52 91.44 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "e6257787-62ec-55b2-ab2a-bdfccb60c016")
+(property "Reference" "C33" (at 477.52 86.36 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 50V" (at 477.52 88.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 477.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 477.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 50V X7R 0603" (at 477.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL10B104KB8NNNC" (at 477.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 477.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 477.52 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "f4c545c0-3cd8-526d-9785-f103841dbe7d"))
+(pin "2" (uuid "1a0cfceb-7113-56b4-91a6-9d8618654370"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C33") (unit 1)))))
+(global_label "VIN" (shape passive) (at 473.71 91.44 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b53e9acc-b54d-5b45-b644-0b47f04fa204") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 481.33 91.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "80e19d81-1642-5021-a6a1-7930531031e4") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 485.14 107.95 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "2275b781-30b8-5105-907e-42c9d1efa6b7")
+(property "Reference" "C34" (at 485.14 102.87 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 16V" (at 485.14 104.65 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 485.14 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 485.14 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 16V X7R 0402" (at 485.14 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05B104KO5NNNC" (at 485.14 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 485.14 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 485.14 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "e54ba564-9e5f-5439-ba1b-9f3316f57456"))
+(pin "2" (uuid "f5ade3c5-bb47-5ff0-95a8-318154396e6d"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C34") (unit 1)))))
+(global_label "BOOT_3V3N" (shape passive) (at 481.33 107.95 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0cea29a2-7b9d-5796-b3b4-976b731ba3ff") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "SW_3V3N" (shape passive) (at 488.95 107.95 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "b95507ea-c904-59e0-a333-91ca21aa5802") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 483.87 124.46 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "dee5d2e1-fe09-5f47-ab0c-f6513cf2b000")
+(property "Reference" "C35" (at 483.87 119.38 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1uF 16V" (at 483.87 121.16 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 483.87 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 483.87 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 1uF 16V X5R 0402" (at 483.87 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05A105KO5NNNC" (at 483.87 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 483.87 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 483.87 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "e8ceae35-e834-5039-b486-53cb99390b58"))
+(pin "2" (uuid "36acaff5-26ff-5646-8ff2-12b3d1c553eb"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C35") (unit 1)))))
+(global_label "VCC_3V3N" (shape passive) (at 480.06 124.46 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "01b1cf51-cdab-5d96-accc-71991f4dbbc8") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 487.68 124.46 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "10090e09-0030-5a63-b818-1c1e2f5184a4") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:L") (at 482.6 142.24 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "259acdb9-ce16-523d-b50a-c95f386073a0")
+(property "Reference" "L3" (at 482.6 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "6.8uH" (at 482.6 138.94 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Inductor_SMD:L_Bourns_SRP1038C_10.0x10.0mm" (at 482.6 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 482.6 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Shielded power inductor 6.8uH" (at 482.6 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "SRP1038C-6R8M" (at 482.6 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Bourns" (at 482.6 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 482.6 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "88b16e0c-49a4-50cc-b4c9-cfd76b44dba1"))
+(pin "2" (uuid "9b7e477d-d4e9-509c-b0bb-66e687ea6fe5"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "L3") (unit 1)))))
+(global_label "SW_3V3N" (shape passive) (at 478.79 142.24 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "f2f5f2da-618a-5b27-b9d7-042acad329a1") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "+3V3_NVME" (shape passive) (at 486.41 142.24 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a55b6ef2-4e8a-5974-aee1-f616e838ba40") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 532.13 57.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3ab0553d-4d6b-57fc-94e6-50d08233ece1")
+(property "Reference" "R13" (at 532.13 52.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100k" (at 532.13 53.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 532.13 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 532.13 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 100k 1% 0402" (at 532.13 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-07100kL" (at 532.13 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 532.13 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 532.13 57.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "831f9573-1bd3-5484-b4ff-45a2474a8bf8"))
+(pin "2" (uuid "59d19872-8bc3-57b3-8585-46105791cbf6"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R13") (unit 1)))))
+(global_label "+3V3_NVME" (shape passive) (at 528.32 57.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e8b4f959-4b58-53d1-92e0-6d8a21684195") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "FB_3V3N" (shape passive) (at 535.94 57.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9d25393e-433e-5542-922b-be9e1d05652c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 529.59 73.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3a3e30d4-d436-5e48-bbc4-b365a6cb9cef")
+(property "Reference" "R14" (at 529.59 68.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "43.2k" (at 529.59 70.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 529.59 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 529.59 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 43.2k 1% 0402" (at 529.59 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-0743k2L" (at 529.59 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 529.59 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 529.59 73.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "a8fa6706-d1c1-5706-bc80-9ffa8a5e5d1e"))
+(pin "2" (uuid "f481f721-6b46-547c-b2b3-18c446f62e0d"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R14") (unit 1)))))
+(global_label "FB_3V3N" (shape passive) (at 525.78 73.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "6d468e81-4573-53bd-96d7-10185261de2b") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 533.4 73.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2a6b99da-f124-54ed-951c-f0886282b237") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 532.13 91.44 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "875a02e0-22b4-5865-af5e-f54e9a365181")
+(property "Reference" "C36" (at 532.13 86.36 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22pF 50V" (at 532.13 88.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 532.13 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 532.13 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22pF 50V C0G 0402" (at 532.13 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05C220JB5NNNC" (at 532.13 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 532.13 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 532.13 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "31d82374-68db-5725-b554-78347a2a13fe"))
+(pin "2" (uuid "3b282b34-705f-572e-ae96-e535121c7309"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C36") (unit 1)))))
+(global_label "+3V3_NVME" (shape passive) (at 528.32 91.44 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d8837df6-4311-527b-94fa-ddfce04e29da") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "FB_3V3N" (shape passive) (at 535.94 91.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "6890775d-46cf-550d-ac28-e3b9d6fb246f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 532.13 107.95 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "25380928-9171-5530-b332-d626c2d5429c")
+(property "Reference" "C37" (at 532.13 102.87 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 532.13 104.65 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 532.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 532.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 532.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 532.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 532.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 532.13 107.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "8c8d7a5d-922e-5231-98b3-69564d9f3e20"))
+(pin "2" (uuid "28725820-913c-5f28-95a4-c43c54a3d533"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C37") (unit 1)))))
+(global_label "+3V3_NVME" (shape passive) (at 528.32 107.95 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "85a4653f-07d6-55b4-838f-5b1e06fc1890") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 535.94 107.95 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "537942d9-d13f-54dd-b55b-e610c325ce5c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 532.13 124.46 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "3ae5b57e-40f9-5fbb-9d8d-7f4f1f84f7aa")
+(property "Reference" "C38" (at 532.13 119.38 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 532.13 121.16 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 532.13 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 532.13 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 532.13 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 532.13 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 532.13 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 532.13 124.46 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "219691e1-5262-5467-8840-49748ffd7252"))
+(pin "2" (uuid "36913662-d7ea-5511-9a05-0a7522ce4324"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C38") (unit 1)))))
+(global_label "+3V3_NVME" (shape passive) (at 528.32 124.46 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2f7ebf89-3d8c-560f-b25e-75ffbb0f152b") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 535.94 124.46 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d06a0eda-8125-5f38-afc5-07bbb0097ffa") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 532.13 142.24 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "dfb374f5-b622-5ba0-bd8b-92a2c97ba4f2")
+(property "Reference" "C39" (at 532.13 137.16 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 532.13 138.94 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 532.13 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 532.13 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 532.13 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 532.13 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 532.13 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 532.13 142.24 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "613ba29d-d1ed-5f30-9829-fd02f462952f"))
+(pin "2" (uuid "b2af5efa-cdfa-597c-8654-1ca2d046cf03"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C39") (unit 1)))))
+(global_label "+3V3_NVME" (shape passive) (at 528.32 142.24 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "4ead6007-65d1-51c4-9ae4-7a1d9c131262") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 535.94 142.24 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2cf38ec3-5250-520c-b7e0-3f90d7d4a1a3") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 38.1 166.37 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "67e80e1b-b71d-5381-a285-cb7d564003d0")
+(property "Reference" "C40" (at 38.1 161.29 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 38.1 163.07 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 38.1 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "1280167e-acdd-5fcd-adb5-6ed857369b09"))
+(pin "2" (uuid "61751eac-79f0-5466-b47c-ad1d0833e270"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C40") (unit 1)))))
+(global_label "+3V3_NVME" (shape passive) (at 34.29 166.37 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "864fc1ab-739b-5207-b5c3-e0509bcfea2e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 41.91 166.37 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a78f7112-b850-5713-99ab-0090e44d5e92") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 38.1 184.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "26398347-c468-5e0f-86e5-7bd70540e5fb")
+(property "Reference" "R15" (at 38.1 179.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100k" (at 38.1 180.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 38.1 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 38.1 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 100k 1% 0402" (at 38.1 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-07100kL" (at 38.1 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 38.1 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 38.1 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "afa98037-0542-5535-8410-81474419f71b"))
+(pin "2" (uuid "7618e284-f34b-5d0d-8e66-904adbae1f2c"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R15") (unit 1)))))
+(global_label "+3V3_NVME" (shape passive) (at 34.29 184.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "307925e3-3724-5fca-ac13-14d8caa1727a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "PG_3V3N" (shape passive) (at 41.91 184.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "b7b31d33-ce63-5d95-8393-f41f20e82871") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:R") (at 40.64 200.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ba65c265-9b0b-5cbc-bbd2-d0313da101f7")
+(property "Reference" "R16" (at 40.64 195.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100k" (at 40.64 197.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 40.64 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 40.64 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Resistor 100k 1% 0402" (at 40.64 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "RC0402FR-07100kL" (at 40.64 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Yageo" (at 40.64 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 40.64 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "44ec05ca-c9f8-536b-81dd-67b194ad8735"))
+(pin "2" (uuid "c0daa57d-2224-5c2d-9a58-84b388b1d314"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "R16") (unit 1)))))
+(global_label "PCIE_PWR_EN" (shape passive) (at 36.83 200.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "28b57581-ba89-56bf-bb0c-ba4bc542039e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 44.45 200.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "585261d7-9ffd-50bc-bb81-598ad1e2f800") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Regulator_Switching:AP63203WU") (at 88.9 166.37 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "cf8edc47-e066-5cdd-ac4b-4e15a730832b")
+(property "Reference" "U8" (at 88.9 157.23 0) (effects (font (size 1.27 1.27))))
+(property "Value" "AP63203WU" (at 88.9 159.23 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6" (at 88.9 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf" (at 88.9 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "2A, 1.1MHz Buck DC/DC Converter, fixed 3.3V output voltage, TSOT-23-6" (at 88.9 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "AP63203WU-7" (at 88.9 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Diodes Inc" (at 88.9 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "AP63205WU-7 is 5V, not a substitute" (at 88.9 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "8d99c057-6d88-5f10-b7a3-c225c4df3907"))
+(pin "2" (uuid "16ee8a94-29d4-5715-b37a-753c9cc3417c"))
+(pin "3" (uuid "042ea7b1-57bb-569c-908f-168777162d95"))
+(pin "4" (uuid "81c84721-2c49-55a5-ba28-f9a6f094ad55"))
+(pin "5" (uuid "86f1ff0d-6f4e-5b43-99f8-b114a3e07123"))
+(pin "6" (uuid "0ee2b74b-b95b-57c3-93c6-a36f0f7d26cb"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "U8") (unit 1)))))
+(global_label "+3V3" (shape passive) (at 99.06 168.91 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "80d92b7a-b718-5e35-a9a2-0279c91b01ec") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "CM5_3V3" (shape passive) (at 78.74 168.91 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7528c617-ada9-5fe9-b2fa-e1d410d4172f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "+5V" (shape passive) (at 78.74 163.83 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e74086da-cd7d-512b-9d16-03feb6ca3d26") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 88.9 173.99 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1874104e-4731-56e1-b50f-a51a037be173") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "SW_3V3" (shape passive) (at 99.06 163.83 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "df68060f-a5e6-5245-a8a8-7d5d499d8a5a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "BST_3V3" (shape passive) (at 99.06 166.37 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d180045e-f0ca-5aea-96bc-ac293f63eadd") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 135.89 166.37 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "4069fab4-2910-51c4-a185-1af6b8f614c3")
+(property "Reference" "C41" (at 135.89 161.29 0) (effects (font (size 1.27 1.27))))
+(property "Value" "10uF 10V" (at 135.89 163.07 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 135.89 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 135.89 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 10uF 10V X5R 0603" (at 135.89 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL10A106KP8NNNC" (at 135.89 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 135.89 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 135.89 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "20ef0b14-0994-5ce6-91bf-81ac3ebac7bb"))
+(pin "2" (uuid "d8f52d89-b98f-57b2-8a79-96b9640526db"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C41") (unit 1)))))
+(global_label "+5V" (shape passive) (at 132.08 166.37 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "e1087f14-12d7-5a5b-9132-8acffa600d2b") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 139.7 166.37 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "381e0b9a-e6ca-5b9a-a9b6-c8dfff3ab740") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 140.97 184.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "db7f3d1d-e753-5eeb-b43c-130fba4c3e58")
+(property "Reference" "C42" (at 140.97 179.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "100nF 16V" (at 140.97 180.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 140.97 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 140.97 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 100nF 16V X7R 0402" (at 140.97 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05B104KO5NNNC" (at 140.97 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 140.97 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 140.97 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "cfa246d3-700b-5281-90c6-4330b1f0dacc"))
+(pin "2" (uuid "07107bdd-8db3-55d4-8e90-3477a3eb82d1"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C42") (unit 1)))))
+(global_label "BST_3V3" (shape passive) (at 137.16 184.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c237230f-eb7a-5acd-a254-5a942ea3ee9e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "SW_3V3" (shape passive) (at 144.78 184.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "77319a2e-56bf-5fa5-b2bd-ffd5a952f37d") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:L") (at 139.7 200.66 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "743caa52-54a4-51c0-a7a1-c75736408192")
+(property "Reference" "L4" (at 139.7 195.58 0) (effects (font (size 1.27 1.27))))
+(property "Value" "4.7uH" (at 139.7 197.36 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Inductor_SMD:L_Bourns-SRN4018" (at 139.7 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 139.7 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Shielded power inductor 4.7uH 2A" (at 139.7 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "SRN4018-4R7M" (at 139.7 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Bourns" (at 139.7 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 139.7 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "7364703c-c6e6-5d57-ba93-1f0c7ac8a89d"))
+(pin "2" (uuid "dc46fa6e-a188-540e-8ae5-d2710463403c"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "L4") (unit 1)))))
+(global_label "SW_3V3" (shape passive) (at 135.89 200.66 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "945c8944-f930-5889-8fce-62bc526d9c86") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "+3V3" (shape passive) (at 143.51 200.66 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "797e9fef-0318-535d-85c2-58b1d669430f") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 137.16 218.44 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "865aa159-7b1e-582d-bfa6-90ad288c434c")
+(property "Reference" "C43" (at 137.16 213.36 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 137.16 215.14 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 137.16 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 137.16 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 137.16 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 137.16 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 137.16 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 137.16 218.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "9e4fe115-8c2e-5ae6-88fe-72259afffb9c"))
+(pin "2" (uuid "b1b78952-a8f4-5430-8462-1744451921f3"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C43") (unit 1)))))
+(global_label "+3V3" (shape passive) (at 133.35 218.44 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d765cfca-f1bc-529f-81cf-b0373e52db4e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 140.97 218.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "346c7f7d-3179-59f7-afbb-511181fb917e") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 137.16 234.95 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "ce719ce8-bd09-5a10-b58e-35310aa3d4a7")
+(property "Reference" "C44" (at 137.16 229.87 0) (effects (font (size 1.27 1.27))))
+(property "Value" "22uF 10V" (at 137.16 231.65 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 137.16 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 137.16 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 22uF 10V X5R 0805" (at 137.16 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL21A226MPQNNNE" (at 137.16 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 137.16 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 137.16 234.95 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "85091bd6-605a-59ca-bdd2-d62dd34b95e4"))
+(pin "2" (uuid "5510be4b-535a-5430-b29e-c9759c8343ea"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C44") (unit 1)))))
+(global_label "+3V3" (shape passive) (at 133.35 234.95 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2d133cb8-f82e-587d-8f84-63688be40ed1") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 140.97 234.95 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "739b7071-771c-538d-b1d1-a84664fe5e42") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Regulator_Linear:AP2112K-1.8") (at 185.42 166.37 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6411d215-6cda-5b8a-adcc-3e034fc7c031")
+(property "Reference" "U9" (at 185.42 157.23 0) (effects (font (size 1.27 1.27))))
+(property "Value" "AP2112K-1.8" (at 185.42 159.23 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 185.42 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf" (at 185.42 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "600mA low dropout linear regulator, with enable pin, 2.5V-6V input voltage range, 1.8V fixed positive output, SOT-23-5" (at 185.42 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "AP2112K-1.8TRG1" (at 185.42 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Diodes Inc" (at 185.42 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 185.42 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "44b18efb-d734-552f-8a42-3218ff017642"))
+(pin "2" (uuid "2d37cc87-435d-508a-bcfc-fa24caab9a6c"))
+(pin "3" (uuid "7dbc35c3-c014-5e43-8b9b-62cab738c940"))
+(pin "4" (uuid "56f3b3dd-eda3-5c06-96dc-6f4062a8f79f"))
+(pin "5" (uuid "85e93c35-a235-524b-96da-76752a4055c9"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "U9") (unit 1)))))
+(global_label "+3V3" (shape passive) (at 177.8 163.83 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9e0875aa-c850-5404-8b00-375692fbd384") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 185.42 173.99 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "3f58f660-89a2-5a34-9750-5b1f953cd0ac") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "+3V3" (shape passive) (at 177.8 166.37 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1c820f39-3b29-5207-9522-6cccf5d43e49") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "+1V8" (shape passive) (at 193.04 163.83 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "f3776eb1-a972-5fb9-8165-441843586048") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 226.06 166.37 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d9da4681-0b3a-5ab0-85be-f3f0ffaf58ee")
+(property "Reference" "C45" (at 226.06 161.29 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1uF 16V" (at 226.06 163.07 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 226.06 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 226.06 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 1uF 16V X5R 0402" (at 226.06 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05A105KO5NNNC" (at 226.06 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 226.06 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 226.06 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "ed228b10-588a-50d5-b4cf-8fd421b2212e"))
+(pin "2" (uuid "213fd477-56d5-547f-b632-825ea071f8ce"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C45") (unit 1)))))
+(global_label "+3V3" (shape passive) (at 222.25 166.37 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "8352fe30-9a81-580f-b5ff-bd229764688a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 229.87 166.37 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d02a6f09-2d01-5def-ba25-841b94e65088") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Device:C") (at 226.06 184.15 90) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "a5bd9473-9252-531b-b990-a9195e53f706")
+(property "Reference" "C46" (at 226.06 179.07 0) (effects (font (size 1.27 1.27))))
+(property "Value" "1uF 16V" (at 226.06 180.85 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 226.06 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 226.06 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "MLCC 1uF 16V X5R 0402" (at 226.06 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "CL05A105KO5NNNC" (at 226.06 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "Samsung" (at 226.06 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 226.06 184.15 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "f61bb2ad-b7b7-5ac2-bacd-3ba11fa86dd2"))
+(pin "2" (uuid "c90ad464-ae63-5d41-b96b-362413d899d6"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "C46") (unit 1)))))
+(global_label "+1V8" (shape passive) (at 222.25 184.15 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d48d63a7-4681-5a6f-8bce-fb1c57f28273") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(global_label "GND" (shape passive) (at 229.87 184.15 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "08439950-95d0-56b8-970a-60b5e3a520bb") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Connector:TestPoint") (at 212.09 200.66 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "f4cef94c-53d8-586a-9964-80f19b2df046")
+(property "Reference" "TP5" (at 212.09 194.06 0) (effects (font (size 1.27 1.27))))
+(property "Value" "+5V" (at 212.09 196.06 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 212.09 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 212.09 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Test pad +5V" (at 212.09 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "" (at 212.09 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "" (at 212.09 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 212.09 200.66 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "720ffe09-8856-5f18-a2d1-9b4f8cbbc961"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "TP5") (unit 1)))))
+(global_label "+5V" (shape passive) (at 212.09 200.66 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "416ac021-8c2d-57bc-8ef9-f3a7b9410a10") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Connector:TestPoint") (at 212.09 227.33 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "8bf523df-eada-5b4f-8389-440090e7bb24")
+(property "Reference" "TP6" (at 212.09 220.73 0) (effects (font (size 1.27 1.27))))
+(property "Value" "+5V_USB" (at 212.09 222.73 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 212.09 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 212.09 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Test pad +5V_USB" (at 212.09 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "" (at 212.09 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "" (at 212.09 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 212.09 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "6f1c9f61-5303-5cd3-8298-eb11135ec72a"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "TP6") (unit 1)))))
+(global_label "+5V_USB" (shape passive) (at 212.09 227.33 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ea59e059-1249-5191-a478-3c8e9c852917") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Connector:TestPoint") (at 248.92 166.37 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "8844585e-7c2c-53c3-ac9f-d49ac585d93b")
+(property "Reference" "TP7" (at 248.92 159.77 0) (effects (font (size 1.27 1.27))))
+(property "Value" "+3V3" (at 248.92 161.77 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 248.92 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 248.92 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Test pad +3V3" (at 248.92 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "" (at 248.92 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "" (at 248.92 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 248.92 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "c022706a-581b-52c8-80dd-0821c1e0807a"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "TP7") (unit 1)))))
+(global_label "+3V3" (shape passive) (at 248.92 166.37 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "cc5388a4-8cfd-5b9b-b7e1-5eac09d2bbcc") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Connector:TestPoint") (at 248.92 194.31 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "c52d9491-8093-571f-940c-596737350749")
+(property "Reference" "TP8" (at 248.92 187.71 0) (effects (font (size 1.27 1.27))))
+(property "Value" "+3V3_NVME" (at 248.92 189.71 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 248.92 194.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 248.92 194.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Test pad +3V3_NVME" (at 248.92 194.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "" (at 248.92 194.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "" (at 248.92 194.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 248.92 194.31 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "e219e607-6a48-55bc-8541-3ae843e7089f"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "TP8") (unit 1)))))
+(global_label "+3V3_NVME" (shape passive) (at 248.92 194.31 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "0ad14eda-9b26-52b6-9f94-d46ed24218c8") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Connector:TestPoint") (at 248.92 227.33 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "770aca1b-a69e-5206-bae2-a538701cc5dc")
+(property "Reference" "TP9" (at 248.92 220.73 0) (effects (font (size 1.27 1.27))))
+(property "Value" "+1V8" (at 248.92 222.73 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 248.92 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 248.92 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Test pad +1V8" (at 248.92 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "" (at 248.92 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "" (at 248.92 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 248.92 227.33 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "13a25064-1f6d-55a6-8891-8f86ec6720a7"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "TP9") (unit 1)))))
+(global_label "+1V8" (shape passive) (at 248.92 227.33 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d305c2a9-4f4c-5eac-88f5-33987058f933") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "Connector:TestPoint") (at 259.08 166.37 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board yes) (dnp no) (uuid "f6d82aba-b658-56d4-b3e5-814a2aa6ad9a")
+(property "Reference" "TP10" (at 259.08 159.77 0) (effects (font (size 1.27 1.27))))
+(property "Value" "V12_POE" (at 259.08 161.77 0) (effects (font (size 1.27 1.27))))
+(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 259.08 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Datasheet" "" (at 259.08 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Description" "Test pad V12_POE" (at 259.08 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "" (at 259.08 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Manufacturer" "" (at 259.08 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "Alternate" "" (at 259.08 166.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(pin "1" (uuid "a8a299dc-a755-5000-a875-1fe750b276f4"))
+(instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "TP10") (unit 1)))))
+(global_label "V12_POE" (shape passive) (at 259.08 166.37 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "c608f666-5d19-5e11-bd42-eda68f353d09") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 20.32 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "e2cdfd2a-5246-5838-8f03-392470c6780a") (property "Reference" "#FLG01" (at 20.32 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 20.32 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 20.32 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 20.32 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "5801e796-e1fb-56d5-88ee-288ff1c69f6b")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG01") (unit 1)))))
+(global_label "+3V3" (shape passive) (at 20.32 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "d193ba1a-2a9a-5798-84d2-ca43e72436fb") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 41.91 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "4eb651f7-af21-546f-b586-bed57c9c48b1") (property "Reference" "#FLG02" (at 41.91 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 41.91 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 41.91 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 41.91 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "1eb5bee4-f6eb-5e25-b69e-d32c93229ac8")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG02") (unit 1)))))
+(global_label "+3V3A" (shape passive) (at 41.91 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "074b2627-5d37-5a78-bdbc-2ad81a763867") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 63.5 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "f8ab800e-92f5-509e-af11-6ef31c30ce23") (property "Reference" "#FLG03" (at 63.5 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 63.5 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 63.5 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 63.5 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "9527c9d8-82a2-56a9-9a89-e458d85877cc")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG03") (unit 1)))))
+(global_label "+3V3_NVME" (shape passive) (at 63.5 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "2f2ab0e3-af91-57d4-b9e9-102d02a43433") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 86.36 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "c5de14cd-3c89-5a4c-9f99-6afa4e14f612") (property "Reference" "#FLG04" (at 86.36 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 86.36 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 86.36 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 86.36 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "b77fa661-c5e5-58bf-96c0-271ecb4220d0")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG04") (unit 1)))))
+(global_label "+5V" (shape passive) (at 86.36 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "055745b8-d176-5dfe-8176-6544daf593f8") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 107.95 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "e9c7e1a1-7ef1-55f8-a0da-d0d86e7abec0") (property "Reference" "#FLG05" (at 107.95 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 107.95 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 107.95 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 107.95 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "eb4ade64-a1a7-5489-8a1d-cc1e6bf75b34")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG05") (unit 1)))))
+(global_label "+5V_SPK" (shape passive) (at 107.95 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "497f505a-2f8f-5579-bb0e-5d42d7440892") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 129.54 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "0d8e47c4-aa64-5924-99d4-189a2be58620") (property "Reference" "#FLG06" (at 129.54 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 129.54 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 129.54 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 129.54 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "3e658250-1db8-5a88-a6d2-491670311f57")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG06") (unit 1)))))
+(global_label "+5V_USB" (shape passive) (at 129.54 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "a76eb535-4323-573c-90cc-d873bcaa0fe8") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 152.4 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "8dcf4132-eb06-5908-b9ac-dc2a95ff4404") (property "Reference" "#FLG07" (at 152.4 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 152.4 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 152.4 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 152.4 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "e9ed63b1-44f7-53fb-b7a0-ff2db2bc851c")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG07") (unit 1)))))
+(global_label "CM5_3V3" (shape passive) (at 152.4 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "469d5667-5e8b-5441-a797-bd89d0fffd1c") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 173.99 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "5f01e8c8-34cd-5eab-ac74-70cefa7bd355") (property "Reference" "#FLG08" (at 173.99 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 173.99 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 173.99 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 173.99 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "9a745c93-7b2a-5eb2-a1ab-b4ff002b0562")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG08") (unit 1)))))
+(global_label "GND" (shape passive) (at 173.99 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "5140f6fa-d757-54c8-abf1-64ba8fc89f2a") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 195.58 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "ffdcaeb9-7a63-5f3b-be7c-139783aa514c") (property "Reference" "#FLG09" (at 195.58 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 195.58 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 195.58 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 195.58 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "26f6e89b-2cf9-58e1-9673-ec70a06a2e79")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG09") (unit 1)))))
+(global_label "MIC_VDD" (shape passive) (at 195.58 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "9aa74e16-c32a-5ff7-bfbf-89c62d8dbf22") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 218.44 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "d5ab5ce1-18c8-5e3e-874a-d186d7c833c3") (property "Reference" "#FLG10" (at 218.44 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 218.44 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 218.44 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 218.44 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "a7925d3f-9a78-5d38-adfd-e9139953c75b")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG10") (unit 1)))))
+(global_label "POE_VIN_N" (shape passive) (at 218.44 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "7491023a-baff-5430-ad91-d75bc726aeb2") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 240.03 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "d109196a-0187-54ad-b78f-b19470d0b3b3") (property "Reference" "#FLG11" (at 240.03 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 240.03 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 240.03 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 240.03 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "7b581640-7cb1-58ad-b73e-1c3d78b525e5")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG11") (unit 1)))))
+(global_label "POE_VIN_P" (shape passive) (at 240.03 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "b2f54a33-2d7a-5562-9e5d-32f857ffaf67") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 261.62 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "07305d9f-805d-5a8a-8f02-422915f8b3d3") (property "Reference" "#FLG12" (at 261.62 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 261.62 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 261.62 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 261.62 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "6da2e2f4-ca8e-5211-b3f8-0d695b13f34c")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG12") (unit 1)))))
+(global_label "VBAT" (shape passive) (at 261.62 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "64867ce6-73ab-53b5-8895-16e2a427c62d") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 284.48 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "c01b7f6d-c0dc-5124-890e-9d52bbece52b") (property "Reference" "#FLG13" (at 284.48 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 284.48 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 284.48 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 284.48 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "678d2099-4912-50bb-9062-3775817e99ba")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG13") (unit 1)))))
+(global_label "VBUS" (shape passive) (at 284.48 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "751c9295-6730-5dcf-93c4-5d378a79a800") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 306.07 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "f4066ba6-d591-5af4-acc6-2dddb7129333") (property "Reference" "#FLG14" (at 306.07 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 306.07 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 306.07 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 306.07 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "8fa6896e-74c7-58bb-bdca-c500e4affec8")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG14") (unit 1)))))
+(global_label "VBUS_SW" (shape passive) (at 306.07 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "ff30cbee-7309-5ebd-aa6b-97e86813afb6") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+(symbol (lib_id "power:PWR_FLAG") (at 327.66 389.89 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid "5ea25252-c0e6-5f59-8b73-58883bfd7db8") (property "Reference" "#FLG15" (at 327.66 384.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "PWR_FLAG" (at 327.66 385.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 327.66 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "" (at 327.66 389.89 0) (effects (font (size 1.27 1.27)) (hide yes))) (pin "1" (uuid "27da0ac3-48bf-51e1-bb45-2a8204439067")) (instances (project "tahanan" (path "/098ae556-03d9-5d12-87da-7582c8bc4652/64d4f371-288d-5b42-8c0a-88f09dcabe58" (reference "#FLG15") (unit 1)))))
+(global_label "VIN" (shape passive) (at 327.66 389.89 270) (effects (font (size 1.27 1.27)) (justify right)) (uuid "fb91e3d4-c930-59f7-b4fa-bf2e660dd182") (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))
+)
