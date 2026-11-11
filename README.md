@@ -8,6 +8,10 @@ socket, and a microphone, codec and speaker output for voice.
 The board is placed but not routed, so there are no fabrication files yet. No hardware has been built
 and nothing has been validated. Read [docs/status.md](docs/status.md) first.
 
+Since the first commit the open component values and part numbers were checked, the BOM was priced
+against DigiKey, and the firmware and Home Assistant OS build files were completed and corrected.
+Routing, fabrication files, builds and all testing are still open.
+
 ## Layout of this repository
 
 | Path | Contents |
@@ -18,7 +22,7 @@ and nothing has been validated. Read [docs/status.md](docs/status.md) first.
 | `manufacturing/bom/` | Board BOM and system BOM as CSV |
 | `mechanical/` | Parametric enclosure script and exported STEP, STL, 3MF |
 | `software/` | Bootloader config, `config.txt` block, device tree overlay, Home Assistant OS build recipe |
-| `firmware/` | USB-PD controller settings, radio firmware pin records |
+| `firmware/` | USB-PD controller settings and programming script, radio firmware manifests |
 
 ## Building
 

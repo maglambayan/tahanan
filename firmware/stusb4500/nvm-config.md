@@ -24,4 +24,21 @@ Tools: ST's STSW-STUSB002 GUI with a NUCLEO board, or any STUSB4500 NVM library,
 (`/dev/i2c-1` on the hub). Verify after programming by reading the NVM back and by attaching a 45 W
 charger: VBUS_SW must sit at 20 V, or 15 V on a charger without a 20 V profile.
 
-Status: parameters defined, programming script not written, not yet exercised on hardware.
+## Programming script
+
+`program_nvm.py` runs on the hub itself, or on any Linux host wired to I2C1, with no extra packages:
+
+```
+python3 program_nvm.py selftest          # no hardware: checks the field packing
+python3 program_nvm.py read              # dump and decode the fitted part
+python3 program_nvm.py write --dry-run   # show the image that would be written
+python3 program_nvm.py write             # read, modify, write, read back and compare
+```
+
+It changes only the fields in the table that differ from the factory image (PDO currents,
+USB_COMM_CAPABLE, POWER_ONLY_ABOVE_5V) and keeps every other byte as read from the part. The new
+profile applies after the controller is reset.
+
+Status: parameters defined and script written. The self-test passes, which shows the field map
+decodes ST's factory image to the documented factory profile. The I2C sequence has not been run on a
+part. Check the first board against ST's STSW-STUSB002 tool.

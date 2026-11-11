@@ -1,0 +1,19 @@
+diff --git a/buildroot-external/board/raspberrypi/rpi5-64/haos-hook.sh b/buildroot-external/board/raspberrypi/rpi5-64/haos-hook.sh
+index cc834bb..ca76f60 100644
+--- a/buildroot-external/board/raspberrypi/rpi5-64/haos-hook.sh
++++ b/buildroot-external/board/raspberrypi/rpi5-64/haos-hook.sh
+@@ -9,6 +9,14 @@ function haos_pre_image() {
+     gzip --stdout "${BINARIES_DIR}"/Image > "${BOOT_DATA}/slot-A/kernel_2712.img"
+     cp -r "${BINARIES_DIR}/overlays/" "${BOOT_DATA}/slot-A/"
+     cp "${BINARIES_DIR}"/*.dtbo "${BOOT_DATA}/slot-A/overlays/" 2>/dev/null || true
++    # Tahanan Hub board overlay: preprocess and compile with the kernel build's own dtc and binding headers
++    local LINUX_DIR="${BUILD_DIR}/linux-custom"
++    cpp -nostdinc -undef -D__DTS__ -x assembler-with-cpp \
++        -I "${LINUX_DIR}/include" -I "${LINUX_DIR}/scripts/dtc/include-prefixes" \
++        "${BOARD_DIR}/tahanan/tahanan-overlay.dts" > "${BINARIES_DIR}/tahanan-overlay.pp.dts"
++    "${LINUX_DIR}/scripts/dtc/dtc" -@ -I dts -O dtb \
++        -o "${BOOT_DATA}/slot-A/overlays/tahanan.dtbo" "${BINARIES_DIR}/tahanan-overlay.pp.dts"
++    test -s "${BOOT_DATA}/slot-A/overlays/tahanan.dtbo"
+     # README needs to be present, otherwise os_prefix is not
+     # prepended implicitly to the overlays' path, see:
+     # https://www.raspberrypi.com/documentation/computers/config_txt.html#overlay_prefix

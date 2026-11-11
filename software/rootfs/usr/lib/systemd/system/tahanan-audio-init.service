@@ -1,0 +1,11 @@
+[Unit]
+Description=Tahanan Hub codec mixer defaults
+After=sound.target
+ConditionPathExists=/proc/asound/TahananHub
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/tahanan-audio-init
+
+[Install]
+WantedBy=sound.target

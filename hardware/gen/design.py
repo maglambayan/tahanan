@@ -62,20 +62,20 @@ tp('VIN', 'VIN'); tp('VBUS', 'VBUS'); tp(G, 'GND'); tp(G, 'GND')
 sheet('power_rails', 'Regulators and sequencing',
       'Sequence: VIN>8V -> +5V (U5) -> PG_5V enables +5V_USB (U6). CM5 starts from +5V; CM5_3V3 then enables +3V3 (U8).\n'
       '+3V3_NVME (U7) is enabled by PCIE_PWR_EN from the CM5. Nothing drives a CM5 pin before +5V is valid (CM5 datasheet 3.1).\n'
-      'LMR336x0: VFB=1.0V. 5V: 100k/24.9k. 3.3V: 100k/43.2k. fsw=400kHz.')
+      'LMR336x0: VFB=1.0V. 5V: 100k/24.9k. 3.3V: 100k/43.2k. fsw=400kHz, L=6.8uH, CIN 2x10uF+220nF (datasheet table 9-1).')
 def lmr(sym, tag, out, en, L, lmpn, rb):
     part('U', sym, {'GND': G, 'VIN': 'VIN', 'EN': en, 'PG': f'PG_{tag}', 'FB': f'FB_{tag}', 'VCC': f'VCC_{tag}', 'BOOT': f'BOOT_{tag}', 'SW': f'SW_{tag}'},
          mpn=sym + 'R', mfr='Texas Instruments', alt='LMR33640DDDAR (2.1MHz, needs smaller L)' if '40' in sym else 'LMR33640ADDAR')
-    c10u50('VIN'); c10u50('VIN'); c100n('VIN').value = '100nF 50V'; PARTS[-1].mpn = 'CL10B104KB8NNNC'; PARTS[-1].fp = SIZES['0603']; PARTS[-1].desc = 'MLCC 100nF 50V X7R 0603'
+    c10u50('VIN'); c10u50('VIN'); C('220nF', 'VIN', G, '0603', '50V', mpn='CL10B224KB8NNNC', mfr='Samsung')   # 220 nF high-frequency input capacitor, LMR33640 datasheet table 9-1
     c100n(f'BOOT_{tag}', f'SW_{tag}'); c1u(f'VCC_{tag}')
     part('L', 'Device:L', {1: f'SW_{tag}', 2: out}, L, 'Inductor_SMD:L_Bourns_SRP1038C_10.0x10.0mm', lmpn, 'Bourns', f'Shielded power inductor {L}')
     R('100k', out, f'FB_{tag}'); R(rb, f'FB_{tag}', G); C('22pF', out, f'FB_{tag}', '0402', '50V', mpn='CL05C220JB5NNNC', mfr='Samsung', diel='C0G')
     for _ in range(4): c22u(out)
     R('100k', out, f'PG_{tag}')
-lmr('LMR33640ADDA', '5V', '+5V', 'EN_5V', '10uH', 'SRP1038C-100M', '24.9k')
+lmr('LMR33640ADDA', '5V', '+5V', 'EN_5V', '6.8uH', 'SRP1038CC-6R8M', '24.9k')
 R('100k', 'VIN', 'EN_5V'); R('18k', 'EN_5V', G)
-lmr('LMR33640ADDA', '5VUSB', '+5V_USB', 'PG_5V', '10uH', 'SRP1038C-100M', '24.9k')
-lmr('LMR33630ADDA', '3V3N', '+3V3_NVME', 'PCIE_PWR_EN', '6.8uH', 'SRP1038C-6R8M', '43.2k')
+lmr('LMR33640ADDA', '5VUSB', '+5V_USB', 'PG_5V', '6.8uH', 'SRP1038CC-6R8M', '24.9k')
+lmr('LMR33630ADDA', '3V3N', '+3V3_NVME', 'PCIE_PWR_EN', '6.8uH', 'SRP1038CC-6R8M', '43.2k')
 R('100k', 'PCIE_PWR_EN', G)
 part('U', 'AP63203WU', {'FB': '+3V3', 'EN': 'CM5_3V3', 'IN': '+5V', 'GND': G, 'SW': 'SW_3V3', 'BST': 'BST_3V3'}, mpn='AP63203WU-7', mfr='Diodes Inc', alt='AP63205WU-7 is 5V, not a substitute')
 c10u('+5V'); c100n('BST_3V3', 'SW_3V3')
@@ -234,7 +234,7 @@ bead('+3V3', '+3V3A'); bead('+5V', '+5V_SPK', mpn='BLM21PG221SN1D', fp='Inductor
 for n in ('+3V3', '+1V8', '+3V3A', '+3V3A'): c100n(n); 
 c1u('+3V3'); c1u('+1V8'); c10u('+3V3A'); c22u('+5V_SPK'); c100n('+5V_SPK'); c100n('+5V_SPK')
 R('10k', 'AUD_RST_N', G)
-part('Y', 'ECS-2520MV-xxx-xx', {'Tri-State': '+3V3', 'GND': G, 'OUT': 'AUD_OSC', 'VDD': '+3V3'}, '12.288MHz', mpn='ECS-2520MV-122.8-BN-TR', mfr='ECS', desc='CMOS oscillator 12.288MHz 2.5x2.0mm',
+part('Y', 'ECS-2520MV-xxx-xx', {'Tri-State': '+3V3', 'GND': G, 'OUT': 'AUD_OSC', 'VDD': '+3V3'}, '12.288MHz', mpn='ECS-2520MVLC-122.8-BN-TR', mfr='ECS', desc='CMOS oscillator 12.288MHz 2.5x2.0mm',
      alt='SiTime SIT2001BI-S2-33E-12.288000')
 R('33', 'AUD_OSC', 'AUD_MCLK'); c100n('+3V3')
 part('MK', 'IM73A135V01', {'OUT+': 'MIC_OUT_P', 'OUT-': 'MIC_OUT_N', 'V_{DD}': 'MIC_VDD', 'GND': G}, mpn='IM73A135V01XTSA1', mfr='Infineon', desc='Analog MEMS microphone, 73dB SNR, differential, bottom port, IP57',

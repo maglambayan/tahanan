@@ -93,4 +93,5 @@ fabricator's impedance calculator before routing.**
 - Confirm the board-edge overhang of J5 against the Molex 48406-0001 drawing.
 - Confirm which jack holes are plated in the Würth 7499511001A drawing (the 1.6 mm pair is assumed to
   be the shield tabs).
+- Confirm the SRP1038CC inductor body, listed as 11.0 x 10.0 mm, against the footprint used for L1 to L3.
 - Re-run `make drc` until it reports 0 errors and 0 unconnected, then run `make fab`.

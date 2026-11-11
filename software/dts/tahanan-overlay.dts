@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: GPL-2.0
 // Tahanan Hub rev A board overlay for Raspberry Pi Compute Module 5 (BCM2712 + RP1).
 // Build: dtc -@ -I dts -O dtb -o tahanan.dtbo tahanan-overlay.dts   (or in-tree, see software/README.md)
-// Status: written against the raspberrypi/linux rpi-6.12.y device tree labels. NOT yet run on hardware.
+// Status: labels, constants and driver property names checked against raspberrypi/linux commit 9b488bc7a1e9
+// (the 6.18 kernel that Home Assistant OS 18.5 builds). NOT compiled and NOT run on hardware.
 /dts-v1/;
 /plugin/;
 
@@ -124,7 +125,9 @@
 				reg = <0x18>;
 				#sound-dai-cells = <0>;
 				reset-gpios = <&gpio 16 GPIO_ACTIVE_LOW>;
-				ai31xx-micbias-vg = <MICBIAS_OFF>;   /* MK1 runs from +3V3A through SW4 */
+				/* The driver requires a level. MICBIAS is never switched on, because no audio route
+				 * uses it: MK1 runs from +3V3A through SW4 and the MICBIAS pin is not connected. */
+				ai31xx-micbias-vg = <MICBIAS_2_0V>;
 				HPVDD-supply = <&tahanan_3v3>;
 				SPRVDD-supply = <&tahanan_5v>;
 				SPLVDD-supply = <&tahanan_5v>;
@@ -133,6 +136,15 @@
 				DVDD-supply = <&tahanan_1v8>;
 			};
 			/* 0x28: STUSB4500 USB-PD sink. No kernel driver is bound; status is read from user space. */
+		};
+	};
+
+	/* The CM5 base device tree gives CAM_GPIO0 (RP1 GPIO34) to the camera supply regulator. This board
+	 * has no camera connector and uses that pin as the PoE Type 4 sense input, so release it. */
+	fragment@4 {
+		target = <&cam0_reg>;
+		__overlay__ {
+			status = "disabled";
 		};
 	};
 

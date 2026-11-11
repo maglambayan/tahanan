@@ -7,7 +7,7 @@ All figures are design calculations from datasheet limits. None has been measure
 | Rail | Source | Rating | Loads |
 |---|---|---|---|
 | VIN | USB-C 15/20 V or PoE 12 V through ideal diodes | 9-21 V, UVLO 8 V | all regulators |
-| +5V | U5 LMR33640, 400 kHz, 10 uH | 4 A | CM5, speaker amplifier, fan, U8, Z-Wave socket |
+| +5V | U5 LMR33640, 400 kHz, 6.8 uH | 4 A | CM5, speaker amplifier, fan, U8, Z-Wave socket |
 | +5V_USB | U6 LMR33640 | 4 A | two USB 3.0 ports through U10 |
 | +3V3_NVME | U7 LMR33630, 6.8 uH | 3 A | M.2 socket only |
 | +3V3 | U8 AP63203 from +5V | 2 A | both MGM240P, codec I/O, oscillator, LEDs |

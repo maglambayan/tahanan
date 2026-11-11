@@ -1,13 +1,18 @@
-"""Write the bill of materials (manufacturing/bom/). Prices are budgetary estimates entered by hand
-on 2026-11-10 for 1k-piece quantities; they are NOT distributor quotes. Supplier columns are search
-links built from the manufacturer part number so stock and price can be confirmed before ordering."""
+"""Write the bill of materials (manufacturing/bom/).
+
+Prices and stock for the parts in distributor-check.json were read from DigiKey's public product pages
+on the date in that file. They are a one-day, one-distributor snapshot, not quotes. Where DigiKey showed
+no price break near 1000 pieces the figure is the list price it showed, and the basis column says so.
+Every other line (resistors, small capacitors, LEDs and the like) still carries a hand-entered estimate.
+Supplier columns are search links built from the manufacturer part number."""
 import csv, json, os, urllib.parse
 HERE = os.path.dirname(os.path.abspath(__file__)); OUT = os.path.join(HERE, '..', '..', 'manufacturing', 'bom'); os.makedirs(OUT, exist_ok=True)
 D = json.load(open(os.path.join(HERE, 'design.json')))['parts']
+DK = json.load(open(os.path.join(HERE, 'distributor-check.json')))
 EST = {'Ag5810': 31.0, '7499511001A': 6.8, 'MGM240PA32VNN3': 9.2, 'MGM240PA32VNA3': 9.2, 'TLV320AIC3100IRHBR': 3.3, 'STUSB4500QTR': 2.3, 'LMR33640ADDAR': 2.1,
        'LMR33630ADDAR': 1.8, 'LM74700QDBVRQ1': 0.95, 'CSD17581Q3A': 0.48, 'DMP3013SFV-7': 0.46, 'AP63203WU-7': 0.36, 'AP2112K-1.8TRG1': 0.12, 'TPS2561DRCR': 1.35,
        'TPD4E05U06DQAR': 0.26, 'TPD2EUSB30DRTR': 0.30, 'USBLC6-2SC6': 0.20, 'IM73A135V01XTSA1': 1.65, 'LTV-817S': 0.12, 'ECS-2520MV-122.8-BN-TR': 0.95,
-       'DF40HC(3.0)-100DS-0.4V(51)': 1.45, '2199119-4': 1.25, '48406-0001': 1.9, 'USB4105-GF-A': 0.72, 'SRP1038C-100M': 0.92, 'SRP1038C-6R8M': 0.92, 'SRN4018-4R7M': 0.28,
+       'DF40HC(3.0)-100DS-0.4V(51)': 1.45, '2199119-4': 1.25, '48406-0001': 1.9, 'USB4105-GF-A': 0.72, 'SRN4018-4R7M': 0.28,
        'EEE-FT1C102AP': 0.62, 'EEE-FT1V101AP': 0.33, 'T520B157M006ATE070': 0.95, '9774030151R': 0.55, '9774025243R': 0.50, 'PMEG10020ELRX': 0.11, 'SMAJ58A': 0.12,
        'SMAJ22A': 0.12, 'BZT52C10S-7-F': 0.03, 'FBMH3225HM102NT': 0.14, 'BLM18PG221SN1D': 0.03, 'BLM21PG221SN1D': 0.04, 'PTS636SM25FSMTRLFS': 0.11, 'JS102011SAQN': 0.42,
        '3000': 0.55, 'SM04B-SRSS-TB': 0.22, '61300311121': 0.08, 'U.FL-R-SMT-1(80)': 0.38, 'SSW-105-01-G-D': 0.85, 'S2B-PH-K-S': 0.06, 'C1812C472KGRACTU': 0.38,
@@ -26,12 +31,21 @@ for p in D:
     groups.setdefault(k, []).append(p)
 def refkey(r):
     import re; m = re.match(r'([A-Z]+)(\d+)(.*)', r); return (m.group(1), int(m.group(2)), m.group(3))
-rows = []; total = 0.0
+rows = []; total = 0.0; checked = 0; nostock = []
 for (mpn, value, fp, dnp), ps in sorted(groups.items(), key=lambda kv: refkey(sorted((p['ref'] for p in kv[1]), key=refkey)[0])):
-    refs = sorted((p['ref'] for p in ps), key=refkey); p = ps[0]; u = 0.0 if dnp else est(p); total += u * len(ps)
+    refs = sorted((p['ref'] for p in ps), key=refkey); p = ps[0]
+    c = DK['parts'].get(mpn)
+    if dnp: u, basis, stock, note = 0.0, '', '', ''
+    elif c:
+        u = c[0]; checked += 1
+        basis = 'DigiKey %s, %s' % (DK['date'], 'break at %d' % c[1] if c[1] else 'list price, break not shown')
+        stock = 'not shown' if c[2] is None else str(c[2]); note = c[3]
+        if c[2] == 0: nostock.append(mpn)
+    else: u, basis, stock, note = est(p), 'estimate', '', ''
+    total += u * len(ps)
     dk, mo, lc = links(mpn) if mpn else ('', '', '')
-    rows.append([' '.join(refs), len(ps), value, p['desc'], p['mfr'], mpn, fp.split(':')[1], 'DNP' if dnp else 'fit', p['alt'], '%.3f' % u, '%.2f' % (u * len(ps)), dk, mo, lc, p['datasheet']])
-hdr = ['References', 'Qty', 'Value', 'Description', 'Manufacturer', 'MPN', 'Footprint', 'Fit', 'Alternates', 'Est. unit USD @1k', 'Est. ext USD', 'DigiKey search', 'Mouser search', 'LCSC search', 'Datasheet']
+    rows.append([' '.join(refs), len(ps), value, p['desc'], p['mfr'], mpn, fp.split(':')[1], 'DNP' if dnp else 'fit', p['alt'], '%.3f' % u, '%.2f' % (u * len(ps)), basis, stock, note, dk, mo, lc, p['datasheet']])
+hdr = ['References', 'Qty', 'Value', 'Description', 'Manufacturer', 'MPN', 'Footprint', 'Fit', 'Alternates', 'Unit USD', 'Ext USD', 'Price basis', 'DigiKey stock', 'Supply note', 'DigiKey search', 'Mouser search', 'LCSC search', 'Datasheet']
 with open(os.path.join(OUT, 'tahanan-pcba-bom.csv'), 'w', newline='') as f:
     w = csv.writer(f); w.writerow(hdr); w.writerows(rows)
 SYSTEM = [  # item, qty, manufacturer, MPN, description, est. USD, note
@@ -59,5 +73,8 @@ SYSTEM = [  # item, qty, manufacturer, MPN, description, est. USD, note
 with open(os.path.join(OUT, 'tahanan-system-bom.csv'), 'w', newline='') as f:
     w = csv.writer(f); w.writerow(['Item', 'Qty', 'Manufacturer', 'MPN / specification', 'Description', 'Est. unit USD', 'Note']); w.writerows(SYSTEM)
 sys_total = sum(r[1] * r[5] for r in SYSTEM if 'option' not in r[0] and r[0] != 'NVMe SSD')
-print('PCBA BOM: %d lines, %d fitted parts, estimated parts cost USD %.2f' % (len(rows), sum(r[1] for r in rows if r[7] == 'fit'), total))
+print('PCBA BOM: %d lines, %d fitted parts, parts cost USD %.2f (%d lines priced from DigiKey %s, the rest estimated)' % (len(rows), sum(r[1] for r in rows if r[7] == 'fit'), total, checked, DK['date']))
+print('No DigiKey stock on %s: %s' % (DK['date'], ', '.join(nostock)))
+missing = sorted(set(DK['parts']) - {r[5] for r in rows})
+if missing: print('In distributor-check.json but not in the design:', ', '.join(missing))
 print('System items excluding SSD and options: USD %.2f' % sys_total)

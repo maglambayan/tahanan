@@ -1,0 +1,37 @@
+# Tahanan Hub U20: Gecko bootloader (UART XMODEM) for the thread radio.
+# Format: NabuCasa/silabs-firmware-builder manifest, derived from manifests/nabucasa/yellow/yellow_bootloader.yaml
+# as of 2026-11. Status: NOT built and NOT flashed. See ../../README.md.
+name: Tahanan thread Bootloader
+device: MGM240PA32VNA
+base_project: src/bootloader
+filename: "{manifest_name}_{gecko_bootloader_version}"
+sdk: "simplicity_sdk:2026.6.1"
+toolchain: "14.2.1.20241119"
+
+gbl:
+  fw_type: gecko-bootloader
+  gecko_bootloader_version: dynamic
+  baudrate: 115200
+
+c_defines:
+  SL_SERIAL_UART_FLOW_CONTROL: 1
+
+  SL_SERIAL_UART_PERIPHERAL: USART0
+  SL_SERIAL_UART_PERIPHERAL_NO: 0
+
+  SL_SERIAL_UART_TX_PORT: gpioPortC
+  SL_SERIAL_UART_TX_PIN:  0
+
+  SL_SERIAL_UART_RX_PORT: gpioPortC
+  SL_SERIAL_UART_RX_PIN:  1
+
+  SL_SERIAL_UART_RTS_PORT: gpioPortC
+  SL_SERIAL_UART_RTS_PIN:  2
+
+  SL_SERIAL_UART_CTS_PORT: gpioPortC
+  SL_SERIAL_UART_CTS_PIN:  3
+
+  # PB00 held low through reset enters the bootloader (CM5 GPIO23 for Zigbee, GPIO25 for Thread)
+  SL_GPIO_ACTIVATION_POLARITY: LOW
+  SL_BTL_BUTTON_PORT: gpioPortB
+  SL_BTL_BUTTON_PIN: 0

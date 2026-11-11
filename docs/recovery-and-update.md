@@ -15,12 +15,15 @@ Nothing in this document has been run on Tahanan hardware. It records the intend
 ## Getting an image
 
 **Bring-up path.** Flash the stock Home Assistant OS image for Raspberry Pi 5 to the SSD. Mount the
-boot partition, append the config block and copy in the compiled overlay. Audio works only if that
-image's kernel includes the TLV320AIC31xx codec driver, which has not been checked.
+boot partition, append the config block and copy in the compiled overlay. Everything except audio
+works this way. The stock kernel configuration (`bcm2712_defconfig`) does not build the TLV320AIC31xx
+codec driver, so audio needs the reproducible path.
 
 **Reproducible path.** Run `software/haos-board/build.sh` on a Linux host with Docker. It clones Home
-Assistant OS at the tag you name, adds the board files and prints the build command. One hook, which
-compiles the overlay inside the build, is still to be written. See `software/haos-board/patches/`.
+Assistant OS (18.5 unless `HAOS_TAG` names another release), adds the kernel fragment, the overlay, the
+config block and the root file system files, patches the image hook so the overlay is compiled during
+the build, and prints the build command. The tree preparation was checked against the 18.5 board
+files. The image build itself has not been run.
 
 ## Hardware support expected from the operating system
 
@@ -33,9 +36,9 @@ compiles the overlay inside the build, is still to be written. See `software/hao
 | Zigbee | ZHA or Zigbee2MQTT over `/dev/tahanan-zigbee` | needs board-specific radio firmware |
 | Thread and Matter | OpenThread Border Router add-on over `/dev/tahanan-thread` | needs board-specific radio firmware |
 | Z-Wave | Z-Wave JS over `/dev/tahanan-zwave` | depends on the plug-in module |
-| Audio codec | `snd-soc-tlv320aic31xx` with `simple-audio-card` | overlay written, driver presence unverified |
+| Audio codec | `snd-soc-tlv320aic31xx` with `simple-audio-card` | overlay written. Driver is added by the kernel fragment, it is not in the stock image |
 | Fan and RTC | CM5 firmware and kernel | supported upstream |
-| User button, LED, mute and PoE sense | `gpio-keys`, `gpio-leds` | overlay written |
+| User button, LED, mute and PoE sense | `gpio-keys`, `gpio-leds` | overlay written. The overlay disables the CM5 camera regulator, which otherwise owns the PoE sense pin |
 | USB-PD controller | none | no kernel driver bound. Status readable over I2C from user space |
 | PoE power class | none | only the Type 4 flag reaches Linux |
 

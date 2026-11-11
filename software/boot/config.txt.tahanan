@@ -20,6 +20,9 @@ force_eeprom_read=0
 dtparam=fan_temp0=55000,fan_temp0_hyst=5000,fan_temp0_speed=90
 dtparam=fan_temp1=65000,fan_temp1_hyst=5000,fan_temp1_speed=160
 dtparam=fan_temp2=72000,fan_temp2_hyst=4000,fan_temp2_speed=255
+# --- no camera or display connectors. CAM_GPIO0 is the PoE Type 4 sense input, so nothing may probe it
+camera_auto_detect=0
+display_auto_detect=0
 # --- board overlay: audio, buttons, LED, PoE and mic-mute sense
 dtoverlay=tahanan
 [all]

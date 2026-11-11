@@ -2276,7 +2276,7 @@
 (property "Footprint" "Oscillator:Oscillator_SMD_ECS_2520MV-xxx-xx-4Pin_2.5x2.0mm" (at 242.57 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
 (property "Datasheet" "https://www.ecsxtal.com/store/pdf/ECS-2520MV.pdf" (at 242.57 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
 (property "Description" "CMOS oscillator 12.288MHz 2.5x2.0mm" (at 242.57 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
-(property "MPN" "ECS-2520MV-122.8-BN-TR" (at 242.57 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
+(property "MPN" "ECS-2520MVLC-122.8-BN-TR" (at 242.57 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
 (property "Manufacturer" "ECS" (at 242.57 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
 (property "Alternate" "SiTime SIT2001BI-S2-33E-12.288000" (at 242.57 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
 (pin "1" (uuid "6da3a3ad-dd90-52ed-8454-d4a91d581af6"))
